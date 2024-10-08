@@ -1,6 +1,7 @@
 #include "structures.hpp"
 #include "primitives.hpp"
 #include <algorithm>
+#include <cmath>
 #include <numeric>
 
 namespace SummarizedCat{
@@ -10,6 +11,10 @@ namespace SummarizedCat{
 	DiscreteStructure::DiscreteStructure(const SpatialVector argAbsolutePosition, const SpatialVector argAbsoluteVelocity, const scalar argMass):IStructure(argAbsolutePosition, argAbsoluteVelocity, argMass){}
 
 	StructureSummary::StructureSummary(const std::vector<IStructure> &argChildStructures){
+		childStructures.reserve(argChildStructures.size());
+
+		std::transform(argChildStructures.begin(), argChildStructures.end(), childStructures.begin(), [](IStructure &struc){ return &struc; } );
+
 		SpatialVector positionSum = std::accumulate(argChildStructures.begin(), argChildStructures.end(), SpatialVector(0,0,0), [](const IStructure a, const IStructure b){
 			return a.absolutePosition*a.mass + b.absolutePosition*b.mass;
 		});
@@ -18,17 +23,52 @@ namespace SummarizedCat{
 			return a.absoluteVelocity*a.mass + b.absoluteVelocity*b.mass;
 		});
 
-		scalar mass = std::accumulate(argChildStructures.begin(), argChildStructures.end(), 0, [](const IStructure a, const IStructure b){
+		scalar totalMass = std::accumulate(argChildStructures.begin(), argChildStructures.end(), 0, [](const IStructure a, const IStructure b){
 			return a.mass + b.mass;
 		});
 
-		IStructure(positionSum / mass, velocitySum / mass, mass);
+		absolutePosition = positionSum / mass;
+		absoluteVelocity = velocitySum / mass;
+		mass = totalMass;
 	}
 
-	StructureCollection::StructureCollection(const unsigned int argMaxDetailDepth, const unsigned int argDimension):maxDetailDepth(argMaxDetailDepth),dimension(argDimension){}
+	StructureCollection::StructureCollection():maxDetailDepth(0),dimension(0),lowestPosition(0),highestPosition(0){}
 
-	StructureCollection::StructureCollection(const std::vector<DiscreteStructure> &argChildStructures):StructureCollection(0,0){
+	StructureCollection::StructureCollection(const std::vector<DiscreteStructure> &argChildStructures):StructureCollection(){
+		maxDetailDepth = 31; //TODO: Calculate this based on arguments
 
-		//TODO: Implement this
+		std::for_each(argChildStructures.begin(), argChildStructures.end(), [&](DiscreteStructure childStructure){
+			for(unsigned int d=0; d<childStructure.absolutePosition.dimension();d++){
+				const scalar &component = childStructure.absolutePosition.components[d];
+				if(component < lowestPosition){ lowestPosition = component; }
+				else if(component > highestPosition){ highestPosition = component; }
+			}
+
+			if(childStructure.absolutePosition.dimension() > dimension){ dimension = childStructure.absolutePosition.dimension(); }
+			if(childStructure.absoluteVelocity.dimension() > dimension) {dimension = childStructure.absoluteVelocity.dimension(); }
+		}); //Surely there is a faster way to do this?
+		
+		scalar sideLength = highestPosition-lowestPosition;
+
+		std::vector<std::vector<StructureSummary>> detailMap(maxDetailDepth+1);
+
+		for(int detailDepth = maxDetailDepth; detailDepth > 0; detailDepth++){
+			unsigned int gridWidth = pow(2, detailDepth);
+			detailMap[detailDepth].reserve(pow(gridWidth, dimension));
+			
+			if(detailDepth == maxDetailDepth){
+				std::for_each(argChildStructures.begin(), argChildStructures.end(), [&](DiscreteStructure childStructure){
+					unsigned int gridIdx = 0;
+					for(unsigned int d=0;d<dimension;d++){
+						unsigned int dimensionalGridPos = floor((scalar)gridWidth * ((childStructure.absolutePosition.components[d]-lowestPosition)/(sideLength)));
+						gridIdx += dimensionalGridPos*pow(gridWidth, d);
+					}
+					detailMap[detailDepth][gridIdx].childStructures.push_back(&childStructure);
+				});
+				continue;
+			}
+
+			//TODO: Create StructureSummary from higher-detail structures occupying the same space in detailDepth+1
+		}
 	}
 }

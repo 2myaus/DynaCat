@@ -4,7 +4,7 @@
 #include <vector>
 namespace SummarizedCat{
 	class scalar{ //Single-dimension magnitude
-		const double m;
+		double m;
 		public:
 			scalar operator+(const scalar &o) const;
 			scalar operator-() const;
@@ -19,9 +19,9 @@ namespace SummarizedCat{
 	};
 
 	class SpatialVector{ //Multi-dimension set of magnitudes (magnitude and direction)
-		const std::vector<scalar> components;
-
 		public:
+			std::vector<scalar> components;
+
 			SpatialVector operator+(const SpatialVector &o) const;
 			SpatialVector operator-() const;
 			SpatialVector operator-(const SpatialVector &o) const;
@@ -30,10 +30,12 @@ namespace SummarizedCat{
 
 			SpatialVector(const scalar argX, const scalar argY, const scalar argZ);
 			SpatialVector(const SpatialVector &rhs);
+			SpatialVector(std::vector<scalar>);
 
 			scalar squaredMagnitude() const;
 			scalar dot(const SpatialVector &o) const;
 			SpatialVector cross(const SpatialVector &o) const;
+			unsigned int dimension() const; // Highest dimension component (0,0,1) -> 3
 	};
 }
 
