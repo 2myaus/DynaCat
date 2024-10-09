@@ -22,7 +22,6 @@ namespace SummarizedCat{
 	class DiscreteStructure : virtual public IStructure{
 		private:
 		public:
-			~DiscreteStructure();
 			DiscreteStructure(const SpatialVector argAbsolutePosition, const SpatialVector argAbsoluteVelocity, const scalar argMass);
 	};
 
@@ -45,7 +44,8 @@ namespace SummarizedCat{
 			unsigned int dimension;
 
 			StructureCollection();
-			const StructureSummary &getSummary(const unsigned int detailDepth, const std::vector<unsigned int> &gridPosition);
+			const StructureSummary &getSummary(const unsigned int detailDepth, const SpatialVector &gridPosition);
+
 			static const unsigned int flattenVecInSpace(const SpatialVector argSpatialPosition, const unsigned int gridWidth);
 			static const SpatialVector unflattenVecInSpace(const unsigned int flattenedPosition, const unsigned int gridWidth);
 	};

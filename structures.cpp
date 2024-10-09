@@ -7,6 +7,9 @@
 namespace SummarizedCat{
 
 	IStructure::IStructure(const SpatialVector argAbsolutePosition, const SpatialVector argAbsoluteVelocity, const scalar argMass):absolutePosition(argAbsolutePosition),absoluteVelocity(argAbsoluteVelocity),mass(argMass){}
+	IStructure::IStructure():mass(0){}
+
+	IStructure::~IStructure() = default;
 
 	DiscreteStructure::DiscreteStructure(const SpatialVector argAbsolutePosition, const SpatialVector argAbsoluteVelocity, const scalar argMass):IStructure(argAbsolutePosition, argAbsoluteVelocity, argMass){}
 
@@ -67,9 +70,9 @@ namespace SummarizedCat{
 			
 			//TODO: This can be multithreaded
 			for(unsigned int gridIdx = 0; gridIdx < pow(gridWidth,dimension); gridIdx++){
-				const SpatialVector gridPos = unflattenVecInSpace(gridIdx, gridWidth);
+				const SpatialVector gridPos = StructureCollection::unflattenVecInSpace(gridIdx, gridWidth);
 				const SpatialVector dGridPos = gridPos * 2;
-				const unsigned int dGridIdx = flattenVecInSpace(dGridPos, gridWidth*2);
+				const unsigned int dGridIdx = StructureCollection::flattenVecInSpace(dGridPos, gridWidth*2);
 				std::vector<unsigned int> childIdxs(pow(2, dimension));
 
 				childIdxs.push_back(dGridIdx);
@@ -88,6 +91,11 @@ namespace SummarizedCat{
 			}
 		}
 	}
+
+	const StructureSummary &StructureCollection::getSummary(const unsigned int detailDepth, const SpatialVector &gridPosition){
+		//TODO
+	}
+
 	const unsigned int StructureCollection::flattenVecInSpace(const SpatialVector argSpatialPosition, const unsigned int gridWidth){
 		unsigned int flatPos = 0;
 		for(unsigned int d = 0; d < argSpatialPosition.dimension(); d++){
@@ -97,7 +105,7 @@ namespace SummarizedCat{
 		return flatPos;
 	}
 
-	const SpatialVector unflattenVecInSpace(const unsigned int flattenedPosition, const unsigned int gridWidth){
+	const SpatialVector StructureCollection::unflattenVecInSpace(const unsigned int flattenedPosition, const unsigned int gridWidth){
 		unsigned int currentFlatPos = flattenedPosition;
 		SpatialVector vec;
 

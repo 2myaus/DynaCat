@@ -3,11 +3,11 @@ CXX := g++
 CXXFLAGS := -std=c++20
 
 # Files
-SRC := structures.cpp primitives.cpp
+SRC := structures.cpp primitives.cpp main.cpp
 HEADERS := primitives.hpp structures.hpp
 
 # Output
-OUT := main
+OUT := dynacat
 
 # Profiles
 CXXFLAGS_DEBUG := -g -O0 -DDEBUG
