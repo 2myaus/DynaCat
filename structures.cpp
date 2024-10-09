@@ -35,7 +35,7 @@ namespace SummarizedCat{
 	StructureCollection::StructureCollection():maxDetailDepth(0),dimension(0),lowestPosition(0),highestPosition(0){}
 
 	StructureCollection::StructureCollection(const std::vector<DiscreteStructure> &argChildStructures):StructureCollection(){
-		maxDetailDepth = 31; //TODO: Calculate this based on arguments
+		maxDetailDepth = 15; //TODO: Calculate this based on arguments
 
 		std::for_each(argChildStructures.begin(), argChildStructures.end(), [&](DiscreteStructure childStructure){
 			for(unsigned int d=0; d<childStructure.absolutePosition.dimension();d++){
@@ -52,7 +52,7 @@ namespace SummarizedCat{
 
 		std::vector<std::vector<StructureSummary>> detailMap(maxDetailDepth+1);
 
-		for(int detailDepth = maxDetailDepth; detailDepth > 0; detailDepth++){
+		for(int detailDepth = maxDetailDepth; detailDepth > 0; detailDepth--){
 			unsigned int gridWidth = pow(2, detailDepth);
 			detailMap[detailDepth].reserve(pow(gridWidth, dimension));
 			
@@ -67,8 +67,52 @@ namespace SummarizedCat{
 				});
 				continue;
 			}
+			
+			//TODO: This can be multithreaded
+			for(unsigned int gridIdx = 0; gridIdx < pow(gridWidth,dimension); gridIdx++){
+				const SpatialVector gridPos = unflattenVecInSpace(gridIdx, gridWidth);
+				const SpatialVector dGridPos = gridPos * 2;
+				const unsigned int dGridIdx = flattenVecInSpace(dGridPos, gridWidth*2);
+				std::vector<unsigned int> childIdxs(pow(2, dimension));
 
-			//TODO: Create StructureSummary from higher-detail structures occupying the same space in detailDepth+1
+				childIdxs.push_back(dGridIdx);
+				for(unsigned int d=0; d<dimension;d++){
+					std::for_each(childIdxs.begin(), childIdxs.end(), [&](unsigned int childIdx){
+						childIdxs.push_back(childIdx+pow(gridWidth,d));
+					});
+				}
+
+				std::vector<IStructure> childSummaries(pow(2,dimension));
+				std::transform(childIdxs.begin(), childIdxs.end(), childSummaries.begin(), [&](unsigned int childIdx){
+					return detailMap[detailDepth+1][childIdx];
+				});
+
+				detailMap[detailDepth][gridIdx] = StructureSummary(childSummaries);
+			}
 		}
+	}
+	const unsigned int StructureCollection::flattenVecInSpace(const SpatialVector argSpatialPosition, const unsigned int gridWidth){
+		unsigned int flatPos = 0;
+		for(unsigned int d = 0; d < argSpatialPosition.dimension(); d++){
+			flatPos += (int)(argSpatialPosition.components.at(d)) * pow(gridWidth, d);
+		}
+
+		return flatPos;
+	}
+
+	const SpatialVector unflattenVecInSpace(const unsigned int flattenedPosition, const unsigned int gridWidth){
+		unsigned int currentFlatPos = flattenedPosition;
+		SpatialVector vec(0,0,0);
+
+		unsigned int d = 0;
+		while(flattenedPosition > 0){
+			unsigned int component = currentFlatPos % gridWidth;
+			vec.components.at(d) = component;
+			currentFlatPos -= component;
+			currentFlatPos /= gridWidth;
+			d++;
+		}
+
+		return vec;
 	}
 }

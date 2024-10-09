@@ -3,7 +3,6 @@
 
 #include "primitives.hpp"
 #include <vector>
-#include <optional>
 
 namespace SummarizedCat{
 	class IStructure{
@@ -47,6 +46,8 @@ namespace SummarizedCat{
 
 			StructureCollection();
 			const StructureSummary &getSummary(const unsigned int detailDepth, const std::vector<unsigned int> &gridPosition);
+			static const unsigned int flattenVecInSpace(const SpatialVector argSpatialPosition, const unsigned int gridWidth);
+			static const SpatialVector unflattenVecInSpace(const unsigned int flattenedPosition, const unsigned int gridWidth);
 	};
 }
 
