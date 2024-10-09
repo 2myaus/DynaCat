@@ -1,6 +1,7 @@
 #include "primitives.hpp"
 #include "structures.hpp"
 
+#include <optional>
 #include <stdio.h>
 #include <iostream>
 #include <vector>

@@ -3,6 +3,7 @@
 
 #include "primitives.hpp"
 #include <vector>
+#include <optional>
 
 namespace SummarizedCat{
 	class IStructure{
@@ -28,17 +29,18 @@ namespace SummarizedCat{
 	class StructureSummary : virtual public IStructure{ // absolutePosition represents center of mass, absoluteVelocity represents average velocity, mass represents total mass
 		private:
 		public:
-			std::vector<const IStructure*> childStructures;
+			std::vector<IStructure const*> childStructures;
 
 			StructureSummary();
-			StructureSummary(const std::vector<IStructure> &argChildStructures);
+			StructureSummary(const StructureSummary &o);
+			StructureSummary(const std::vector<const IStructure*> &argChildStructures);
 	};
 
 	class StructureCollection : virtual public IStructure{
 		private:
-			std::vector<std::vector<StructureSummary>> detailMap; // Mipmap-like representation of existing structures on different detail levels (detaillevel-spatialposition)
+			std::vector<std::vector<std::optional<StructureSummary>>> detailMap; // Mipmap-like representation of existing structures on different detail levels (detaillevel-spatialposition)
 		public:
-			StructureCollection(const std::vector<DiscreteStructure> &argChildStructures); //Generate a collection describing the given discrete structures
+			StructureCollection(std::vector<DiscreteStructure> &argChildStructures); //Generate a collection describing the given discrete structures
 			unsigned int maxDetailDepth;
 			scalar lowestPosition; // Lowest position component in any dimension
 			scalar highestPosition;
