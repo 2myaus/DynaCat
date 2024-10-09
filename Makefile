@@ -12,17 +12,22 @@ OUT := dynacat
 # Profiles
 CXXFLAGS_DEBUG := -g -O0 -DDEBUG
 CXXFLAGS_DEFAULT := -O2
+CXXFLAGS_FAST := -O3 -Ofast -funroll-loops -march=native
 
 # Default target
 all: default
 
 # Default profile
-default: CXXFLAGS += $(CXXFLAGS_DEFAULT)
+default: CXXFLAGS = $(CXXFLAGS_DEFAULT)
 default: $(OUT)
 
 # Debug profile
-debug: CXXFLAGS += $(CXXFLAGS_DEBUG)
+debug: CXXFLAGS = $(CXXFLAGS_DEBUG)
 debug: $(OUT)
+
+# Lightspeed!!
+fast: CXXFLAGS = $(CXXFLAGS_FAST)
+fast: $(OUT)
 
 # Build executable
 $(OUT): $(SRC) $(HEADERS)

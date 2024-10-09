@@ -6,7 +6,6 @@
 #include <iostream>
 #include <vector>
 #include <chrono>
-#include <random>
 
 using namespace SummarizedCat;
 
