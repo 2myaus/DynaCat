@@ -57,17 +57,17 @@ namespace SummarizedCat{
 
 		for(int detailDepth = maxDetailDepth; detailDepth > 0; detailDepth--){
 			unsigned int gridWidth = pow(2, detailDepth);
-			size_t reserve = (double)pow(gridWidth, dimension);
+			size_t reserve = (double)pow(gridWidth, dimension+1);
 			detailMap[detailDepth].resize(reserve); //Doing this without casts gives wrong values!
 			
 			if(detailDepth == maxDetailDepth){
 				std::for_each(argChildStructures.begin(), argChildStructures.end(), [&](DiscreteStructure childStructure){
 					unsigned int gridIdx = 0;
 					for(unsigned int d=0;d<dimension;d++){
-						unsigned int dimensionalGridPos = floor((scalar)gridWidth * ((childStructure.absolutePosition.components[d]-lowestPosition)/(sideLength)));
+						unsigned int dimensionalGridPos = floor((scalar)gridWidth * ((childStructure.absolutePosition.components[d]-lowestPosition)/(sideLength))); //TODO: Increase performance here!
 						gridIdx += dimensionalGridPos*pow(gridWidth, d);
 					}
-					detailMap[detailDepth][gridIdx].childStructures.push_back(&childStructure);
+					detailMap.at(detailDepth).at(gridIdx).childStructures.push_back(&childStructure);
 				});
 				continue;
 			}

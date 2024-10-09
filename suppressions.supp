@@ -1,0 +1,7 @@
+{
+  SuppressMyFile
+  Memcheck:Leak
+  obj:/path/to/your/executable
+  fun:your_function_name
+  obj:/path/to/the/file/to/suppress
+}

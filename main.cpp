@@ -13,7 +13,7 @@ int main(){
 
 	std::vector<DiscreteStructure> particles;
 
-	for(int i = 0; i < 100; i++){
+	for(int i = 0; i < 100000; i++){
 		particles.push_back(DiscreteStructure(SpatialVector({((double) rand() / (RAND_MAX)), ((double) rand() / (RAND_MAX))}), SpatialVector({((double) rand() / (RAND_MAX)), ((double) rand() / (RAND_MAX))}), 1));
 	}
 
