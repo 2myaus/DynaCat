@@ -3,7 +3,7 @@ CXX := g++
 CXXFLAGS := -std=c++17
 
 # Files
-SRC := structures.cpp
+SRC := structures.cpp primitives.cpp
 HEADERS := primitives.hpp structures.hpp
 
 # Output
