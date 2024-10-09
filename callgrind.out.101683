@@ -1,0 +1,6926 @@
+# callgrind format
+version: 1
+creator: callgrind-3.22.0
+pid: 101683
+cmd:  ./dynacat
+part: 1
+
+
+desc: I1 cache: 
+desc: D1 cache: 
+desc: LL cache: 
+
+desc: Timerange: Basic block 0 - 44382287
+desc: Trigger: Program termination
+
+positions: line
+events: Ir
+summary: 275945573
+
+
+ob=(1) /nix/store/c10zhkbp6jmyh0xc5kd123ga8yy2p4hk-glibc-2.39-52/lib/libc.so.6
+fl=(1) ???
+fn=(1034) __cxa_finalize
+0 297
+cob=(3) /nix/store/swcl0ynnia5c57i6qfdcrqa72j7877mg-gcc-13.2.0-lib/lib/libstdc++.so.6.0.32
+cfi=(2) ???
+cfn=(1080) std::ios_base::Init::~Init()
+calls=1 0 
+0 1389
+cob=(3)
+cfi=(2)
+cfn=(1078) std::(anonymous namespace)::generic_error_category::~generic_error_category()
+calls=1 0 
+0 8
+cob=(3)
+cfi=(2)
+cfn=(1072) std::(anonymous namespace)::system_error_category::~system_error_category()
+calls=1 0 
+0 8
+cob=(3)
+cfi=(2)
+cfn=(1070) (anonymous namespace)::constant_init::~constant_init()
+calls=1 0 
+0 2
+cob=(3)
+cfi=(2)
+cfn=(1070)
+calls=1 0 
+0 2
+cob=(3)
+cfi=(2)
+cfn=(1068) (anonymous namespace)::constant_init<(anonymous namespace)::generic_error_category>::~constant_init()
+calls=1 0 
+0 2
+cob=(3)
+cfi=(2)
+cfn=(1066) (anonymous namespace)::constant_init<(anonymous namespace)::system_error_category>::~constant_init()
+calls=1 0 
+0 2
+cob=(3)
+cfi=(2)
+cfn=(1064) std::pmr::(anonymous namespace)::constant_init<std::pmr::(anonymous namespace)::newdel_res_t>::~constant_init()
+calls=1 0 
+0 2
+cob=(3)
+cfi=(2)
+cfn=(1062) std::pmr::(anonymous namespace)::constant_init<std::pmr::(anonymous namespace)::null_res_t>::~constant_init()
+calls=1 0 
+0 2
+cob=(3)
+cfi=(2)
+cfn=(1060) std::pmr::(anonymous namespace)::constant_init<std::atomic<std::pmr::memory_resource*> >::~constant_init()
+calls=1 0 
+0 2
+cob=(3)
+cfi=(2)
+cfn=(1058) std::atomic<std::shared_ptr<std::chrono::tzdb_list::_Node> >::~atomic()
+calls=1 0 
+0 5
+cob=(3)
+cfi=(2)
+cfn=(1056) std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+calls=2 0 
+0 12
+0 198
+cfn=(1036) __unregister_atfork
+calls=4 0 
+0 64
+0 308
+
+fn=(0) read
+0 3
+
+fn=(2) _IO_file_underflow@@GLIBC_2.2.5
+cfn=(0)
+calls=1 0 
+0 3
+0 14
+
+fn=(210) sbrk
+0 24
+cfn=(212) brk
+calls=1 0 
+0 11
+0 2
+
+fn=(228) alloc_perturb
+0 11532
+
+fn=(938) __printf_buffer_write
+0 69
+cob=(2) ???
+cfi=(4) ???
+cfn=(940) 0x0000000004bd06f0
+calls=3 0 
+0 49
+0 42
+
+fn=(1174) __libc_cleanup_pop_restore
+0 18
+
+fn=(28) __overflow
+0 16
+cfn=(30) _IO_file_overflow@@GLIBC_2.2.5
+calls=1 0 
+0 148
+
+fn=(34) new_do_write
+0 40
+cfn=(36) _IO_file_write@@GLIBC_2.2.5
+calls=2 0 
+0 92
+0 58
+
+fn=(38) write
+0 16
+
+fn=(138) malloc
+0 426128
+cfn=(204) _int_malloc
+calls=5366 0 
+0 1551788
+0 37562
+
+fn=(370) free
+0 4217692
+cfn=(220) _int_free
+calls=210884 0 
+0 16398027
+0 1054433
+cfn=(978) munmap_chunk
+calls=1 0 
+0 35
+0 5
+
+fn=(208) __glibc_morecore
+0 5
+cfn=(210)
+calls=1 0 
+0 37
+0 5
+
+fn=(214) sysmalloc_mmap_fallback.constprop.0
+0 25
+cfn=(216) mmap
+calls=1 0 
+0 23
+0 9
+cfn=(218) __set_vma_name
+calls=1 0 
+0 18
+0 13
+
+fn=(226) _int_free_maybe_consolidate.part.0
+0 672
+
+fn=(924) printf
+0 25
+cfn=(926) __vfprintf_internal
+calls=1 0 
+0 890
+0 5
+
+fn=(936) __strchrnul_avx2
+0 38
+
+fn=(948) __printf_buffer_done
+0 19
+
+fn=(978)
+0 29
+cfn=(980) munmap
+calls=1 0 
+0 6
+
+fn=(980)
+0 6
+
+fn=(988) exit
+0 6
+cfn=(990) __run_exit_handlers
+calls=1 0 
+0 4485
+
+fn=(36)
+0 28
+cfn=(38)
+calls=2 0 
+0 16
+0 48
+
+fn=(204)
+0 507749
+cfn=(376) malloc_consolidate
+calls=1 0 
+0 119673
+0 661963
+cfn=(352) unlink_chunk.isra.0
+calls=2465 0 
+0 70765
+0 81603
+cfn=(352)
+calls=212 0 
+0 6766
+0 926
+cfn=(228)
+calls=10 0 
+0 40
+0 1010
+cfn=(228)
+calls=202 0 
+0 808
+0 10684
+cfn=(228)
+calls=2671 0 
+0 10684
+0 77858
+cfn=(206) sysmalloc
+calls=1 0 
+0 448
+0 811
+
+fn=(1036)
+0 64
+
+fn=(352)
+0 172699
+
+fn=(926)
+0 41
+cfn=(928) __printf_buffer_to_file_init
+calls=1 0 
+0 24
+0 5
+cfn=(932) __printf_buffer
+calls=1 0 
+0 583
+0 2
+cfn=(944) __printf_buffer_to_file_done
+calls=1 0 
+0 234
+0 1
+
+fn=(1008) __pthread_mutex_unlock_usercnt
+0 35
+
+fn=(1096) _IO_file_sync@@GLIBC_2.2.5
+0 221
+cfn=(32) _IO_do_write@@GLIBC_2.2.5
+calls=1 0 
+0 107
+0 2
+
+fn=(26) __memcpy_avx_unaligned_erms
+0 290731
+
+fn=(942) _itoa_word
+0 151
+
+fn=(46) clock_gettime@@GLIBC_2.17
+0 22
+
+fn=(218)
+0 18
+
+fn=(928)
+0 11
+cfn=(930) __printf_buffer_to_file_switch
+calls=1 0 
+0 13
+
+fn=(944)
+0 7
+cfn=(946) __printf_buffer_flush_to_file
+calls=1 0 
+0 205
+0 3
+cfn=(948)
+calls=1 0 
+0 19
+
+fn=(1094) fflush
+0 170
+cfn=(1096)
+calls=10 0 
+0 294
+0 270
+
+fn=(1176) _IO_file_setbuf@@GLIBC_2.2.5
+0 8
+cfn=(1178) _IO_default_setbuf
+calls=2 0 
+0 130
+0 20
+
+fn=(206)
+0 98
+cfn=(214)
+calls=1 0 
+0 88
+0 23
+cfn=(208)
+calls=1 0 
+0 47
+0 32
+cfn=(220)
+calls=1 0 
+0 156
+0 4
+
+fn=(30)
+0 39
+cfn=(32)
+calls=1 0 
+0 107
+0 2
+
+fn=(216)
+0 23
+
+fn=(930)
+0 26
+
+fn=(220)
+0 15979404
+cfn=(222) _int_free_merge_chunk
+calls=3713 0 
+0 369000
+0 49779
+
+fn=(224) _int_free_create_chunk
+0 131922
+cfn=(352)
+calls=1366 0 
+0 28777
+0 4108
+
+fn=(14) puts
+0 9
+cob=(2)
+cfi=(4)
+cfn=(16) 0x0000000004bd0520
+calls=1 0 
+0 16
+0 18
+cfn=(20) _IO_file_xsputn@@GLIBC_2.2.5
+calls=1 0 
+0 110
+0 41
+cfn=(28)
+calls=1 0 
+0 164
+0 2
+
+fn=(18) __strlen_avx2
+0 14
+
+fn=(4) _IO_default_uflow
+cfn=(2)
+calls=1 0 
+0 17
+0 10
+
+fn=(212)
+0 11
+
+fn=(376)
+0 75167
+cfn=(352)
+calls=830 0 
+0 16801
+0 9752
+cfn=(352)
+calls=808 0 
+0 16337
+0 1616
+
+fn=(932)
+0 25
+cob=(2)
+cfi=(4)
+cfn=(934) 0x0000000004bd05b0
+calls=1 0 
+0 21
+0 8
+cfn=(938)
+calls=1 0 
+0 54
+0 63
+cob=(2)
+cfi=(4)
+cfn=(934)
+calls=1 0 
+0 21
+0 7
+cfn=(938)
+calls=1 0 
+0 54
+0 35
+cfn=(942)
+calls=1 0 
+0 151
+0 81
+cfn=(938)
+calls=1 0 
+0 52
+0 11
+
+fn=(986) (below main)
+cob=(4) /home/myaumyau/Projects/SummarizedCat/dynacat
+cfi=(3) /home/myaumyau/Projects/SummarizedCat/main.cpp
+cfn=(10) main
+calls=1 32 
+0 275941080
+0 2
+cfn=(988)
+calls=1 0 
+0 4491
+
+fn=(990)
+0 246
+cfn=(1180) _Exit
+calls=1 0 
+0 4
+0 13
+cob=(5) /nix/store/c10zhkbp6jmyh0xc5kd123ga8yy2p4hk-glibc-2.39-52/lib/ld-linux-x86-64.so.2
+cfi=(28) ???
+cfn=(994) _dl_fini
+calls=1 0 
+0 3638
+0 9
+cfn=(992) __call_tls_dtors
+calls=1 0 
+0 12
+0 2
+cfn=(1168) _IO_cleanup
+calls=1 0 
+0 560
+0 1
+
+fn=(1006) pthread_mutex_unlock@@GLIBC_2.2.5
+0 3
+cfn=(1008)
+calls=1 0 
+0 35
+
+fn=(1170) _IO_flush_all
+0 17
+cfn=(1172) __libc_cleanup_push_defer
+calls=1 0 
+0 13
+0 114
+cfn=(1174)
+calls=1 0 
+0 9
+0 29
+
+fn=(1172)
+0 26
+
+fn=(32)
+0 12
+cfn=(34)
+calls=2 0 
+0 190
+0 12
+
+fn=(20)
+0 52
+cob=(2)
+cfi=(4)
+cfn=(22) 0x0000000004bd0450
+calls=2 0 
+0 32
+0 184
+
+fn=(992)
+0 12
+
+fn=(1178)
+0 34
+cfn=(1096)
+calls=2 0 
+0 36
+0 60
+
+fn=(1180)
+0 4
+
+fn=(24) __mempcpy_avx_unaligned_erms
+0 28
+
+fn=(996) pthread_mutex_lock@@GLIBC_2.2.5
+0 40
+
+fn=(946)
+0 20
+cfn=(930)
+calls=1 0 
+0 13
+0 12
+cfn=(20)
+calls=1 0 
+0 158
+0 2
+
+fn=(1168)
+0 13
+cfn=(1170)
+calls=1 0 
+0 182
+0 6
+cfn=(1172)
+calls=1 0 
+0 13
+0 85
+cfn=(1176)
+calls=2 0 
+0 158
+0 35
+cfn=(1174)
+calls=1 0 
+0 9
+0 59
+
+fn=(222)
+0 118265
+cfn=(352)
+calls=1589 0 
+0 33253
+0 22278
+cfn=(224)
+calls=3713 0 
+0 164807
+0 29725
+cfn=(226)
+calls=21 0 
+0 672
+
+ob=(5)
+fl=(28)
+fn=(1004) memcpy
+0 19
+
+fn=(1024) _dl_audit_objclose
+0 35
+
+fn=(1010) _dl_call_fini
+0 127
+cob=(7) /nix/store/yfd49ay99aa1a0jg80jsvnxbyl61fsh6-gcc-13.2.0-libgcc/lib/libgcc_s.so.1
+cfi=(31) ???
+cfn=(1148) release_registered_frames
+calls=1 0 
+0 12
+cob=(6) /nix/store/c10zhkbp6jmyh0xc5kd123ga8yy2p4hk-glibc-2.39-52/lib/libm.so.6
+cfi=(20) ???
+cfn=(1130) 0x00000000000104a0
+calls=1 0 
+0 159
+cob=(3)
+cfi=(2)
+cfn=(1048) 0x00000000000b9220
+calls=1 0 
+0 1906
+cob=(8) /nix/store/dfngcnvmdj2r6r7j78qn7yjaa59mc7il-valgrind-3.22.0/libexec/valgrind/vgpreload_core-amd64-linux.so
+cfi=(30) ???
+cfn=(1026) 0x00000000000010c0
+calls=1 0 
+0 158
+cob=(4)
+cfi=(29) ???
+cfn=(1012) 0x0000000000401220
+calls=1 0 
+0 13
+0 1
+cob=(7)
+cfi=(31)
+cfn=(1150) 0x0000000000005720
+calls=1 0 
+0 159
+0 75
+cob=(2)
+cfi=(4)
+cfn=(1166) 0x0000000004ba1eb8
+calls=1 0 
+0 4
+cob=(2)
+cfi=(4)
+cfn=(1146) 0x0000000004b26aa8
+calls=1 0 
+0 4
+cob=(2)
+cfi=(4)
+cfn=(1128) 0x0000000004a00844
+calls=1 0 
+0 4
+cob=(2)
+cfi=(4)
+cfn=(1046) 0x000000000483a280
+calls=1 0 
+0 4
+cob=(2)
+cfi=(4)
+cfn=(1022) 0x000000000040e92c
+calls=1 0 
+0 4
+0 8
+
+fn=(994)
+0 27
+cob=(1)
+cfi=(1)
+cfn=(996)
+calls=1 0 
+0 40
+0 14
+cfn=(998) _dl_audit_activity_nsid
+calls=1 0 
+0 9
+0 110
+cfn=(1000) _dl_sort_maps
+calls=1 0 
+0 576
+0 2
+cob=(1)
+cfi=(1)
+cfn=(1006)
+calls=1 0 
+0 38
+0 83
+cfn=(1010)
+calls=7 0 
+0 2638
+0 14
+cfn=(1024)
+calls=7 0 
+0 35
+0 24
+cfn=(998)
+calls=1 0 
+0 9
+0 19
+
+fn=(1108) __tls_get_addr
+0 24
+
+fn=(1000)
+0 168
+cfn=(1002) dfs_traversal.part.0
+calls=7 0 
+0 353
+0 35
+cfn=(1004)
+calls=1 0 
+0 19
+0 1
+
+fn=(1002)
+0 353
+
+fn=(998)
+0 18
+
+ob=(8)
+fl=(30)
+fn=(1026)
+0 9
+cob=(2)
+cfi=(4)
+cfn=(1032) 0x000000000483a030
+calls=1 0 
+0 140
+0 1
+cfn=(1040) 0x0000000000001050
+calls=1 0 
+0 5
+0 3
+
+fn=(1040)
+0 5
+
+ob=(4)
+fl=(27) /nix/store/6g5fhxv0bdm7236ixdwq1izzawbc7grm-gcc-13.2.0/include/c++/13.2.0/bits/chrono.h
+fn=(916) std::chrono::duration<long, std::ratio<1l, 1000000000l> >::count() const
+600 9
++1 12
+
+fn=(914) std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<long, std::ratio<1l, 1000000000l>, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&, std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)
+721 9
++6 6
+cfn=(916)
+calls=1 600 
+* 7
+* 7
+cfn=(916)
+calls=1 600 
+* 7
+* 8
+cfn=(918) std::chrono::duration<long, std::ratio<1l, 1000000000l> >::duration<long, void>(long const&)
+calls=1 584 
+* 11
+* 1
++1 6
+
+fn=(912) std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::time_since_epoch() const
+960 6
++1 8
+
+fn=(920) std::enable_if<std::chrono::__is_duration<std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::value, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::duration_cast<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)
+273 3
++4 2
++12 2
+
+fn=(910) std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&)
+1152 8
++2 3
+cfn=(912)
+calls=1 960 
+* 7
+* 4
+cfn=(912)
+calls=1 960 
+* 7
+* 6
+cfn=(914)
+calls=1 721 
+* 62
+* 5
+
+fn=(918)
+584 4
++1 7
+
+fl=(12) /nix/store/6g5fhxv0bdm7236ixdwq1izzawbc7grm-gcc-13.2.0/include/c++/13.2.0/x86_64-unknown-linux-gnu/bits/c++config.h
+fn=(126) std::__is_constant_evaluated()
+541 1202190
++6 601095
++4 1202190
+
+fl=(8) /nix/store/6g5fhxv0bdm7236ixdwq1izzawbc7grm-gcc-13.2.0/include/c++/13.2.0/bits/stl_iterator.h
+fn=(86) __gnu_cxx::__normal_iterator<SummarizedCat::DiscreteStructure const*, std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > >::operator*() const
+1099 600000
++1 800000
+
+fn=(348) __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const**, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >::operator-(long) const
+1157 800000
++1 1200000
+cfn=(304) __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const**, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >::__normal_iterator(SummarizedCat::IStructure const** const&)
+calls=100000 -82 
+* 1100000
+* 600000
+
+fn=(398) __gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >::__normal_iterator(SummarizedCat::scalar const* const&)
+1076 220320
++1 385560
+
+fn=(350) __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const**, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >::operator*() const
+1099 300000
++1 400000
+
+fn=(622) std::back_insert_iterator<std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >::operator=(SummarizedCat::IStructure&&)
+745 8160
++2 6800
+cfi=(17) /nix/store/6g5fhxv0bdm7236ixdwq1izzawbc7grm-gcc-13.2.0/include/c++/13.2.0/bits/move.h
+cfn=(624) std::remove_reference<SummarizedCat::IStructure&>::type&& std::move<SummarizedCat::IStructure&>(SummarizedCat::IStructure&)
+calls=1360 97 
+* 8160
+* 4080
+cfi=(7) /nix/store/6g5fhxv0bdm7236ixdwq1izzawbc7grm-gcc-13.2.0/include/c++/13.2.0/bits/stl_vector.h
+cfn=(626) std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >::push_back(SummarizedCat::IStructure&&)
+calls=1360 1295 
+* 1417120
++1 1360
++1 4080
+
+fn=(644) __gnu_cxx::__normal_iterator<SummarizedCat::IStructure*, std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >::operator*() const
+1099 4080
++1 5440
+
+fn=(406) __gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >::base() const
+1162 160956
++1 160956
+
+fn=(708) SummarizedCat::scalar const* std::__niter_base<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >(__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >)
+1357 32640
++2 24480
+cfn=(406)
+calls=8160 1162 
+* 48960
+* 24480
+
+fn=(850) __gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >::operator*() const
+1099 1938
++1 2584
+
+fn=(854) __gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >::operator++()
+1109 1938
++2 3230
++1 646
++1 1292
+
+fn=(394) __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >::__normal_iterator(SummarizedCat::scalar* const&)
+1076 85136
++1 148988
+
+fn=(536) SummarizedCat::IStructure const* std::__make_move_if_noexcept_iterator<SummarizedCat::IStructure, SummarizedCat::IStructure const*>(SummarizedCat::IStructure*)
+1832 2040
++1 2040
+
+fn=(640) __gnu_cxx::__normal_iterator<SummarizedCat::IStructure*, std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >::__normal_iterator(SummarizedCat::IStructure* const&)
+1076 10880
++1 19040
+
+fn=(662) std::back_insert_iterator<std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >::operator++()
+761 4080
++1 4080
+
+fn=(674) bool __gnu_cxx::operator==<SummarizedCat::IStructure const*, std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >(__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const*, std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > > const&, __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const*, std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > > const&)
+1197 30600
++6 15300
+cfn=(676) __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const*, std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >::base() const
+calls=5100 -41 
+* 30600
+* 20400
+cfn=(676)
+calls=5100 -41 
+* 30600
+* 30600
+
+fn=(704) SummarizedCat::scalar* std::__niter_base<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >(__gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >)
+1357 32640
++2 24480
+cfn=(706) __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >::base() const
+calls=8160 1162 
+* 48960
+* 24480
+
+fn=(498) bool __gnu_cxx::operator==<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int> > >(__gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int> > > const&, __gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int> > > const&)
+1197 20400
++6 10200
+cfn=(500) __gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int> > >::base() const
+calls=3400 -41 
+* 20400
+* 13600
+cfn=(500)
+calls=3400 -41 
+* 20400
+* 20400
+
+fn=(520) __gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int> > >::operator-(long) const
+1157 8160
++1 12240
+cfn=(492) __gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int> > >::__normal_iterator(unsigned int* const&)
+calls=1020 -82 
+* 11220
+* 6120
+
+fn=(502) __gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int> > >::operator*() const
+1099 10200
++1 13600
+
+fn=(676)
+1162 30600
++1 30600
+
+fn=(818) __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >::difference_type __gnu_cxx::operator-<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >(__gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > > const&, __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > > const&)
+1334 3876
++3 1938
+cfn=(706)
+calls=646 1162 
+* 3876
+* 2584
+cfn=(706)
+calls=646 1162 
+* 3876
+* 5168
+
+fn=(610) __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >::base() const
+1162 8160
++1 8160
+
+fn=(620) std::back_insert_iterator<std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >::operator*()
+755 4080
++1 4080
+
+fn=(642) __gnu_cxx::__normal_iterator<SummarizedCat::IStructure*, std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >::operator-(long) const
+1157 10880
++1 16320
+cfn=(640)
+calls=1360 -82 
+* 14960
+* 8160
+
+fn=(84) __gnu_cxx::__normal_iterator<SummarizedCat::DiscreteStructure const*, std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > >::base() const
+1162 1200012
++1 1200012
+
+fn=(98) __gnu_cxx::__normal_iterator<SummarizedCat::DiscreteStructure const*, std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > >::operator++()
+1109 600000
++2 1000000
++1 200000
++1 400000
+
+fn=(706)
+1162 32232
++1 32232
+
+fn=(718) __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >::operator+(long) const
+1147 32640
++1 44880
+cfn=(394)
+calls=4080 -72 
+* 44880
+* 24480
+
+fn=(856) __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >::operator++()
+1109 1938
++2 3230
++1 646
++1 1292
+
+fn=(254) SummarizedCat::StructureSummary const* std::__make_move_if_noexcept_iterator<SummarizedCat::StructureSummary, SummarizedCat::StructureSummary const*>(SummarizedCat::StructureSummary*)
+1832 30
++1 30
+
+fn=(564) std::back_insert_iterator<std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > > std::back_inserter<std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >(std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >&)
+785 2380
++1 1700
+cfn=(566) std::back_insert_iterator<std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >::back_insert_iterator(std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >&)
+calls=340 -73 
+* 6460
+* 2040
+
+fn=(566)
+713 1700
++1 1020
+cfi=(17)
+cfn=(568) std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >* std::__addressof<std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >(std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >&)
+calls=340 51 
+* 2040
+* 1700
+
+fn=(592) __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >::__normal_iterator(SummarizedCat::IStructure const* const* const&)
+1076 10880
++1 19040
+
+fn=(76) __gnu_cxx::__normal_iterator<SummarizedCat::DiscreteStructure const*, std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > >::__normal_iterator(SummarizedCat::DiscreteStructure const* const&)
+1076 16
++1 28
+
+fn=(320) __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const**, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >::difference_type __gnu_cxx::operator-<SummarizedCat::IStructure const**, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >(__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const**, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > > const&, __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const**, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > > const&)
+1334 49152
++3 24576
+cfn=(322) __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const**, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >::base() const
+calls=8192 1162 
+* 49152
+* 32768
+cfn=(322)
+calls=8192 1162 
+* 49152
+* 65536
+
+fn=(830) SummarizedCat::scalar const* std::__make_move_if_noexcept_iterator<SummarizedCat::scalar, SummarizedCat::scalar const*>(SummarizedCat::scalar*)
+1832 9768
++1 9768
+
+fn=(82) bool __gnu_cxx::operator==<SummarizedCat::DiscreteStructure const*, std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > >(__gnu_cxx::__normal_iterator<SummarizedCat::DiscreteStructure const*, std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > > const&, __gnu_cxx::__normal_iterator<SummarizedCat::DiscreteStructure const*, std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > > const&)
+1197 1200012
++6 600006
+cfn=(84)
+calls=200002 -41 
+* 1200012
+* 800008
+cfn=(84)
+calls=200002 -41 
+* 1200012
+* 1200012
+
+fn=(522) __gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int> > >::operator++()
+1109 7140
++2 11900
++1 2380
++1 4760
+
+fn=(842) __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >::operator-(long) const
+1157 5168
++1 7752
+cfn=(394)
+calls=646 -82 
+* 7106
+* 3876
+
+fn=(322)
+1162 98304
++1 98304
+
+fn=(404) bool __gnu_cxx::operator==<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >(__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > > const&, __gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > > const&)
+1197 136476
++6 68238
+cfn=(406)
+calls=22746 -41 
+* 136476
+* 90984
+cfn=(406)
+calls=22746 -41 
+* 136476
+* 136476
+
+fn=(500)
+1162 20400
++1 20400
+
+fn=(668) __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const*, std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >::__normal_iterator(SummarizedCat::IStructure const* const&)
+1076 8160
++1 14280
+
+fn=(678) __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const*, std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >::operator*() const
+1099 12240
++1 16320
+
+fn=(304)
+1076 865536
++1 1514688
+
+fn=(492)
+1076 16320
++1 28560
+
+fn=(726) __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const*, std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >::operator++()
+1109 12240
++2 20400
++1 4080
++1 8160
+
+fn=(844) __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >::operator*() const
+1099 3876
++1 5168
+
+fn=(608) SummarizedCat::IStructure const* const* std::__niter_base<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >(__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >)
+1357 10880
++2 8160
+cfn=(610)
+calls=2720 1162 
+* 16320
+* 8160
+
+fl=(16) /nix/store/6g5fhxv0bdm7236ixdwq1izzawbc7grm-gcc-13.2.0/include/c++/13.2.0/type_traits
+fn=(146) std::is_constant_evaluated()
+3645 63174
++4 31587
++2 63174
+
+fl=(29)
+fn=(1012)
+0 6
+cfn=(1016) 0x00000000004011b0
+calls=1 0 
+0 4
+0 3
+
+fn=(1016)
+0 4
+
+fl=(6) /home/myaumyau/Projects/SummarizedCat/primitives.cpp
+fn=(578) SummarizedCat::scalar::scalar(SummarizedCat::scalar const&)
+27 40436
+cfn=(64) SummarizedCat::scalar::scalar(double)
+calls=3676 -1 
+* 36760
+* 11028
+
+fn=(102) SummarizedCat::scalar::operator-() const
+10 1000005
++1 1800009
+cfn=(64)
+calls=200001 +15 
+* 2000010
++1 600003
+
+fn=(278) SummarizedCat::scalar::operator*(SummarizedCat::scalar const&) const
+18 1203876
++1 2006460
+cfn=(64)
+calls=200646 +7 
+* 2006460
++1 601938
+
+fn=(852) SummarizedCat::SpatialVector::operator*(SummarizedCat::scalar const&) const::{lambda(SummarizedCat::scalar const&)#1}::operator()(SummarizedCat::scalar const&) const
+81 10336
+cfn=(278)
+calls=646 -63 
+* 18734
+* 3876
+
+fn=(446) SummarizedCat::SpatialVector::SpatialVector(SummarizedCat::SpatialVector const&)
+94 64600
+cfn=(408) SummarizedCat::SpatialVector::SpatialVector(std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > const&)
+calls=6460 +1 
+* 2390200
+* 19380
+
+fn=(738) SummarizedCat::SpatialVector::operator/(SummarizedCat::scalar const&) const
+86 8160
++1 2040
++1 2040
+cfn=(90) SummarizedCat::SpatialVector::dimension() const
+calls=680 +10 
+* 14280
+* 3400
+cfi=(10) /nix/store/6g5fhxv0bdm7236ixdwq1izzawbc7grm-gcc-13.2.0/include/c++/13.2.0/bits/vector.tcc
+cfn=(382) std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::reserve(unsigned long)
+calls=680 -21 
+* 61200
++1 2720
+cfi=(7)
+cfn=(392) std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::begin()
+calls=680 870 
+* 19720
+* 2720
+cfi=(7)
+cfn=(396) std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::end() const
+calls=680 900 
+* 20400
+* 2720
+cfi=(7)
+cfn=(400) std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::begin() const
+calls=680 880 
+* 19720
+* 3400
+cfi=(9) /nix/store/6g5fhxv0bdm7236ixdwq1izzawbc7grm-gcc-13.2.0/include/c++/13.2.0/bits/stl_algo.h
+cfn=(740) __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > > std::transform<__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, SummarizedCat::SpatialVector::operator/(SummarizedCat::scalar const&) const::{lambda(SummarizedCat::scalar const&)#1}>(__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, SummarizedCat::SpatialVector::operator/(SummarizedCat::scalar const&) const::{lambda(SummarizedCat::scalar const&)#1})
+calls=680 4298 
+* 39440
++2 3400
+cfn=(408)
+calls=680 +4 
+* 251600
+* 680
++1 2040
+cfi=(7)
+cfn=(432) std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::~vector()
+calls=680 730 
+* 70040
+-1 680
++1 6800
+
+fn=(100) SummarizedCat::scalar::operator-(SummarizedCat::scalar const&) const
+14 1800009
++1 1000005
+cfn=(102)
+calls=200001 -5 
+* 5400027
+* 1200006
+cfn=(104) SummarizedCat::scalar::operator+(SummarizedCat::scalar const&) const
+calls=200001 -9 
+* 5800029
++1 1200006
+
+fn=(380) SummarizedCat::SpatialVector::operator*(SummarizedCat::scalar const&) const
+78 36720
++1 9180
++1 9180
+cfn=(90)
+calls=3060 +18 
+* 64260
+* 15300
+cfi=(10)
+cfn=(382)
+calls=3060 -13 
+* 396618
++1 12240
+cfi=(7)
+cfn=(392)
+calls=3060 870 
+* 88740
+* 12240
+cfi=(7)
+cfn=(396)
+calls=3060 900 
+* 91800
+* 12240
+cfi=(7)
+cfn=(400)
+calls=3060 880 
+* 88740
+* 15300
+cfi=(9)
+cfn=(402) __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > > std::transform<__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, SummarizedCat::SpatialVector::operator*(SummarizedCat::scalar const&) const::{lambda(SummarizedCat::scalar const&)#1}>(__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, SummarizedCat::SpatialVector::operator*(SummarizedCat::scalar const&) const::{lambda(SummarizedCat::scalar const&)#1})
+calls=3060 4298 
+* 272442
++2 15300
+cfn=(408)
+calls=3060 +12 
+* 1132200
+* 3060
++1 9180
+cfi=(7)
+cfn=(432)
+calls=3060 730 
+* 358860
+-1 3060
++1 30600
+
+fn=(408)
+95 129200
+cfi=(7)
+cfn=(410) std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::vector(std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > const&)
+calls=12920 598 
+* 4612440
+* 38760
+
+fn=(54) SummarizedCat::SpatialVector::SpatialVector()
+96 536186
+cfi=(7)
+cfn=(56) std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::vector()
+calls=76598 528 
+* 3676704
+* 229794
+
+fn=(276) SummarizedCat::scalar::operator/(SummarizedCat::scalar const&) const
+22 1200000
++1 2000000
+cfn=(64)
+calls=200000 +3 
+* 2000000
++1 600000
+
+fn=(684) SummarizedCat::SpatialVector::operator+(SummarizedCat::SpatialVector const&) const
+33 32640
++1 5440
++1 5440
++1 8160
+cfn=(90)
+calls=2720 +62 
+* 57120
+* 10880
+cfn=(90)
+calls=2720 +62 
+* 57120
+* 10880
++6 13600
+cfi=(7)
+cfn=(410)
+calls=2720 598 
+* 971040
++1 8160
+cfi=(7)
+cfn=(392)
+calls=2720 870 
+* 78880
+* 10880
+cfi=(7)
+cfn=(400)
+calls=2720 880 
+* 78880
+* 10880
+cfi=(7)
+cfn=(396)
+calls=2720 900 
+* 81600
+* 10880
+cfi=(7)
+cfn=(400)
+calls=2720 880 
+* 78880
+* 13600
+cfi=(9)
+cfn=(686) __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > > std::transform<__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, SummarizedCat::SpatialVector::operator+(SummarizedCat::SpatialVector const&) const::{lambda(SummarizedCat::scalar const&, SummarizedCat::scalar const&)#1}>(__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, SummarizedCat::SpatialVector::operator+(SummarizedCat::SpatialVector const&) const::{lambda(SummarizedCat::scalar const&, SummarizedCat::scalar const&)#1})
+calls=2720 4336 
+* 157760
++4 13600
+cfn=(408)
+calls=2720 +48 
+* 1006400
+* 2720
++1 8160
+cfi=(7)
+cfn=(432)
+calls=2720 730 
+* 280160
+-1 2720
++1 27200
+
+fn=(64)
+26 10461610
+
+fn=(96) SummarizedCat::scalar::operator double() const
+29 3004080
++1 3004080
++1 3004080
+
+fn=(90)
+98 2038084
++1 1528563
+cfi=(7)
+cfn=(92) std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::size() const
+calls=509521 989 
+* 6114252
++1 1019042
+
+fn=(104)
+6 1208166
++1 2013610
+cfn=(64)
+calls=201361 +19 
+* 2013610
++1 604083
+
+fl=(15) /nix/store/6g5fhxv0bdm7236ixdwq1izzawbc7grm-gcc-13.2.0/include/c++/13.2.0/bits/stl_uninitialized.h
+fn=(234) SummarizedCat::StructureSummary* std::__uninitialized_default_n<SummarizedCat::StructureSummary*, unsigned long>(SummarizedCat::StructureSummary*, unsigned long)
+696 25
++3 5
+cfi=(16)
+cfn=(146)
+calls=5 3645 
+* 25
+* 10
++8 5
++5 25
+cfn=(236) SummarizedCat::StructureSummary* std::__uninitialized_default_n_1<false>::__uninit_default_n<SummarizedCat::StructureSummary*, unsigned long>(SummarizedCat::StructureSummary*, unsigned long)
+calls=5 -75 
+* 10448072
+* 5
++1 10
+
+fn=(252) SummarizedCat::StructureSummary* std::__uninitialized_move_if_noexcept_a<SummarizedCat::StructureSummary*, SummarizedCat::StructureSummary*, std::allocator<SummarizedCat::StructureSummary> >(SummarizedCat::StructureSummary*, SummarizedCat::StructureSummary*, SummarizedCat::StructureSummary*, std::allocator<SummarizedCat::StructureSummary>&)
+393 40
++6 15
+cfi=(8)
+cfn=(254)
+calls=5 1832 
+* 30
+* 20
+cfi=(8)
+cfn=(254)
+calls=5 1832 
+* 30
+* 35
+cfn=(256) SummarizedCat::StructureSummary* std::__uninitialized_copy_a<SummarizedCat::StructureSummary const*, SummarizedCat::StructureSummary*, SummarizedCat::StructureSummary>(SummarizedCat::StructureSummary const*, SummarizedCat::StructureSummary const*, SummarizedCat::StructureSummary*, std::allocator<SummarizedCat::StructureSummary>&)
+calls=5 -33 
+* 360
++2 15
+
+fn=(430) SummarizedCat::scalar* std::__do_uninit_copy<__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, SummarizedCat::scalar*>(__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, SummarizedCat::scalar*)
+113 109480
++3 31280
++3 93840
+cfi=(8)
+cfn=(404)
+calls=15640 1197 
+* 484840
+* 46920
++2 31280
++7 46920
+
+fn=(262) SummarizedCat::StructureSummary* std::__do_uninit_copy<SummarizedCat::StructureSummary const*, SummarizedCat::StructureSummary*>(SummarizedCat::StructureSummary const*, SummarizedCat::StructureSummary const*, SummarizedCat::StructureSummary*)
+113 35
++3 10
++3 20
++2 10
++7 15
+
+fn=(474) unsigned int* std::__relocate_a<unsigned int*, unsigned int*, std::allocator<unsigned int> >(unsigned int*, unsigned int*, unsigned int*, std::allocator<unsigned int>&)
+1142 3060
++6 1020
+cfi=(11) /nix/store/6g5fhxv0bdm7236ixdwq1izzawbc7grm-gcc-13.2.0/include/c++/13.2.0/bits/stl_algobase.h
+cfn=(476) unsigned int* std::__niter_base<unsigned int*>(unsigned int*)
+calls=340 316 
+* 2040
+* 1360
+cfi=(11)
+cfn=(476)
+calls=340 316 
+* 2040
+* 1360
+cfi=(11)
+cfn=(476)
+calls=340 316 
+* 2040
+* 2040
+cfn=(478) std::enable_if<std::__is_bitwise_relocatable<unsigned int, void>::value, unsigned int*>::type std::__relocate_a_1<unsigned int, unsigned int>(unsigned int*, unsigned int*, unsigned int*, std::allocator<unsigned int>&)
+calls=340 -33 
+* 8500
++3 1700
+
+fn=(236)
+637 30
++2 10
++3 5
++1 112344
+cfi=(17)
+cfn=(238) SummarizedCat::StructureSummary* std::__addressof<SummarizedCat::StructureSummary>(SummarizedCat::StructureSummary&)
+calls=37448 51 
+* 224688
+* 74896
+cfi=(18) /nix/store/6g5fhxv0bdm7236ixdwq1izzawbc7grm-gcc-13.2.0/include/c++/13.2.0/bits/stl_construct.h
+cfn=(240) void std::_Construct<SummarizedCat::StructureSummary>(SummarizedCat::StructureSummary*)
+calls=37448 109 
+* 9886272
+-1 149802
++2 10
++7 15
+
+fn=(342) std::enable_if<std::__is_bitwise_relocatable<SummarizedCat::IStructure const*, void>::value, SummarizedCat::IStructure const**>::type std::__relocate_a_1<SummarizedCat::IStructure const*, SummarizedCat::IStructure const*>(SummarizedCat::IStructure const**, SummarizedCat::IStructure const**, SummarizedCat::IStructure const**, std::allocator<SummarizedCat::IStructure const*>&)
+1115 163840
++4 65536
++1 32768
++3 7168
+cfi=(16)
+cfn=(146)
+calls=7168 3645 
+* 35840
+* 14336
++9 50176
+cob=(1)
+cfi=(1)
+cfn=(26)
+calls=7168 0 
+* 181120
+* 7168
++2 65536
++1 81920
+
+fn=(832) SummarizedCat::scalar* std::__uninitialized_copy_a<SummarizedCat::scalar const*, SummarizedCat::scalar*, SummarizedCat::scalar>(SummarizedCat::scalar const*, SummarizedCat::scalar const*, SummarizedCat::scalar*, std::allocator<SummarizedCat::scalar>&)
+366 11396
++4 1628
+cfi=(16)
+cfn=(146)
+calls=1628 3645 
+* 8140
+* 3256
++3 9768
+cfn=(834) SummarizedCat::scalar* std::uninitialized_copy<SummarizedCat::scalar const*, SummarizedCat::scalar*>(SummarizedCat::scalar const*, SummarizedCat::scalar const*, SummarizedCat::scalar*)
+calls=1628 163 
+* 106974
+* 1628
++1 3256
+
+fn=(256)
+366 35
++4 5
+cfi=(16)
+cfn=(146)
+calls=5 3645 
+* 25
+* 10
++3 30
+cfn=(258) SummarizedCat::StructureSummary* std::uninitialized_copy<SummarizedCat::StructureSummary const*, SummarizedCat::StructureSummary*>(SummarizedCat::StructureSummary const*, SummarizedCat::StructureSummary const*, SummarizedCat::StructureSummary*)
+calls=5 163 
+* 240
+* 5
++1 10
+
+fn=(258)
+163 30
++11 5
++7 5
++4 30
+cfn=(260) SummarizedCat::StructureSummary* std::__uninitialized_copy<false>::__uninit_copy<SummarizedCat::StructureSummary const*, SummarizedCat::StructureSummary*>(SummarizedCat::StructureSummary const*, SummarizedCat::StructureSummary const*, SummarizedCat::StructureSummary*)
+calls=5 -50 
+* 160
++1 10
+
+fn=(260)
+135 30
++2 30
+cfn=(262)
+calls=5 -24 
+* 90
+* 10
+
+fn=(836) SummarizedCat::scalar* std::__uninitialized_copy<false>::__uninit_copy<SummarizedCat::scalar const*, SummarizedCat::scalar*>(SummarizedCat::scalar const*, SummarizedCat::scalar const*, SummarizedCat::scalar*)
+135 9768
++2 9768
+cfn=(838) SummarizedCat::scalar* std::__do_uninit_copy<SummarizedCat::scalar const*, SummarizedCat::scalar*>(SummarizedCat::scalar const*, SummarizedCat::scalar const*, SummarizedCat::scalar*)
+calls=1628 -24 
+* 58134
+* 3256
+
+fn=(144) std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >* std::__uninitialized_default_n<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, unsigned long>(std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, unsigned long)
+696 5
++3 1
+cfi=(16)
+cfn=(146)
+calls=1 3645 
+* 5
+* 2
++8 1
++5 5
+cfn=(148) std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >* std::__uninitialized_default_n_1<false>::__uninit_default_n<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, unsigned long>(std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, unsigned long)
+calls=1 -75 
+* 571
+* 1
++1 2
+
+fn=(148)
+637 5
++2 2
++3 1
++1 18
+cfi=(17)
+cfn=(150) std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >* std::__addressof<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > >(std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >&)
+calls=6 51 
+* 36
+* 12
+cfi=(18)
+cfn=(152) void std::_Construct<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >>(std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*)
+calls=6 109 
+* 468
+-1 26
++2 1
++7 2
+
+fn=(550) SummarizedCat::IStructure* std::uninitialized_copy<SummarizedCat::IStructure const*, SummarizedCat::IStructure*>(SummarizedCat::IStructure const*, SummarizedCat::IStructure const*, SummarizedCat::IStructure*)
+163 2040
++11 340
++7 340
++4 2040
+cfn=(552) SummarizedCat::IStructure* std::__uninitialized_copy<false>::__uninit_copy<SummarizedCat::IStructure const*, SummarizedCat::IStructure*>(SummarizedCat::IStructure const*, SummarizedCat::IStructure const*, SummarizedCat::IStructure*)
+calls=340 -50 
+* 10880
++1 680
+
+fn=(554) SummarizedCat::IStructure* std::__do_uninit_copy<SummarizedCat::IStructure const*, SummarizedCat::IStructure*>(SummarizedCat::IStructure const*, SummarizedCat::IStructure const*, SummarizedCat::IStructure*)
+113 2380
++3 680
++3 1360
++2 680
++7 1020
+
+fn=(478)
+1115 3400
++4 1360
++1 680
++14 1360
++1 1700
+
+fn=(828) SummarizedCat::scalar* std::__uninitialized_move_if_noexcept_a<SummarizedCat::scalar*, SummarizedCat::scalar*, std::allocator<SummarizedCat::scalar> >(SummarizedCat::scalar*, SummarizedCat::scalar*, SummarizedCat::scalar*, std::allocator<SummarizedCat::scalar>&)
+393 10336
++6 3876
+cfi=(8)
+cfn=(830)
+calls=1292 1832 
+* 7752
+* 5168
+cfi=(8)
+cfn=(830)
+calls=1292 1832 
+* 7752
+* 9044
+cfn=(832)
+calls=1292 -33 
+* 121854
++2 3876
+
+fn=(838)
+113 11396
++3 3256
++3 1628
++1 930
+cfi=(17)
+cfn=(864) SummarizedCat::scalar* std::__addressof<SummarizedCat::scalar>(SummarizedCat::scalar&)
+calls=310 -69 
+* 1860
+* 1550
+cfi=(18)
+cfn=(866) void std::_Construct<SummarizedCat::scalar, SummarizedCat::scalar const&>(SummarizedCat::scalar*, SummarizedCat::scalar const&)
+calls=310 -11 
+* 22940
+-1 6434
++2 3256
++7 4884
+
+fn=(424) SummarizedCat::scalar* std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, SummarizedCat::scalar*, SummarizedCat::scalar>(__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, SummarizedCat::scalar*, std::allocator<SummarizedCat::scalar>&)
+366 109480
++4 15640
+cfi=(16)
+cfn=(146)
+calls=15640 3645 
+* 78200
+* 31280
++3 93840
+cfn=(426) SummarizedCat::scalar* std::uninitialized_copy<__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, SummarizedCat::scalar*>(__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, SummarizedCat::scalar*)
+calls=15640 163 
+* 1313760
+* 15640
++1 31280
+
+fn=(142) std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >* std::__uninitialized_default_n_a<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, unsigned long, std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > >(std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, unsigned long, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > >&)
+777 6
++2 5
+cfn=(144)
+calls=1 -83 
+* 593
+* 2
+
+fn=(166) std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >* std::__relocate_a<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >(std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > >&)
+1142 9
++6 3
+cfi=(11)
+cfn=(168) std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >* std::__niter_base<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*>(std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*)
+calls=1 316 
+* 6
+* 4
+cfi=(11)
+cfn=(168)
+calls=1 316 
+* 6
+* 4
+cfi=(11)
+cfn=(168)
+calls=1 316 
+* 6
+* 6
+cfn=(170) std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >* std::__relocate_a_1<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >(std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > >&)
+calls=1 -56 
+* 18
++3 5
+
+fn=(426)
+163 93840
++11 15640
++7 15640
++4 93840
+cfn=(428) SummarizedCat::scalar* std::__uninitialized_copy<false>::__uninit_copy<__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, SummarizedCat::scalar*>(__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, SummarizedCat::scalar*)
+calls=15640 -50 
+* 1063520
++1 31280
+
+fn=(596) SummarizedCat::IStructure const** std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >, SummarizedCat::IStructure const**, SummarizedCat::IStructure const*>(__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >, __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >, SummarizedCat::IStructure const**, std::allocator<SummarizedCat::IStructure const*>&)
+366 9520
++4 1360
+cfi=(16)
+cfn=(146)
+calls=1360 3645 
+* 6800
+* 2720
++3 8160
+cfn=(598) SummarizedCat::IStructure const** std::uninitialized_copy<__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >, SummarizedCat::IStructure const**>(__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >, __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >, SummarizedCat::IStructure const**)
+calls=1360 163 
+* 392816
+* 1360
++1 2720
+
+fn=(598)
+163 8160
++11 1360
++7 1360
++4 8160
+cfn=(600) SummarizedCat::IStructure const** std::__uninitialized_copy<true>::__uninit_copy<__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >, SummarizedCat::IStructure const**>(__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >, __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >, SummarizedCat::IStructure const**)
+calls=1360 -40 
+* 371056
++1 2720
+
+fn=(600)
+145 8160
++2 8160
+cfi=(11)
+cfn=(602) SummarizedCat::IStructure const** std::copy<__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >, SummarizedCat::IStructure const**>(__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >, __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >, SummarizedCat::IStructure const**)
+calls=1360 624 
+* 352016
+* 2720
+
+fn=(834)
+163 9768
++11 1628
++7 1628
++4 9768
+cfn=(836)
+calls=1628 -50 
+* 80926
++1 3256
+
+fn=(170)
+1092 8
++12 2
++1 4
++3 1
++1 3
+
+fn=(428)
+135 93840
++2 93840
+cfn=(430)
+calls=15640 -24 
+* 844560
+* 31280
+
+fn=(548) SummarizedCat::IStructure* std::__uninitialized_copy_a<SummarizedCat::IStructure const*, SummarizedCat::IStructure*, SummarizedCat::IStructure>(SummarizedCat::IStructure const*, SummarizedCat::IStructure const*, SummarizedCat::IStructure*, std::allocator<SummarizedCat::IStructure>&)
+366 2380
++4 340
+cfi=(16)
+cfn=(146)
+calls=340 3645 
+* 1700
+* 680
++3 2040
+cfn=(550)
+calls=340 163 
+* 16320
+* 340
++1 680
+
+fn=(552)
+135 2040
++2 2040
+cfn=(554)
+calls=340 -24 
+* 6120
+* 680
+
+fn=(232) SummarizedCat::StructureSummary* std::__uninitialized_default_n_a<SummarizedCat::StructureSummary*, unsigned long, SummarizedCat::StructureSummary>(SummarizedCat::StructureSummary*, unsigned long, std::allocator<SummarizedCat::StructureSummary>&)
+777 30
++2 25
+cfn=(234)
+calls=5 -83 
+* 10448182
+* 10
+
+fn=(338) SummarizedCat::IStructure const** std::__relocate_a<SummarizedCat::IStructure const**, SummarizedCat::IStructure const**, std::allocator<SummarizedCat::IStructure const*> >(SummarizedCat::IStructure const**, SummarizedCat::IStructure const**, SummarizedCat::IStructure const**, std::allocator<SummarizedCat::IStructure const*>&)
+1142 147456
++6 49152
+cfi=(11)
+cfn=(340) SummarizedCat::IStructure const** std::__niter_base<SummarizedCat::IStructure const**>(SummarizedCat::IStructure const**)
+calls=16384 316 
+* 98304
+* 65536
+cfi=(11)
+cfn=(340)
+calls=16384 316 
+* 98304
+* 65536
+cfi=(11)
+cfn=(340)
+calls=16384 316 
+* 98304
+* 98304
+cfn=(342)
+calls=16384 -33 
+* 705408
++3 81920
+
+fl=(10)
+fn=(814) void std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::_M_realloc_insert<SummarizedCat::scalar>(__gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, SummarizedCat::scalar&&)
+445 6460
++10 3230
+cfi=(7)
+cfn=(816) std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::_M_check_len(unsigned long, char const*) const
+calls=646 1893 
+* 146332
+* 646
++1 1938
++1 1938
++1 1938
+cfi=(7)
+cfn=(392)
+calls=646 870 
+* 18734
+* 3876
+cfi=(8)
+cfn=(818)
+calls=646 1334 
+* 21318
+* 646
++1 3230
+cfi=(7)
+cfn=(418) std::_Vector_base<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::_M_allocate(unsigned long)
+calls=646 -84 
+* 76512
+* 646
++1 1292
++8 1938
+cfi=(17)
+cfn=(812) SummarizedCat::scalar&& std::forward<SummarizedCat::scalar>(std::remove_reference<SummarizedCat::scalar>::type&)
+calls=646 70 
+* 3876
++1 1292
+-1 3876
+fi=(21) /nix/store/6g5fhxv0bdm7236ixdwq1izzawbc7grm-gcc-13.2.0/include/c++/13.2.0/bits/alloc_traits.h
++71 1938
+cfi=(17)
+cfn=(812)
+calls=646 70 
+* 3876
+* 3230
+cfi=(18)
+cfn=(826) decltype (::new ((void*)(0)) SummarizedCat::scalar((declval<SummarizedCat::scalar>)())) std::construct_at<SummarizedCat::scalar, SummarizedCat::scalar>(SummarizedCat::scalar*, SummarizedCat::scalar&&)
+calls=646 94 
+* 43282
++2 646
+fe=(10)
+-66 646
++19 1938
+cfi=(7)
+cfn=(422) std::_Vector_base<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::_M_get_Tp_allocator()
+calls=646 298 
+* 3876
+* 646
+-1 1938
+cfi=(8)
+cfn=(706)
+calls=646 1162 
+* 3876
+* 3876
+cfi=(15)
+cfn=(828)
+calls=646 393 
+* 99244
+* 646
++3 646
++5 1938
+cfi=(7)
+cfn=(422)
+calls=646 298 
+* 3876
+* 646
+-1 1938
+cfi=(8)
+cfn=(706)
+calls=646 1162 
+* 3876
+* 3876
+cfi=(15)
+cfn=(828)
+calls=646 393 
+* 70414
+* 646
++17 1938
+cfi=(7)
+cfn=(422)
+calls=646 298 
+* 3876
+* 3230
+fi=(21)
+947 3230
+cfi=(18)
+cfn=(434) void std::_Destroy<SummarizedCat::scalar*>(SummarizedCat::scalar*, SummarizedCat::scalar*)
+calls=646 182 
+* 17442
++1 646
+fe=(10)
+519 646
++1 2584
+-1 2584
+cfi=(7)
+cfn=(442) std::_Vector_base<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::_M_deallocate(SummarizedCat::scalar*, unsigned long)
+calls=646 383 
+* 47406
++2 1938
++1 1938
++1 3876
++1 4522
+
+fn=(510) unsigned int& std::vector<unsigned int, std::allocator<unsigned int> >::emplace_back<unsigned int>(unsigned int&&)
+111 6120
++3 6120
++3 3060
+cfi=(17)
+cfn=(512) unsigned int&& std::forward<unsigned int>(std::remove_reference<unsigned int>::type&)
+calls=1020 -47 
+* 6120
+* 6120
+fi=(21)
+539 3060
+cfi=(17)
+cfn=(512)
+calls=1020 70 
+* 6120
+* 5100
+cfi=(18)
+cfn=(516) decltype (::new ((void*)(0)) unsigned int((declval<unsigned int>)())) std::construct_at<unsigned int, unsigned int>(unsigned int*, unsigned int&&)
+calls=1020 94 
+* 33660
++2 1020
+fe=(10)
+119 6120
++6 3060
+cfi=(7)
+cfn=(518) std::vector<unsigned int, std::allocator<unsigned int> >::back()
+calls=1020 1230 
+* 99960
++2 3060
+
+fn=(298) SummarizedCat::IStructure const*& std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::emplace_back<SummarizedCat::IStructure const*>(SummarizedCat::IStructure const*&&)
+111 600000
++3 600000
++3 275424
+cfi=(17)
+cfn=(300) SummarizedCat::IStructure const*&& std::forward<SummarizedCat::IStructure const*>(std::remove_reference<SummarizedCat::IStructure const*>::type&)
+calls=91808 -47 
+* 550848
+* 550848
+fi=(21)
+539 275424
+cfi=(17)
+cfn=(300)
+calls=91808 70 
+* 550848
+* 459040
+cfi=(18)
+cfn=(332) decltype (::new ((void*)(0)) SummarizedCat::IStructure const*((declval<SummarizedCat::IStructure const*>)())) std::construct_at<SummarizedCat::IStructure const*, SummarizedCat::IStructure const*>(SummarizedCat::IStructure const**, SummarizedCat::IStructure const*&&)
+calls=91808 94 
+* 3029664
++2 91808
+fe=(10)
+119 550848
++4 24576
+cfi=(17)
+cfn=(300)
+calls=8192 -53 
+* 49152
+* 32768
+cfi=(7)
+cfn=(302) std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::end()
+calls=8192 890 
+* 245760
+* 49152
+cfn=(306) void std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_M_realloc_insert<SummarizedCat::IStructure const*>(__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const**, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >, SummarizedCat::IStructure const*&&)
+calls=8192 445 
+* 9495267
++2 300000
+cfi=(7)
+cfn=(346) std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::back()
+calls=100000 1230 
+* 9800000
++2 300000
+
+fn=(188) std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::_M_default_append(unsigned long)
+634 30
++3 10
++2 15
+cfi=(7)
+cfn=(186) std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::size() const
+calls=5 989 
+* 65
+* 5
++1 10
++1 30
+-1 5
++3 15
+cfi=(7)
+cfn=(190) std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::max_size() const
+calls=5 995 
+* 270
+* 25
+cfi=(7)
+cfn=(190)
+calls=5 995 
+* 270
+* 25
++3 15
++12 15
++1 15
++3 30
+cfi=(7)
+cfn=(196) std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::_M_check_len(unsigned long, char const*) const
+calls=5 1893 
+* 1155
+* 5
++1 25
+cfi=(7)
+cfn=(198) std::_Vector_base<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::_M_allocate(unsigned long)
+calls=5 375 
+* 2527
+* 5
++18 5
++4 15
+cfi=(7)
+cfn=(230) std::_Vector_base<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::_M_get_Tp_allocator()
+calls=5 298 
+* 30
+* 5
+-1 65
+cfi=(15)
+cfn=(232)
+calls=5 +93 
+* 10448247
++2 45
++3 15
+cfi=(7)
+cfn=(230)
+calls=5 298 
+* 30
+* 5
+-2 25
+cfi=(15)
+cfn=(252)
+calls=5 393 
+* 545
++13 15
+cfi=(7)
+cfn=(230)
+calls=5 298 
+* 30
+* 25
+fi=(21)
+947 25
+cfi=(18)
+cfn=(264) void std::_Destroy<SummarizedCat::StructureSummary*>(SummarizedCat::StructureSummary*, SummarizedCat::StructureSummary*)
+calls=5 182 
+* 165
++1 5
+fe=(10)
+703 5
++1 35
+-1 20
+cfi=(7)
+cfn=(270) std::_Vector_base<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::_M_deallocate(SummarizedCat::StructureSummary*, unsigned long)
+calls=5 383 
+* 55
++2 15
++1 60
++1 50
++3 25
+
+fn=(628) SummarizedCat::IStructure& std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >::emplace_back<SummarizedCat::IStructure>(SummarizedCat::IStructure&&)
+111 8160
++3 8160
++3 4080
+cfi=(17)
+cfn=(630) SummarizedCat::IStructure&& std::forward<SummarizedCat::IStructure>(std::remove_reference<SummarizedCat::IStructure>::type&)
+calls=1360 -47 
+* 8160
+* 8160
+fi=(21)
+539 4080
+cfi=(17)
+cfn=(630)
+calls=1360 70 
+* 8160
+* 6800
+cfi=(18)
+cfn=(634) decltype (::new ((void*)(0)) SummarizedCat::IStructure((declval<SummarizedCat::IStructure>)())) std::construct_at<SummarizedCat::IStructure, SummarizedCat::IStructure>(SummarizedCat::IStructure*, SummarizedCat::IStructure&&)
+calls=1360 94 
+* 1180480
++2 1360
+fe=(10)
+119 8160
++6 4080
+cfi=(7)
+cfn=(636) std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >::back()
+calls=1360 1230 
+* 133280
++2 4080
+
+fn=(452) std::vector<unsigned int, std::allocator<unsigned int> >::reserve(unsigned long)
+67 1700
++3 1020
+cfi=(7)
+cfn=(454) std::vector<unsigned int, std::allocator<unsigned int> >::max_size() const
+calls=340 995 
+* 18360
+* 1360
++2 1020
+cfi=(7)
+cfn=(460) std::vector<unsigned int, std::allocator<unsigned int> >::capacity() const
+calls=340 1075 
+* 4080
+* 1360
++2 1020
+cfi=(7)
+cfn=(462) std::vector<unsigned int, std::allocator<unsigned int> >::size() const
+calls=340 989 
+* 4080
+* 340
++5 1700
+cfi=(7)
+cfn=(464) std::_Vector_base<unsigned int, std::allocator<unsigned int> >::_M_allocate(unsigned long)
+calls=340 375 
+* 40800
+* 340
++2 1020
+cfi=(7)
+cfn=(470) std::_Vector_base<unsigned int, std::allocator<unsigned int> >::_M_get_Tp_allocator()
+calls=340 298 
+* 2040
+* 340
+-1 2380
+cfi=(7)
+cfn=(472) std::vector<unsigned int, std::allocator<unsigned int> >::_S_relocate(unsigned int*, unsigned int*, unsigned int*, std::allocator<unsigned int>&)
+calls=340 501 
+* 30260
++13 340
++1 680
++1 1700
+-2 2380
+cfi=(7)
+cfn=(480) std::_Vector_base<unsigned int, std::allocator<unsigned int> >::_M_deallocate(unsigned int*, unsigned long)
+calls=340 383 
+* 3740
++3 1020
++1 2040
++1 2380
++2 1020
+
+fn=(306)
+445 81920
++10 40960
+cfi=(7)
+cfn=(308) std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_M_check_len(unsigned long, char const*) const
+calls=8192 1893 
+* 1852416
+* 8192
++1 24576
++1 24576
++1 24576
+cfi=(7)
+cfn=(318) std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::begin()
+calls=8192 870 
+* 237568
+* 49152
+cfi=(8)
+cfn=(320)
+calls=8192 1334 
+* 270336
+* 8192
++1 40960
+cfi=(7)
+cfn=(324) std::_Vector_base<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_M_allocate(unsigned long)
+calls=8192 -84 
+* 2539608
+* 8192
++1 16384
++8 24576
+cfi=(17)
+cfn=(300)
+calls=8192 70 
+* 49152
++1 16384
+-1 49152
+fi=(21)
++71 24576
+cfi=(17)
+cfn=(300)
+calls=8192 70 
+* 49152
+* 40960
+cfi=(18)
+cfn=(332)
+calls=8192 94 
+* 270336
++2 8192
+fe=(10)
+-66 8192
++6 24576
+cfi=(7)
+cfn=(334) std::_Vector_base<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_M_get_Tp_allocator()
+calls=8192 298 
+* 49152
+* 8192
+-1 24576
+cfi=(8)
+cfn=(322)
+calls=8192 1162 
+* 49152
+* 49152
+cfi=(7)
+cfn=(336) std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_S_relocate(SummarizedCat::IStructure const**, SummarizedCat::IStructure const**, SummarizedCat::IStructure const**, std::allocator<SummarizedCat::IStructure const*>&)
+calls=8192 +21 
+* 1024896
+* 8192
++3 8192
++3 24576
+cfi=(7)
+cfn=(334)
+calls=8192 298 
+* 49152
+* 8192
+-1 24576
+cfi=(8)
+cfn=(322)
+calls=8192 1162 
+* 49152
+* 49152
+cfi=(7)
+cfn=(336)
+calls=8192 +16 
+* 729088
+* 8192
++34 8192
++1 32768
+-1 32768
+cfi=(7)
+cfn=(344) std::_Vector_base<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_M_deallocate(SummarizedCat::IStructure const**, unsigned long)
+calls=8192 383 
+* 1309451
++2 24576
++1 24576
++1 49152
++1 57344
+
+fn=(382)
+67 22440
++3 11220
+cfi=(7)
+cfn=(384) std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::max_size() const
+calls=3740 995 
+* 201960
+* 14960
++2 11220
+cfi=(7)
+cfn=(390) std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::capacity() const
+calls=3740 1075 
+* 44880
+* 14960
++2 1008
+cfi=(7)
+cfn=(92)
+calls=336 989 
+* 4032
+* 336
++12 1344
+cfi=(8)
+cfn=(830)
+calls=336 1832 
+* 2016
+* 1680
+cfi=(8)
+cfn=(830)
+calls=336 1832 
+* 2016
+* 2016
+cfi=(7)
+cfn=(846) SummarizedCat::scalar* std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::_M_allocate_and_copy<SummarizedCat::scalar const*>(unsigned long, SummarizedCat::scalar const*, SummarizedCat::scalar const*)
+calls=336 1613 
+* 75858
+* 336
++4 1008
+cfi=(7)
+cfn=(422)
+calls=336 298 
+* 2016
+-1 2352
+fi=(21)
+947 1680
+cfi=(18)
+cfn=(434)
+calls=336 182 
+* 9072
++1 336
+fe=(10)
+93 336
++1 672
++1 1680
+-2 2352
+cfi=(7)
+cfn=(442)
+calls=336 383 
+* 3696
++3 1008
++1 2016
++1 2352
++2 14960
+
+fn=(110) std::vector<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::_M_default_append(unsigned long)
+634 6
++3 2
++2 3
+cfi=(7)
+cfn=(108) std::vector<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::size() const
+calls=1 989 
+* 13
+* 1
++1 2
++1 6
+-1 1
++3 3
+cfi=(7)
+cfn=(112) std::vector<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::max_size() const
+calls=1 995 
+* 54
+* 5
+cfi=(7)
+cfn=(112)
+calls=1 995 
+* 54
+* 5
++3 3
++12 3
++1 3
++3 6
+cfi=(7)
+cfn=(120) std::vector<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::_M_check_len(unsigned long, char const*) const
+calls=1 1893 
+* 231
+* 1
++1 5
+cfi=(7)
+cfn=(124) std::_Vector_base<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::_M_allocate(unsigned long)
+calls=1 375 
+* 123
+* 1
++6 3
+cfi=(7)
+cfn=(140) std::_Vector_base<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::_M_get_Tp_allocator()
+calls=1 298 
+* 6
+* 1
+-1 13
+cfi=(15)
+cfn=(142)
+calls=1 777 
+* 606
++9 3
+cfi=(7)
+cfn=(140)
+calls=1 298 
+* 6
+* 1
+-1 5
+cfi=(7)
+cfn=(164) std::vector<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::_S_relocate(std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > >&)
+calls=1 501 
+* 82
++27 1
++1 7
+-1 4
+cfi=(7)
+cfn=(172) std::_Vector_base<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::_M_deallocate(std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, unsigned long)
+calls=1 383 
+* 11
++2 3
++1 12
++1 10
++3 5
+
+fn=(690) std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::operator=(std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > const&)
+210 48960
++3 12240
+cfi=(17)
+cfn=(692) std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > const* std::__addressof<std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > const>(std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > const&)
+calls=4080 51 
+* 24480
+* 16320
+fi=(26) /nix/store/6g5fhxv0bdm7236ixdwq1izzawbc7grm-gcc-13.2.0/include/c++/13.2.0/ext/alloc_traits.h
+106 4080
+fe=(10)
+217 8160
++18 12240
+cfi=(7)
+cfn=(92)
+calls=4080 989 
+* 48960
+* 4080
++1 12240
+cfi=(7)
+cfn=(390)
+calls=4080 1075 
+* 48960
+* 16320
++12 12240
+cfi=(7)
+cfn=(92)
+calls=4080 989 
+* 48960
+* 16320
++3 12240
+cfi=(7)
+cfn=(422)
+calls=4080 +47 
+* 24480
+* 4080
+-1 12240
+cfi=(7)
+cfn=(696) std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::end()
+calls=4080 890 
+* 122400
+* 16320
+cfi=(7)
+cfn=(392)
+calls=4080 870 
+* 118320
+* 16320
+cfi=(7)
+cfn=(396)
+calls=4080 900 
+* 122400
+* 16320
+cfi=(7)
+cfn=(400)
+calls=4080 880 
+* 118320
+* 16320
+cfi=(11)
+cfn=(698) __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > > std::copy<__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > > >(__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >)
+calls=4080 624 
+* 975120
+* 12240
+fi=(21)
+947 20400
+cfi=(18)
+cfn=(720) void std::_Destroy<__gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > > >(__gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >)
+calls=4080 182 
+* 110160
++1 4080
+fe=(10)
+262 28560
++2 4080
++1 40800
+
+fn=(810) SummarizedCat::scalar& std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::emplace_back<SummarizedCat::scalar>(SummarizedCat::scalar&&)
+111 3876
++3 3876
++9 1938
+cfi=(17)
+cfn=(812)
+calls=646 -53 
+* 3876
+* 2584
+cfi=(7)
+cfn=(696)
+calls=646 890 
+* 19380
+* 3876
+cfn=(814)
+calls=646 445 
+* 653088
++2 1938
+cfi=(7)
+cfn=(840) std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::back()
+calls=646 1230 
+* 63308
++2 1938
+
+fn=(524) std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >::reserve(unsigned long)
+67 2040
++3 1020
+cfi=(7)
+cfn=(526) std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >::max_size() const
+calls=340 995 
+* 18360
+* 1360
++2 1020
+cfi=(7)
+cfn=(532) std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >::capacity() const
+calls=340 1075 
+* 4080
+* 1360
++2 1020
+cfi=(7)
+cfn=(534) std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >::size() const
+calls=340 989 
+* 4080
+* 340
++12 1360
+cfi=(8)
+cfn=(536)
+calls=340 1832 
+* 2040
+* 1700
+cfi=(8)
+cfn=(536)
+calls=340 1832 
+* 2040
+* 2040
+cfi=(7)
+cfn=(538) SummarizedCat::IStructure* std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >::_M_allocate_and_copy<SummarizedCat::IStructure const*>(unsigned long, SummarizedCat::IStructure const*, SummarizedCat::IStructure const*)
+calls=340 1613 
+* 76840
+* 340
++4 1020
+cfi=(7)
+cfn=(546) std::_Vector_base<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >::_M_get_Tp_allocator()
+calls=340 298 
+* 2040
+-1 2380
+fi=(21)
+947 1700
+cfi=(18)
+cfn=(556) void std::_Destroy<SummarizedCat::IStructure*>(SummarizedCat::IStructure*, SummarizedCat::IStructure*)
+calls=340 182 
+* 11220
++1 340
+fe=(10)
+93 340
++1 680
++1 1700
+-2 2380
+cfi=(7)
+cfn=(562) std::_Vector_base<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >::_M_deallocate(SummarizedCat::IStructure*, unsigned long)
+calls=340 383 
+* 3740
++3 1020
++1 2380
++1 2380
++2 1360
+
+fl=(3)
+fn=(10)
+cob=(3)
+cfi=(2)
+cfn=(8) _ZNSi6ignoreEv@@GLIBCXX_3.4.5
+calls=1 0 
+22 37
+23 3
+cob=(1)
+cfi=(1)
+cfn=(14)
+calls=1 -23 
+* 360
+* 1
++2 1
+cob=(3)
+cfi=(2)
+cfn=(42) std::chrono::_V2::steady_clock::now()
+calls=1 -25 
+* 22
+* 1
+* 1
++1 5
+cfi=(5) /home/myaumyau/Projects/SummarizedCat/structures.cpp
+cfn=(48) SummarizedCat::StructureCollection::StructureCollection(std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > const&)
+calls=1 +13 
+* 215238944
++1 1
+cob=(3)
+cfi=(2)
+cfn=(42)
+calls=1 -27 
+* 22
+* 1
+* 1
++2 5
+cfi=(27)
+cfn=(910)
+calls=1 1152 
+* 102
+* 4
+cfi=(27)
+cfn=(920)
+calls=1 273 
+* 7
+* 4
+cfi=(27)
+cfn=(916)
+calls=1 600 
+* 7
+* 5
+cob=(1)
+cfi=(1)
+cfn=(924)
+calls=1 -29 
+* 920
+* 1
++2 1
++1 3
+cfi=(23) /home/myaumyau/Projects/SummarizedCat/structures.hpp
+cfn=(950) SummarizedCat::StructureCollection::~StructureCollection()
+calls=1 +5 
+* 379
+* 3
+cfi=(7)
+cfn=(952) std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> >::~vector()
+calls=1 730 
+* 60700227
+* 12
+
+fl=(7)
+fn=(106) std::vector<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::resize(unsigned long)
+1010 5
++2 3
+cfn=(108)
+calls=1 -23 
+* 13
+* 4
++1 3
+cfn=(108)
+calls=1 -24 
+* 13
+* 6
+cfi=(10)
+cfn=(110)
+calls=1 634 
+* 1310
++3 4
+
+fn=(270)
+383 66
++3 22
++1 60
+fi=(13) /nix/store/6g5fhxv0bdm7236ixdwq1izzawbc7grm-gcc-13.2.0/include/c++/13.2.0/bits/allocator.h
+205 5
+cfi=(12)
+cfn=(126)
+calls=5 541 
+* 25
+* 10
++5 30
+cfi=(14) /nix/store/6g5fhxv0bdm7236ixdwq1izzawbc7grm-gcc-13.2.0/include/c++/13.2.0/bits/new_allocator.h
+cfn=(894) std::__new_allocator<SummarizedCat::StructureSummary>::deallocate(SummarizedCat::StructureSummary*, unsigned long)
+calls=5 -58 
+* 1016
+fi=(21)
+516 5
+fe=(7)
+388 33
+
+fn=(302)
+890 757344
++1 649152
+cfi=(8)
+cfn=(304)
+calls=108192 1076 
+* 1190112
+* 649152
+
+fn=(462)
+989 1020
++1 3060
+
+fn=(472)
+501 2380
++5 2040
+cfi=(15)
+cfn=(474)
+calls=340 1142 
+* 25160
++5 680
+
+fn=(746) std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::operator=(std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >&&)
+763 1700
++2 340
++3 1020
+cfi=(17)
+cfn=(748) std::remove_reference<std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >&>::type&& std::move<std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >&>(std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >&)
+calls=340 97 
+* 2040
+* 1700
+cfn=(750) std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_M_move_assign(std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >&&, std::integral_constant<bool, true>)
+calls=340 1956 
+* 148580
++1 340
++1 680
+
+fn=(186)
+989 304185
++1 1013950
+
+fn=(62) std::_Vector_base<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::_Vector_impl_data::_Vector_impl_data()
+99 276714
++1 553428
++1 276714
+
+fn=(108)
+989 304101
++1 1013670
+
+fn=(246) std::_Vector_base<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_Vector_base()
+312 264516
+cfn=(248) std::_Vector_base<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_Vector_impl::_Vector_impl()
+calls=37788 137 
+* 1058064
+* 113364
+
+fn=(294) std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::push_back(SummarizedCat::IStructure const*&&)
+1295 500000
++1 300000
+cfi=(17)
+cfn=(296) std::remove_reference<SummarizedCat::IStructure const*&>::type&& std::move<SummarizedCat::IStructure const*&>(SummarizedCat::IStructure const*&)
+calls=100000 97 
+* 600000
+* 500000
+cfi=(10)
+cfn=(298)
+calls=100000 111 
+* 27831427
+* 300000
+
+fn=(388) std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::_S_max_size(std::allocator<SummarizedCat::scalar> const&)
+1913 35224
++5 20128
+fi=(21)
+575 5032
+fe=(7)
+1920 5032
++1 25160
+cfi=(11)
+cfn=(118) unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
+calls=5032 233 
+* 65416
+* 5032
++1 25160
+
+fn=(410)
+598 172040
++2 62560
+cfn=(386) std::_Vector_base<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::_M_get_Tp_allocator() const
+calls=15640 303 
+* 93840
+* 172040
+fi=(14)
+92 15640
+fi=(13)
++76 15640
+fi=(21)
+587 15640
+fi=(26)
+98 15640
+fe=(7)
+600 46920
+cfn=(92)
+calls=15640 989 
+* 187680
+* 93840
+cfn=(412) std::_Vector_base<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::_Vector_base(unsigned long, std::allocator<SummarizedCat::scalar> const&)
+calls=15640 330 
+* 1501440
+fi=(13)
+184 15640
+fe=(7)
+605 46920
+cfn=(422)
+calls=15640 298 
+* 93840
+* 15640
+-2 78200
+cfn=(396)
+calls=15640 900 
+* 469200
+* 62560
+cfn=(400)
+calls=15640 880 
+* 453560
+* 78200
+cfi=(15)
+cfn=(424)
+calls=15640 366 
+* 1689120
+-1 31280
++4 156400
+
+fn=(442)
+383 1781760
++3 593920
++1 2411784
+fi=(13)
+205 200982
+cfi=(12)
+cfn=(126)
+calls=200982 541 
+* 1004910
+* 401964
++5 1205892
+cfi=(14)
+cfn=(860) std::__new_allocator<SummarizedCat::scalar>::deallocate(SummarizedCat::scalar*, unsigned long)
+calls=200982 -58 
+* 25101144
+fi=(21)
+516 200982
+fe=(7)
+388 890880
+
+fn=(532)
+1075 1020
++1 680
++1 2380
+
+fn=(638) std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >::end()
+890 9520
++1 8160
+cfi=(8)
+cfn=(640)
+calls=1360 1076 
+* 14960
+* 8160
+
+fn=(78) std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> >::begin() const
+880 14
++1 10
+cfi=(8)
+cfn=(76)
+calls=2 1076 
+* 22
+* 12
+
+fn=(112)
+995 16
++1 12
+cfn=(114) std::_Vector_base<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::_M_get_Tp_allocator() const
+calls=4 303 
+* 24
+* 8
+cfn=(116) std::vector<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::_S_max_size(std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > const&)
+calls=4 1913 
+* 148
+* 8
+
+fn=(160) std::_Vector_base<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::_Vector_impl::_Vector_impl()
+137 48
+fi=(14)
+-49 6
+fi=(13)
++75 6
+fe=(7)
+-24 18
+cfn=(162) std::_Vector_base<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::_Vector_impl_data::_Vector_impl_data()
+calls=6 -40 
+* 72
++1 18
+
+fn=(292) std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::operator[](unsigned long)
+1123 406800
++3 813600
++1 203400
+
+fn=(392)
+870 78302
++1 55930
+cfi=(8)
+cfn=(394)
+calls=11186 1076 
+* 123046
+* 67116
+
+fn=(470)
+298 2040
++1 2040
+
+fn=(658) std::_Vector_base<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_Vector_impl::~_Vector_impl()
+133 197440
+fi=(13)
++51 39488
+fe=(7)
+-51 118464
+
+fn=(670) std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >::begin() const
+880 7140
++1 5100
+cfi=(8)
+cfn=(668)
+calls=1020 1076 
+* 11220
+* 6120
+
+fn=(754) std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::vector(std::allocator<SummarizedCat::IStructure const*> const&)
+539 1700
++1 1700
+cfn=(756) std::_Vector_base<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_Vector_base(std::allocator<SummarizedCat::IStructure const*> const&)
+calls=340 318 
+* 15640
+* 1020
+
+fn=(760) std::_Vector_base<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_Vector_impl_data::_M_swap_data(std::_Vector_base<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_Vector_impl_data&)
+122 5440
++4 2040
++1 3400
+cfn=(762) std::_Vector_base<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_Vector_impl_data::_M_copy_data(std::_Vector_base<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_Vector_impl_data const&)
+calls=680 -14 
+* 12920
++1 3400
+cfn=(762)
+calls=680 -15 
+* 12920
++1 3400
+cfn=(762)
+calls=680 -16 
+* 12920
++1 4080
+
+fn=(970) std::_Vector_base<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> >::~_Vector_base()
+364 4
++3 8
+-1 7
+cfn=(972) std::_Vector_base<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> >::_M_deallocate(SummarizedCat::DiscreteStructure*, unsigned long)
+calls=1 +17 
+* 130
++2 3
+cfn=(984) std::_Vector_base<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> >::_Vector_impl::~_Vector_impl()
+calls=1 133 
+* 9
+* 3
+
+fn=(984)
+133 5
+fi=(13)
++51 1
+fe=(7)
+-51 3
+
+fn=(190)
+995 80
++1 60
+cfn=(192) std::_Vector_base<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::_M_get_Tp_allocator() const
+calls=20 303 
+* 120
+* 40
+cfn=(194) std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::_S_max_size(std::allocator<SummarizedCat::StructureSummary> const&)
+calls=20 1913 
+* 740
+* 40
+
+fn=(124)
+375 8
++3 10
+fi=(13)
+191 1
+cfi=(12)
+cfn=(126)
+calls=1 541 
+* 5
+* 2
++7 6
+cfi=(14)
+cfn=(130) std::__new_allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > >::allocate(unsigned long, void const*)
+calls=1 -76 
+* 83
+* 1
+fi=(21)
+482 2
+fe=(7)
+379 5
+
+fn=(164)
+501 7
++5 6
+cfi=(15)
+cfn=(166)
+calls=1 1142 
+* 67
++5 2
+
+fn=(386)
+303 62016
++1 62016
+
+fn=(432)
+730 1183912
++3 887934
+cfn=(422)
+calls=295978 298 
+* 1775868
+-1 2071846
+fi=(21)
+947 1479890
+cfi=(18)
+cfn=(434)
+calls=295978 182 
+* 7991406
++1 295978
+fe=(7)
+735 887934
+cfn=(440) std::_Vector_base<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::~_Vector_base()
+calls=295978 364 
+* 43510390
+* 887934
+
+fn=(530) std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >::_S_max_size(std::allocator<SummarizedCat::IStructure> const&)
+1913 2380
++5 1360
+fi=(21)
+575 340
+fe=(7)
+1920 340
++1 1700
+cfi=(11)
+cfn=(118)
+calls=340 233 
+* 4420
+* 340
++1 1700
+
+fn=(584) std::_Vector_base<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_Vector_impl::_Vector_impl(std::allocator<SummarizedCat::IStructure const*> const&)
+143 22100
+fi=(14)
+-51 1700
+fi=(13)
++76 1700
+fe=(7)
+-24 5100
+cfn=(250) std::_Vector_base<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_Vector_impl_data::_Vector_impl_data()
+calls=1700 -45 
+* 20400
++1 5100
+
+fn=(68) std::_Vector_base<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::_Vector_base()
+312 7
+cfn=(70) std::_Vector_base<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::_Vector_impl::_Vector_impl()
+calls=1 137 
+* 28
+* 3
+
+fn=(244) std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::vector()
+528 264516
+cfn=(246)
+calls=37788 312 
+* 1435944
+* 113364
+
+fn=(336)
+501 114688
++5 98304
+cfi=(15)
+cfn=(338)
+calls=16384 1142 
+* 1508224
++5 32768
+
+fn=(444) std::_Vector_base<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::_Vector_impl::~_Vector_impl()
+133 1479890
+fi=(13)
++51 295978
+fe=(7)
+-51 887934
+
+fn=(696)
+890 37604
++1 32232
+cfi=(8)
+cfn=(394)
+calls=5372 1076 
+* 59092
+* 32232
+
+fn=(750)
+1956 3060
++2 1700
+cfn=(752) std::_Vector_base<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::get_allocator() const
+calls=340 308 
+* 9180
+* 1700
+cfn=(754)
+calls=340 539 
+* 20060
+fi=(13)
+184 340
+fe=(7)
+1959 1700
+cfn=(760)
+calls=340 122 
+* 30260
++1 1700
+cfn=(760)
+calls=340 122 
+* 30260
++1 1020
+cfn=(334)
+calls=340 298 
+* 2040
+* 1360
+cfn=(334)
+calls=340 298 
+* 2040
+* 680
+fi=(21)
+754 1020
+cfi=(17)
+cfn=(764) std::remove_reference<std::allocator<SummarizedCat::IStructure const*>&>::type&& std::move<std::allocator<SummarizedCat::IStructure const*>&>(std::allocator<SummarizedCat::IStructure const*>&)
+calls=340 97 
+* 2040
++4 340
+fe=(7)
+1962 1020
+cfn=(648) std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::~vector()
+calls=340 730 
+* 35020
+* 2040
+
+fn=(908) std::_Vector_base<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::_Vector_impl::~_Vector_impl()
+133 10
+fi=(13)
++51 2
+fe=(7)
+-51 6
+
+fn=(952)
+730 4
++3 3
+cfn=(954) std::_Vector_base<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> >::_M_get_Tp_allocator()
+calls=1 298 
+* 6
+-1 7
+fi=(21)
+947 5
+cfi=(18)
+cfn=(956) void std::_Destroy<SummarizedCat::DiscreteStructure*>(SummarizedCat::DiscreteStructure*, SummarizedCat::DiscreteStructure*)
+calls=1 182 
+* 60700031
++1 1
+fe=(7)
+735 3
+cfn=(970)
+calls=1 364 
+* 164
+* 3
+
+fn=(972)
+383 6
++3 2
++1 12
+fi=(13)
+205 1
+cfi=(12)
+cfn=(126)
+calls=1 541 
+* 5
+* 2
++5 6
+cfi=(14)
+cfn=(976) std::__new_allocator<SummarizedCat::DiscreteStructure>::deallocate(SummarizedCat::DiscreteStructure*, unsigned long)
+calls=1 -58 
+* 92
+fi=(21)
+516 1
+fe=(7)
+388 3
+
+fn=(182) std::vector<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::operator[](unsigned long)
+1123 406820
++3 813640
++1 203410
+
+fn=(194)
+1913 140
++5 80
+fi=(21)
+575 20
+fe=(7)
+1920 20
++1 100
+cfi=(11)
+cfn=(118)
+calls=20 233 
+* 260
+* 20
++1 100
+
+fn=(58) std::_Vector_base<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::_Vector_base()
+312 536186
+cfn=(60) std::_Vector_base<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::_Vector_impl::_Vector_impl()
+calls=76598 137 
+* 2144744
+* 229794
+
+fn=(230)
+298 63
++1 63
+
+fn=(284) std::vector<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::at(unsigned long)
+1175 506800
++2 506800
+cfn=(286) std::vector<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::_M_range_check(unsigned long) const
+calls=101360 -25 
+* 2838080
++1 506800
+cfn=(182)
+calls=101360 -55 
+* 1419040
++1 202720
+
+fn=(528) std::_Vector_base<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >::_M_get_Tp_allocator() const
+303 1020
++1 1020
+
+fn=(580) std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::vector(std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > const&)
+598 14960
++2 5440
+cfn=(312) std::_Vector_base<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_M_get_Tp_allocator() const
+calls=1360 303 
+* 8160
+* 14960
+fi=(14)
+92 1360
+fi=(13)
++76 1360
+fi=(21)
+587 1360
+fi=(26)
+98 1360
+fe=(7)
+600 4080
+cfn=(316) std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::size() const
+calls=1360 989 
+* 16320
+* 8160
+cfn=(582) std::_Vector_base<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_Vector_base(unsigned long, std::allocator<SummarizedCat::IStructure const*> const&)
+calls=1360 330 
+* 238012
+fi=(13)
+184 1360
+fe=(7)
+605 4080
+cfn=(334)
+calls=1360 298 
+* 8160
+* 1360
+-2 6800
+cfn=(590) std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::end() const
+calls=1360 900 
+* 40800
+* 5440
+cfn=(594) std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::begin() const
+calls=1360 880 
+* 39440
+* 6800
+cfi=(15)
+cfn=(596)
+calls=1360 366 
+* 425456
+-1 2720
++4 13600
+
+fn=(626)
+1295 6800
++1 4080
+cfi=(17)
+cfn=(624)
+calls=1360 97 
+* 8160
+* 6800
+cfi=(10)
+cfn=(628)
+calls=1360 111 
+* 1387200
+* 4080
+
+fn=(648)
+730 157952
++3 118464
+cfn=(334)
+calls=39488 298 
+* 236928
+-1 276416
+fi=(21)
+947 197440
+cfi=(18)
+cfn=(650) void std::_Destroy<SummarizedCat::IStructure const**>(SummarizedCat::IStructure const**, SummarizedCat::IStructure const**)
+calls=39488 182 
+* 1066176
++1 39488
+fe=(7)
+735 118464
+cfn=(656) std::_Vector_base<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::~_Vector_base()
+calls=39488 364 
+* 2115141
+* 118464
+
+fn=(418)
+375 132976
++3 41100
+fi=(13)
+191 982
+cfi=(12)
+cfn=(126)
+calls=982 541 
+* 4910
+* 1964
++7 5892
+cfi=(14)
+cfn=(822) std::__new_allocator<SummarizedCat::scalar>::allocate(unsigned long, void const*)
+calls=982 -76 
+* 77474
+* 982
+fi=(21)
+482 1964
+fe=(7)
+378 15640
++1 83110
+
+fn=(656)
+364 157952
++3 276416
+-1 276416
+cfn=(344)
+calls=39488 +17 
+* 812037
++2 118464
+cfn=(658)
+calls=39488 133 
+* 355392
+* 118464
+
+fn=(762)
+113 8160
++2 8160
++1 8160
++1 8160
++1 6120
+
+fn=(768) std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >::~vector()
+730 1360
++3 1020
+cfn=(546)
+calls=340 298 
+* 2040
+-1 2380
+fi=(21)
+947 1700
+cfi=(18)
+cfn=(556)
+calls=340 182 
+* 396100
++1 340
+fe=(7)
+735 1020
+cfn=(778) std::_Vector_base<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >::~_Vector_base()
+calls=340 364 
+* 59500
+* 1020
+
+fn=(804) std::_Vector_base<unsigned int, std::allocator<unsigned int> >::_Vector_impl::~_Vector_impl()
+133 1700
+fi=(13)
++51 340
+fe=(7)
+-51 1020
+
+fn=(870) std::vector<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::~vector()
+730 8
++3 6
+cfn=(140)
+calls=2 298 
+* 12
+-1 14
+fi=(21)
+947 10
+cfi=(18)
+cfn=(872) void std::_Destroy<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*>(std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*)
+calls=2 182 
+* 15600316
++1 2
+fe=(7)
+735 6
+cfn=(900) std::_Vector_base<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::~_Vector_base()
+calls=2 364 
+* 224
+* 6
+
+fn=(196)
+1893 50
++2 15
+cfn=(190)
+calls=5 995 
+* 270
+* 20
+cfn=(186)
+calls=5 989 
+* 65
+* 35
++3 15
+cfn=(186)
+calls=5 989 
+* 65
+* 20
+cfn=(186)
+calls=5 989 
+* 65
+* 30
+cfi=(11)
+cfn=(122) unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+calls=5 257 
+* 70
+* 15
++1 15
+cfn=(186)
+calls=5 989 
+* 65
+* 25
+cfn=(190)
+calls=5 995 
+* 270
+* 15
++1 30
+
+fn=(74) std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> >::end() const
+900 14
++1 12
+cfi=(8)
+cfn=(76)
+calls=2 1076 
+* 22
+* 12
+
+fn=(92)
+989 1608723
++1 4826169
+
+fn=(162)
+99 18
++1 36
++1 18
+
+fn=(454)
+995 1360
++1 1020
+cfn=(456) std::_Vector_base<unsigned int, std::allocator<unsigned int> >::_M_get_Tp_allocator() const
+calls=340 303 
+* 2040
+* 680
+cfn=(458) std::vector<unsigned int, std::allocator<unsigned int> >::_S_max_size(std::allocator<unsigned int> const&)
+calls=340 1913 
+* 12580
+* 680
+
+fn=(72) std::_Vector_base<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::_Vector_impl_data::_Vector_impl_data()
+99 3
++1 6
++1 3
+
+fn=(248)
+137 302304
+fi=(14)
+-49 37788
+fi=(13)
++75 37788
+fe=(7)
+-24 113364
+cfn=(250)
+calls=37788 -40 
+* 453456
++1 113364
+
+fn=(390)
+1075 23460
++1 15640
++1 54740
+
+fn=(458)
+1913 2380
++5 1360
+fi=(21)
+575 340
+fe=(7)
+1920 340
++1 1700
+cfi=(11)
+cfn=(118)
+calls=340 233 
+* 4420
+* 340
++1 1700
+
+fn=(494) std::vector<unsigned int, std::allocator<unsigned int> >::begin()
+870 7140
++1 5100
+cfi=(8)
+cfn=(492)
+calls=1020 1076 
+* 11220
+* 6120
+
+fn=(796) std::_Vector_base<unsigned int, std::allocator<unsigned int> >::~_Vector_base()
+364 1360
++3 2380
+-1 2380
+cfn=(480)
+calls=340 +17 
+* 47940
++2 1020
+cfn=(804)
+calls=340 133 
+* 3060
+* 1020
+
+fn=(880) std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::~vector()
+730 24
++3 18
+cfn=(230)
+calls=6 298 
+* 36
+-1 42
+fi=(21)
+947 30
+cfi=(18)
+cfn=(264)
+calls=6 182 
+* 15598427
++1 6
+fe=(7)
+735 18
+cfn=(884) std::_Vector_base<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::~_Vector_base()
+calls=6 364 
+* 1421
+* 18
+
+fn=(886) std::_Vector_base<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::_Vector_impl::~_Vector_impl()
+133 30
+fi=(13)
++51 6
+fe=(7)
+-51 18
+
+fn=(94) std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::operator[](unsigned long) const
+1142 1600000
++3 2000000
++1 800000
+
+fn=(172)
+383 18
++3 6
++1 12
+fi=(13)
+205 1
+cfi=(12)
+cfn=(126)
+calls=1 541 
+* 5
+* 2
++5 6
+cfi=(14)
+cfn=(904) std::__new_allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > >::deallocate(std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, unsigned long)
+calls=1 -58 
+* 107
+fi=(21)
+516 1
+fe=(7)
+388 9
+
+fn=(346)
+1230 700000
++3 300000
+cfn=(302)
+calls=100000 890 
+* 3000000
+* 500000
+cfi=(8)
+cfn=(348)
+calls=100000 -76 
+* 3700000
+* 400000
+cfi=(8)
+cfn=(350)
+calls=100000 1099 
+* 700000
++1 500000
+
+fn=(538)
+1613 2720
++3 1700
+cfn=(540) std::_Vector_base<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >::_M_allocate(unsigned long)
+calls=340 375 
+* 40800
+* 340
++4 1020
+cfn=(546)
+calls=340 298 
+* 2040
+* 340
+-1 1700
+cfi=(15)
+cfn=(548)
+calls=340 366 
+* 24480
++2 680
++7 1020
+
+fn=(540)
+375 2720
++3 3400
+fi=(13)
+191 340
+cfi=(12)
+cfn=(126)
+calls=340 541 
+* 1700
+* 680
++7 2040
+cfi=(14)
+cfn=(544) std::__new_allocator<SummarizedCat::IStructure>::allocate(unsigned long, void const*)
+calls=340 -76 
+* 27200
+* 340
+fi=(21)
+482 680
+fe=(7)
+379 1700
+
+fn=(586) std::_Vector_base<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_M_create_storage(unsigned long)
+393 6800
++2 6800
+cfn=(324)
+calls=1360 -20 
+* 129212
+* 2720
++1 5440
++1 9520
++1 4080
+
+fn=(198)
+375 40
++3 50
+fi=(13)
+191 5
+cfi=(12)
+cfn=(126)
+calls=5 541 
+* 25
+* 10
++7 30
+cfi=(14)
+cfn=(202) std::__new_allocator<SummarizedCat::StructureSummary>::allocate(unsigned long, void const*)
+calls=5 -76 
+* 2327
+* 5
+fi=(21)
+482 10
+fe=(7)
+379 25
+
+fn=(308)
+1893 81920
++2 24576
+cfn=(310) std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::max_size() const
+calls=8192 995 
+* 442368
+* 32768
+cfn=(316)
+calls=8192 989 
+* 98304
+* 57344
++3 24576
+cfn=(316)
+calls=8192 989 
+* 98304
+* 32768
+cfn=(316)
+calls=8192 989 
+* 98304
+* 49152
+cfi=(11)
+cfn=(122)
+calls=8192 257 
+* 107520
+* 24576
++1 24576
+cfn=(316)
+calls=8192 989 
+* 98304
+* 40960
+cfn=(310)
+calls=8192 995 
+* 442368
+* 24576
++1 49152
+
+fn=(316)
+989 102384
++1 307152
+
+fn=(384)
+995 20128
++1 15096
+cfn=(386)
+calls=5032 303 
+* 30192
+* 10064
+cfn=(388)
+calls=5032 1913 
+* 186184
+* 10064
+
+fn=(400)
+880 202300
++1 144500
+cfi=(8)
+cfn=(398)
+calls=28900 1076 
+* 317900
+* 173400
+
+fn=(456)
+303 1020
++1 1020
+
+fn=(464)
+375 2720
++3 3400
+fi=(13)
+191 340
+cfi=(12)
+cfn=(126)
+calls=340 541 
+* 1700
+* 680
++7 2040
+cfi=(14)
+cfn=(468) std::__new_allocator<unsigned int>::allocate(unsigned long, void const*)
+calls=340 -76 
+* 27200
+* 340
+fi=(21)
+482 680
+fe=(7)
+379 1700
+
+fn=(480)
+383 4080
++3 1360
++1 4080
+fi=(13)
+205 340
+cfi=(12)
+cfn=(126)
+calls=340 541 
+* 1700
+* 680
++5 2040
+cfi=(14)
+cfn=(800) std::__new_allocator<unsigned int>::deallocate(unsigned int*, unsigned long)
+calls=340 -58 
+* 35020
+fi=(21)
+516 340
+fe=(7)
+388 2040
+
+fn=(788) std::vector<unsigned int, std::allocator<unsigned int> >::~vector()
+730 1360
++3 1020
+cfn=(470)
+calls=340 298 
+* 2040
+-1 2380
+fi=(21)
+947 1700
+cfi=(18)
+cfn=(790) void std::_Destroy<unsigned int*>(unsigned int*, unsigned int*)
+calls=340 182 
+* 9180
++1 340
+fe=(7)
+735 1020
+cfn=(796)
+calls=340 364 
+* 59160
+* 1020
+
+fn=(806) std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::push_back(SummarizedCat::scalar&&)
+1295 3230
++1 1938
+cfi=(17)
+cfn=(808) std::remove_reference<SummarizedCat::scalar&>::type&& std::move<SummarizedCat::scalar&>(SummarizedCat::scalar&)
+calls=646 97 
+* 3876
+* 3230
+cfi=(10)
+cfn=(810)
+calls=646 111 
+* 759678
+* 1938
+
+fn=(846)
+1613 2688
++3 1680
+cfn=(418)
+calls=336 375 
+* 40242
+* 336
++4 1008
+cfn=(422)
+calls=336 298 
+* 2016
+* 336
+-1 1680
+cfi=(15)
+cfn=(832)
+calls=336 366 
+* 24192
++2 672
++7 1008
+
+fn=(954)
+298 3
++1 3
+
+fn=(290) std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::_M_range_check(unsigned long) const
+1152 506800
++2 304080
+cfn=(186)
+calls=101360 989 
+* 1317680
+* 405440
++5 304080
+
+fn=(546)
+298 3060
++1 3060
+
+fn=(582)
+330 9520
++1 6800
+cfn=(584)
+calls=1360 143 
+* 44880
++1 6800
+cfn=(586)
+calls=1360 +61 
+* 164572
+* 5440
+
+fn=(60)
+137 612784
+fi=(14)
+-49 76598
+fi=(13)
++75 76598
+fe=(7)
+-24 229794
+cfn=(62)
+calls=76598 -40 
+* 919176
++1 229794
+
+fn=(140)
+298 12
++1 12
+
+fn=(288) std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::at(unsigned long)
+1175 506800
++2 506800
+cfn=(290)
+calls=101360 -25 
+* 2838080
++1 506800
+cfn=(292)
+calls=101360 -55 
+* 1419040
++1 202720
+
+fn=(314) std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> >::_S_max_size(std::allocator<SummarizedCat::IStructure const*> const&)
+1913 114688
++5 65536
+fi=(21)
+575 16384
+fe=(7)
+1920 16384
++1 81920
+cfi=(11)
+cfn=(118)
+calls=16384 233 
+* 212992
+* 16384
++1 81920
+
+fn=(334)
+298 173736
++1 173736
+
+fn=(440)
+364 1183912
++3 2071846
+-1 2071846
+cfn=(442)
+calls=295978 +17 
+* 33743116
++2 887934
+cfn=(444)
+calls=295978 133 
+* 2663802
+* 887934
+
+fn=(666) std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >::end() const
+900 7140
++1 6120
+cfi=(8)
+cfn=(668)
+calls=1020 1076 
+* 11220
+* 6120
+
+fn=(786) std::_Vector_base<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> >::_Vector_impl::~_Vector_impl()
+133 1700
+fi=(13)
++51 340
+fe=(7)
+-51 1020
+
+fn=(884)
+364 24
++3 48
+-1 42
+cfn=(270)
+calls=6 +17 
+* 1217
++2 18
+cfn=(886)
+calls=6 133 
+* 54
+* 18
+
+fn=(900)
+364 8
++3 16
+-1 14
+cfn=(172)
+calls=2 +17 
+* 156
++2 6
+cfn=(908)
+calls=2 133 
+* 18
+* 6
+
+fn=(70)
+137 8
+fi=(14)
+-49 1
+fi=(13)
++75 1
+fe=(7)
+-24 3
+cfn=(72)
+calls=1 -40 
+* 12
++1 3
+
+fn=(120)
+1893 10
++2 3
+cfn=(112)
+calls=1 995 
+* 54
+* 4
+cfn=(108)
+calls=1 989 
+* 13
+* 7
++3 3
+cfn=(108)
+calls=1 989 
+* 13
+* 4
+cfn=(108)
+calls=1 989 
+* 13
+* 6
+cfi=(11)
+cfn=(122)
+calls=1 257 
+* 14
+* 3
++1 3
+cfn=(108)
+calls=1 989 
+* 13
+* 5
+cfn=(112)
+calls=1 995 
+* 54
+* 3
++1 6
+
+fn=(158) std::_Vector_base<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::_Vector_base()
+312 42
+cfn=(160)
+calls=6 137 
+* 168
+* 18
+
+fn=(250)
+99 118464
++1 236928
++1 118464
+
+fn=(396)
+900 183260
++1 157080
+cfi=(8)
+cfn=(398)
+calls=26180 1076 
+* 287980
+* 157080
+
+fn=(416) std::_Vector_base<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::_M_create_storage(unsigned long)
+393 78200
++2 78200
+cfn=(418)
+calls=15640 -20 
+* 250240
+* 31280
++1 62560
++1 109480
++1 46920
+
+fn=(490) std::vector<unsigned int, std::allocator<unsigned int> >::end()
+890 14280
++1 12240
+cfi=(8)
+cfn=(492)
+calls=2040 1076 
+* 22440
+* 12240
+
+fn=(506) std::vector<unsigned int, std::allocator<unsigned int> >::push_back(unsigned int&&)
+1295 5100
++1 3060
+cfi=(17)
+cfn=(508) std::remove_reference<unsigned int&>::type&& std::move<unsigned int&>(unsigned int&)
+calls=1020 97 
+* 6120
+* 5100
+cfi=(10)
+cfn=(510)
+calls=1020 111 
+* 188700
+* 3060
+
+fn=(594)
+880 9520
++1 6800
+cfi=(8)
+cfn=(592)
+calls=1360 1076 
+* 14960
+* 8160
+
+fn=(636)
+1230 9520
++3 4080
+cfn=(638)
+calls=1360 890 
+* 40800
+* 6800
+cfi=(8)
+cfn=(642)
+calls=1360 -76 
+* 50320
+* 5440
+cfi=(8)
+cfn=(644)
+calls=1360 1099 
+* 9520
++1 6800
+
+fn=(286)
+1152 506800
++2 304080
+cfn=(108)
+calls=101360 989 
+* 1317680
+* 405440
++5 304080
+
+fn=(312)
+303 54252
++1 54252
+
+fn=(422)
+298 954924
++1 954924
+
+fn=(482) std::vector<unsigned int, std::allocator<unsigned int> >::push_back(unsigned int const&)
+1278 1700
++2 2040
++3 2380
+fi=(21)
+539 1020
+cfi=(17)
+cfn=(484) unsigned int const& std::forward<unsigned int const&>(std::remove_reference<unsigned int const&>::type&)
+calls=340 70 
+* 2040
+* 1700
+cfi=(18)
+cfn=(488) decltype (::new ((void*)(0)) unsigned int((declval<unsigned int const&>)())) std::construct_at<unsigned int, unsigned int const&>(unsigned int*, unsigned int const&)
+calls=340 94 
+* 11220
++2 340
+fe=(7)
+1285 1700
++5 1360
+
+fn=(840)
+1230 4522
++3 1938
+cfn=(696)
+calls=646 890 
+* 19380
+* 3230
+cfi=(8)
+cfn=(842)
+calls=646 -76 
+* 23902
+* 2584
+cfi=(8)
+cfn=(844)
+calls=646 1099 
+* 4522
++1 3230
+
+fn=(184) std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::resize(unsigned long)
+1010 25
++2 15
+cfn=(186)
+calls=5 -23 
+* 65
+* 20
++1 15
+cfn=(186)
+calls=5 -24 
+* 65
+* 30
+cfi=(10)
+cfn=(188)
+calls=5 634 
+* 10454129
++3 20
+
+fn=(116)
+1913 28
++5 16
+fi=(21)
+575 4
+fe=(7)
+1920 4
++1 20
+cfi=(11)
+cfn=(118)
+calls=4 233 
+* 52
+* 4
++1 20
+
+fn=(310)
+995 65536
++1 49152
+cfn=(312)
+calls=16384 303 
+* 98304
+* 32768
+cfn=(314)
+calls=16384 1913 
+* 606208
+* 32768
+
+fn=(318)
+870 57344
++1 40960
+cfi=(8)
+cfn=(304)
+calls=8192 1076 
+* 90112
+* 49152
+
+fn=(518)
+1230 7140
++3 3060
+cfn=(490)
+calls=1020 890 
+* 30600
+* 5100
+cfi=(8)
+cfn=(520)
+calls=1020 -76 
+* 37740
+* 4080
+cfi=(8)
+cfn=(502)
+calls=1020 1099 
+* 7140
++1 5100
+
+fn=(534)
+989 1020
++1 3060
+
+fn=(56)
+528 536186
+cfn=(58)
+calls=76598 312 
+* 2910724
+* 229794
+
+fn=(156) std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >::vector()
+528 42
+cfn=(158)
+calls=6 312 
+* 228
+* 18
+
+fn=(324)
+375 76416
++3 92832
+fi=(13)
+191 9216
+cfi=(12)
+cfn=(126)
+calls=9216 541 
+* 46080
+* 18432
++7 55296
+cfi=(14)
+cfn=(328) std::__new_allocator<SummarizedCat::IStructure const*>::allocate(unsigned long, void const*)
+calls=9216 -76 
+* 2294804
+* 9216
+fi=(21)
+482 18432
+fe=(7)
+378 336
++1 47760
+
+fn=(344)
+383 286080
++3 95360
++1 110592
+fi=(13)
+205 9216
+cfi=(12)
+cfn=(126)
+calls=9216 541 
+* 46080
+* 18432
++5 55296
+cfi=(14)
+cfn=(358) std::__new_allocator<SummarizedCat::IStructure const*>::deallocate(SummarizedCat::IStructure const**, unsigned long)
+calls=9216 -58 
+* 1348176
+fi=(21)
+516 9216
+fe=(7)
+388 143040
+
+fn=(412)
+330 109480
++1 78200
+cfn=(414) std::_Vector_base<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> >::_Vector_impl::_Vector_impl(std::allocator<SummarizedCat::scalar> const&)
+calls=15640 143 
+* 516120
++1 78200
+cfn=(416)
+calls=15640 +61 
+* 656880
+* 62560
+
+fn=(752)
+308 1700
++1 1020
+cfn=(312)
+calls=340 -6 
+* 2040
+* 2380
+fi=(14)
+92 340
+fi=(13)
++76 340
+fe=(7)
+309 1360
+
+fn=(756)
+318 1700
++1 1700
+cfn=(584)
+calls=340 143 
+* 11220
+* 1020
+
+fn=(778)
+364 1360
++3 2380
+-1 2380
+cfn=(562)
+calls=340 +17 
+* 48280
++2 1020
+cfn=(786)
+calls=340 133 
+* 3060
+* 1020
+
+fn=(816)
+1893 6460
++2 1938
+cfn=(384)
+calls=646 995 
+* 34884
+* 2584
+cfn=(92)
+calls=646 989 
+* 7752
+* 4522
++3 1938
+cfn=(92)
+calls=646 989 
+* 7752
+* 2584
+cfn=(92)
+calls=646 989 
+* 7752
+* 3876
+cfi=(11)
+cfn=(122)
+calls=646 257 
+* 8734
+* 1938
++1 1938
+cfn=(92)
+calls=646 989 
+* 7752
+* 3230
+cfn=(384)
+calls=646 995 
+* 34884
+* 1938
++1 3876
+
+fn=(192)
+303 60
++1 60
+
+fn=(66) std::vector<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >, std::allocator<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > > >::vector()
+528 7
+cfn=(68)
+calls=1 312 
+* 38
+* 3
+
+fn=(114)
+303 12
++1 12
+
+fn=(414)
+143 203320
+fi=(14)
+-51 15640
+fi=(13)
++76 15640
+fe=(7)
+-24 46920
+cfn=(62)
+calls=15640 -45 
+* 187680
++1 46920
+
+fn=(460)
+1075 1020
++1 680
++1 2380
+
+fn=(526)
+995 1360
++1 1020
+cfn=(528)
+calls=340 303 
+* 2040
+* 680
+cfn=(530)
+calls=340 1913 
+* 12580
+* 680
+
+fn=(562)
+383 4080
++3 1360
++1 4080
+fi=(13)
+205 340
+cfi=(12)
+cfn=(126)
+calls=340 541 
+* 1700
+* 680
++5 2040
+cfi=(14)
+cfn=(782) std::__new_allocator<SummarizedCat::IStructure>::deallocate(SummarizedCat::IStructure*, unsigned long)
+calls=340 -58 
+* 35360
+fi=(21)
+516 340
+fe=(7)
+388 2040
+
+fn=(590)
+900 9520
++1 8160
+cfi=(8)
+cfn=(592)
+calls=1360 1076 
+* 14960
+* 8160
+
+fl=(9)
+fn=(80) SummarizedCat::StructureCollection::StructureCollection(std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > const&)::{lambda(SummarizedCat::DiscreteStructure const&)#1} std::for_each<__gnu_cxx::__normal_iterator<SummarizedCat::DiscreteStructure const*, std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > >, SummarizedCat::StructureCollection::StructureCollection(std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > const&)::{lambda(SummarizedCat::DiscreteStructure const&)#1}>(__gnu_cxx::__normal_iterator<SummarizedCat::DiscreteStructure const*, std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > >, __gnu_cxx::__normal_iterator<SummarizedCat::DiscreteStructure const*, std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > >, SummarizedCat::StructureCollection::StructureCollection(std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > const&)::{lambda(SummarizedCat::DiscreteStructure const&)#1})
+3827 6
++5 1
++1 300000
+cfi=(8)
+cfn=(86)
+calls=100000 1099 
+* 700000
+* 500000
+cfi=(5)
+cfn=(88) SummarizedCat::StructureCollection::StructureCollection(std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > const&)::{lambda(SummarizedCat::DiscreteStructure const&)#1}::operator()(SummarizedCat::DiscreteStructure const&) const
+calls=100000 42 
+* 37300099
+-1 300000
+cfi=(8)
+cfn=(98)
+calls=100000 1109 
+* 1100000
+* 500005
+cfi=(8)
+cfn=(82)
+calls=100001 1197 
+* 3100031
+* 300003
++2 1
++1 2
+
+fn=(402)
+4298 33660
++10 3060
++1 1938
+cfi=(8)
+cfn=(850)
+calls=646 1099 
+* 4522
+* 3876
+cfi=(6)
+cfn=(852)
+calls=646 81 
+* 32946
+* 2584
+cfi=(8)
+cfn=(844)
+calls=646 1099 
+* 4522
+* 1292
+-1 1938
+cfi=(8)
+cfn=(854)
+calls=646 1109 
+* 7106
+* 1938
+cfi=(8)
+cfn=(856)
+calls=646 1109 
+* 7106
+* 18530
+cfi=(8)
+cfn=(404)
+calls=3706 1197 
+* 114886
+* 11118
++2 3060
++1 18360
+
+fn=(570) std::back_insert_iterator<std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > > std::transform<__gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int> > >, std::back_insert_iterator<std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >, SummarizedCat::StructureCollection::StructureCollection(std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > const&)::{lambda(unsigned int const&)#2}>(__gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int> > >, __gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int> > >, std::back_insert_iterator<std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >, SummarizedCat::StructureCollection::StructureCollection(std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > const&)::{lambda(unsigned int const&)#2})
+4298 5100
++10 340
++1 4080
+cfi=(8)
+cfn=(502)
+calls=1360 1099 
+* 9520
+* 8160
+cfi=(5)
+cfn=(572) SummarizedCat::StructureCollection::StructureCollection(std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > const&)::{lambda(unsigned int const&)#2}::operator()(unsigned int const&) const
+calls=1360 92 
+* 2247868
+* 4080
+cfi=(8)
+cfn=(620)
+calls=1360 755 
+* 8160
+* 8160
+cfi=(8)
+cfn=(622)
+calls=1360 745 
+* 1449760
+* 4080
+cfi=(23)
+cfn=(646) SummarizedCat::StructureSummary::~StructureSummary()
+calls=1360 28 
+* 639040
+-1 4080
+cfi=(8)
+cfn=(522)
+calls=1360 1109 
+* 14960
+* 4080
+cfi=(8)
+cfn=(662)
+calls=1360 761 
+* 8160
+* 8500
+cfi=(8)
+cfn=(498)
+calls=1700 1197 
+* 52700
+* 5100
++2 340
++1 2040
+
+fn=(686)
+4336 29920
++12 16320
+cfi=(8)
+cfn=(404)
+calls=2720 1197 
+* 84320
+* 8160
++2 2720
++1 16320
+
+fn=(272) SummarizedCat::StructureCollection::StructureCollection(std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > const&)::{lambda(SummarizedCat::DiscreteStructure const&)#2} std::for_each<__gnu_cxx::__normal_iterator<SummarizedCat::DiscreteStructure const*, std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > >, SummarizedCat::StructureCollection::StructureCollection(std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > const&)::{lambda(SummarizedCat::DiscreteStructure const&)#2}>(__gnu_cxx::__normal_iterator<SummarizedCat::DiscreteStructure const*, std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > >, __gnu_cxx::__normal_iterator<SummarizedCat::DiscreteStructure const*, std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > >, SummarizedCat::StructureCollection::StructureCollection(std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > const&)::{lambda(SummarizedCat::DiscreteStructure const&)#2})
+3827 7
++5 1
++1 300000
+cfi=(8)
+cfn=(86)
+calls=100000 1099 
+* 700000
+* 300000
+cfi=(5)
+cfn=(274) SummarizedCat::StructureCollection::StructureCollection(std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > const&)::{lambda(SummarizedCat::DiscreteStructure const&)#2}::operator()(SummarizedCat::DiscreteStructure const&) const
+calls=100000 64 
+* 120531427
+-1 300000
+cfi=(8)
+cfn=(98)
+calls=100000 1109 
+* 1100000
+* 500005
+cfi=(8)
+cfn=(82)
+calls=100001 1197 
+* 3100031
+* 300003
++2 11
++1 4
+
+fn=(496) SummarizedCat::StructureCollection::StructureCollection(std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > const&)::{lambda(unsigned int const&)#1} std::for_each<__gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int> > >, SummarizedCat::StructureCollection::StructureCollection(std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > const&)::{lambda(unsigned int const&)#1}>(__gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int> > >, __gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int> > >, SummarizedCat::StructureCollection::StructureCollection(std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > const&)::{lambda(unsigned int const&)#1})
+3827 4080
++5 680
++1 3060
+cfi=(8)
+cfn=(502)
+calls=1020 1099 
+* 7140
+* 3060
+cfi=(5)
+cfn=(504) SummarizedCat::StructureCollection::StructureCollection(std::vector<SummarizedCat::DiscreteStructure, std::allocator<SummarizedCat::DiscreteStructure> > const&)::{lambda(unsigned int const&)#1}::operator()(unsigned int const&) const
+calls=1020 85 
+* 375020
+-1 3060
+cfi=(8)
+cfn=(522)
+calls=1020 1109 
+* 11220
+* 8500
+cfi=(8)
+cfn=(498)
+calls=1700 1197 
+* 52700
+* 5100
++2 4760
++1 2040
+
+fn=(740)
+4298 7480
++10 4080
+cfi=(8)
+cfn=(404)
+calls=680 1197 
+* 21080
+* 2040
++2 680
++1 4080
+
+fl=(24) /nix/store/6g5fhxv0bdm7236ixdwq1izzawbc7grm-gcc-13.2.0/include/c++/13.2.0/bits/cpp_type_traits.h
+fn=(700) __gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > > std::__miter_base<__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > > >(__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >)
+607 24480
++1 24480
+
+fn=(604) __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > > std::__miter_base<__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > > >(__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >)
+607 8160
++1 8160
+
+fl=(14)
+fn=(782)
+152 2040
++16 2380
+cob=(3)
+cfi=(2)
+cfn=(362) operator delete(void*, unsigned long)
+calls=340 0 
+* 29920
+* 340
++1 680
+
+fn=(468)
+122 2720
+229 340
+-99 2380
++17 1360
+cob=(3)
+cfi=(2)
+cfn=(134) operator new(unsigned long)
+calls=340 0 
+* 19040
+* 340
+* 340
++1 680
+
+fn=(358)
+152 55296
++16 55296
+cob=(3)
+cfi=(2)
+cfn=(362)
+calls=9216 0 
+* 1209936
+* 9216
++1 18432
+
+fn=(894)
+152 30
++16 50
+cob=(3)
+cfi=(2)
+cfn=(362)
+calls=5 0 
+* 921
+* 5
++1 10
+
+fn=(544)
+122 2720
+229 340
+-99 2380
++17 1360
+cob=(3)
+cfi=(2)
+cfn=(134)
+calls=340 0 
+* 19040
+* 340
+* 340
++1 680
+
+fn=(202)
+122 40
+229 5
+-99 35
++17 35
+cob=(3)
+cfi=(2)
+cfn=(134)
+calls=5 0 
+* 2192
+* 5
+* 5
++1 10
+
+fn=(976)
+152 6
++16 10
+cob=(3)
+cfi=(2)
+cfn=(362)
+calls=1 0 
+* 73
+* 1
++1 2
+
+fn=(822)
+122 7856
+229 982
+-99 6874
++17 3928
+cob=(3)
+cfi=(2)
+cfn=(134)
+calls=982 0 
+* 53906
+* 982
+* 982
++1 1964
+
+fn=(130)
+122 8
+229 1
+-99 7
++17 7
+cob=(3)
+cfi=(2)
+cfn=(134)
+calls=1 0 
+* 56
+* 1
+* 1
++1 2
+
+fn=(860)
+152 1205892
++16 1205892
+cob=(3)
+cfi=(2)
+cfn=(362)
+calls=200982 0 
+* 22086414
+* 200982
++1 401964
+
+fn=(904)
+152 6
++16 10
+cob=(3)
+cfi=(2)
+cfn=(362)
+calls=1 0 
+* 88
+* 1
++1 2
+
+fn=(328)
+122 73728
+229 9216
+-99 64512
++17 36864
+cob=(3)
+cfi=(2)
+cfn=(134)
+calls=9216 0 
+* 2073620
+* 9216
+* 9216
++1 18432
+
+fn=(800)
+152 2040
++16 2040
+cob=(3)
+cfi=(2)
+cfn=(362)
+calls=340 0 
+* 29920
+* 340
++1 680
+
+fl=(19) /nix/store/6g5fhxv0bdm7236ixdwq1izzawbc7grm-gcc-13.2.0/include/c++/13.2.0/new
+fn=(154) operator new(unsigned long, void*)
+175 987910
+
+fl=(25) /nix/store/6g5fhxv0bdm7236ixdwq1izzawbc7grm-gcc-13.2.0/include/c++/13.2.0/bits/stl_numeric.h
+fn=(672) SummarizedCat::SpatialVector std::accumulate<__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const*, std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >, SummarizedCat::SpatialVector, SummarizedCat::StructureSummary::StructureSummary(std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > const&)::{lambda(SummarizedCat::SpatialVector const&, SummarizedCat::IStructure const&)#1}>(__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const*, std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >, __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const*, std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >, SummarizedCat::SpatialVector, SummarizedCat::StructureSummary::StructureSummary(std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > const&)::{lambda(SummarizedCat::SpatialVector const&, SummarizedCat::IStructure const&)#1})
+161 3740
++7 340
++1 4080
+cfi=(8)
+cfn=(678)
+calls=1360 1099 
+* 9520
+* 5440
+cfi=(17)
+cfn=(680) std::remove_reference<SummarizedCat::SpatialVector&>::type&& std::move<SummarizedCat::SpatialVector&>(SummarizedCat::SpatialVector&)
+calls=1360 -72 
+* 8160
+* 8160
+cfi=(5)
+cfn=(682) SummarizedCat::StructureSummary::StructureSummary(std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > const&)::{lambda(SummarizedCat::SpatialVector const&, SummarizedCat::IStructure const&)#1}::operator()(SummarizedCat::SpatialVector const&, SummarizedCat::IStructure const&) const
+calls=1360 20 
+* 2800240
+* 6800
+cfi=(22) /home/myaumyau/Projects/SummarizedCat/primitives.hpp
+cfn=(688) SummarizedCat::SpatialVector::operator=(SummarizedCat::SpatialVector const&)
+calls=1360 21 
+* 727600
+* 4080
+cfi=(22)
+cfn=(450) SummarizedCat::SpatialVector::~SpatialVector()
+calls=1360 21 
+* 153680
+-1 4080
+cfi=(8)
+cfn=(726)
+calls=1360 1109 
+* 14960
+* 8500
+cfi=(8)
+cfn=(674)
+calls=1700 1197 
+* 52700
+* 5100
++2 1700
+cfi=(6)
+cfn=(446)
+calls=340 -76 
+* 130220
++1 2380
+
+fn=(728) SummarizedCat::SpatialVector std::accumulate<__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const*, std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >, SummarizedCat::SpatialVector, SummarizedCat::StructureSummary::StructureSummary(std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > const&)::{lambda(SummarizedCat::SpatialVector const&, SummarizedCat::IStructure const&)#2}>(__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const*, std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >, __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const*, std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >, SummarizedCat::SpatialVector, SummarizedCat::StructureSummary::StructureSummary(std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > const&)::{lambda(SummarizedCat::SpatialVector const&, SummarizedCat::IStructure const&)#2})
+161 3740
++7 340
++1 4080
+cfi=(8)
+cfn=(678)
+calls=1360 1099 
+* 9520
+* 5440
+cfi=(17)
+cfn=(680)
+calls=1360 -72 
+* 8160
+* 8160
+cfi=(5)
+cfn=(730) SummarizedCat::StructureSummary::StructureSummary(std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > const&)::{lambda(SummarizedCat::SpatialVector const&, SummarizedCat::IStructure const&)#2}::operator()(SummarizedCat::SpatialVector const&, SummarizedCat::IStructure const&) const
+calls=1360 24 
+* 2800240
+* 6800
+cfi=(22)
+cfn=(688)
+calls=1360 21 
+* 727600
+* 4080
+cfi=(22)
+cfn=(450)
+calls=1360 21 
+* 153680
+-1 4080
+cfi=(8)
+cfn=(726)
+calls=1360 1109 
+* 14960
+* 8500
+cfi=(8)
+cfn=(674)
+calls=1700 1197 
+* 52700
+* 5100
++2 1700
+cfi=(6)
+cfn=(446)
+calls=340 -76 
+* 130220
++1 2380
+
+fn=(732) int std::accumulate<__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const*, std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >, int, SummarizedCat::StructureSummary::StructureSummary(std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > const&)::{lambda(SummarizedCat::scalar const&, SummarizedCat::IStructure const&)#1}>(__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const*, std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >, __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const*, std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > >, int, SummarizedCat::StructureSummary::StructureSummary(std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > const&)::{lambda(SummarizedCat::scalar const&, SummarizedCat::IStructure const&)#1})
+161 3400
++7 340
++1 4080
+cfi=(8)
+cfn=(678)
+calls=1360 1099 
+* 9520
+* 5440
+cfi=(17)
+cfn=(734) std::remove_reference<int&>::type&& std::move<int&>(int&)
+calls=1360 -72 
+* 8160
+* 10880
+cfi=(6)
+cfn=(64)
+calls=1360 26 
+* 13600
+* 8160
+cfi=(5)
+cfn=(736) SummarizedCat::StructureSummary::StructureSummary(std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > const&)::{lambda(SummarizedCat::scalar const&, SummarizedCat::IStructure const&)#1}::operator()(SummarizedCat::scalar const&, SummarizedCat::IStructure const&) const
+calls=1360 28 
+* 70720
+* 4080
+cfi=(6)
+cfn=(96)
+calls=1360 29 
+* 12240
+* 2720
+-1 4080
+cfi=(8)
+cfn=(726)
+calls=1360 1109 
+* 14960
+* 8500
+cfi=(8)
+cfn=(674)
+calls=1700 1197 
+* 52700
+* 5100
++2 340
++1 2040
+
+fl=(23)
+fn=(742) SummarizedCat::StructureSummary::operator=(SummarizedCat::StructureSummary&&)
+28 7480
+cfn=(744) SummarizedCat::IStructure::operator=(SummarizedCat::IStructure const&)
+calls=340 -20 
+* 372640
+* 2380
+cfi=(7)
+cfn=(746)
+calls=340 763 
+* 156400
+* 1020
+
+fn=(966) SummarizedCat::DiscreteStructure::~DiscreteStructure()
+22 1700000
+cfi=(5)
+cfn=(660) SummarizedCat::IStructure::~IStructure()
+calls=100000 -9 
+* 54899998
+* 300000
+
+fn=(574) SummarizedCat::StructureSummary::StructureSummary(SummarizedCat::StructureSummary const&)
+28 24480
+cfn=(576) SummarizedCat::IStructure::IStructure(SummarizedCat::IStructure const&)
+calls=1360 -20 
+* 1122000
+* 21760
+cfi=(7)
+cfn=(580)
+calls=1360 598 
+* 871548
+* 5440
+
+fn=(576)
+8 46240
+cfi=(6)
+cfn=(446)
+calls=2720 +86 
+* 1041760
+* 19040
+cfi=(6)
+cfn=(446)
+calls=2720 +86 
+* 1041760
+* 19040
+cfi=(6)
+cfn=(578)
+calls=2720 +19 
+* 65280
+* 10880
+
+fn=(744)
+8 4080
+cfi=(22)
+cfn=(688)
+calls=340 +13 
+* 181900
+* 2380
+cfi=(22)
+cfn=(688)
+calls=340 +13 
+* 181900
+* 2380
+
+fn=(646)
+28 665516
+cfi=(7)
+cfn=(648)
+calls=39148 730 
+* 4409913
+* 156592
+cfi=(5)
+cfn=(660)
+calls=39148 -15 
+* 9591260
+* 117444
+
+fn=(950)
+37 17
+cfi=(7)
+cfn=(870)
+calls=1 730 
+* 110
+* 4
+cfi=(5)
+cfn=(660)
+calls=1 -24 
+* 245
+* 3
+
+fl=(22)
+fn=(450)
+21 2026626
+cfi=(7)
+cfn=(432)
+calls=289518 730 
+* 60264032
+* 868554
+
+fn=(688)
+21 40800
+cfi=(10)
+cfn=(690)
+calls=4080 210 
+* 2129760
+* 12240
+
+fl=(18)
+fn=(774) void std::destroy_at<SummarizedCat::IStructure>(SummarizedCat::IStructure*)
+80 5440
++8 8160
+cfi=(5)
+cfn=(660)
+calls=1360 -75 
+* 333200
++1 4080
+
+fn=(874) void std::_Destroy_aux<false>::__destroy<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*>(std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*, std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*)
+160 10
++2 2
++1 18
+cfi=(17)
+cfn=(150)
+calls=6 51 
+* 36
+* 12
+cfn=(876) void std::_Destroy<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > >(std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*)
+calls=6 -17 
+* 15600160
+-1 30
++2 8
+
+fn=(792) void std::_Destroy_aux<true>::__destroy<unsigned int*>(unsigned int*, unsigned int*)
+172 2380
+
+fn=(958) void std::_Destroy_aux<false>::__destroy<SummarizedCat::DiscreteStructure*>(SummarizedCat::DiscreteStructure*, SummarizedCat::DiscreteStructure*)
+160 5
++2 1
++1 300000
+cfi=(17)
+cfn=(960) SummarizedCat::DiscreteStructure* std::__addressof<SummarizedCat::DiscreteStructure>(SummarizedCat::DiscreteStructure&)
+calls=100000 51 
+* 600000
+* 200000
+cfn=(962) void std::_Destroy<SummarizedCat::DiscreteStructure>(SummarizedCat::DiscreteStructure*)
+calls=100000 -17 
+* 59199998
+-1 400003
++2 4
+
+fn=(962)
+146 400000
++3 300000
+cfn=(964) void std::destroy_at<SummarizedCat::DiscreteStructure>(SummarizedCat::DiscreteStructure*)
+calls=100000 -69 
+* 58199998
++4 300000
+
+fn=(556)
+182 3400
++10 680
+cfi=(12)
+cfn=(126)
+calls=680 541 
+* 3400
+* 1360
++4 3400
+cfn=(558) void std::_Destroy_aux<false>::__destroy<SummarizedCat::IStructure*>(SummarizedCat::IStructure*, SummarizedCat::IStructure*)
+calls=680 -36 
+* 393720
++1 1360
+
+fn=(650)
+182 197440
++10 39488
+cfi=(12)
+cfn=(126)
+calls=39488 541 
+* 197440
+* 78976
++4 197440
+cfn=(652) void std::_Destroy_aux<true>::__destroy<SummarizedCat::IStructure const**>(SummarizedCat::IStructure const**, SummarizedCat::IStructure const**)
+calls=39488 -24 
+* 276416
++1 78976
+
+fn=(152)
+109 24
++3 6
+cfi=(12)
+cfn=(126)
+calls=6 541 
+* 30
+* 12
++7 24
+cfi=(19)
+cfn=(154)
+calls=6 +56 
+* 42
+* 30
+cfi=(7)
+cfn=(156)
+calls=6 528 
+* 288
++1 12
+
+fn=(890) void std::destroy_at<SummarizedCat::StructureSummary>(SummarizedCat::StructureSummary*)
+80 149792
++8 224688
+cfi=(23)
+cfn=(646)
+calls=37448 -60 
+* 14175205
++1 112344
+
+fn=(956)
+182 5
++10 1
+cfi=(12)
+cfn=(126)
+calls=1 541 
+* 5
+* 2
++4 5
+cfn=(958)
+calls=1 -36 
+* 60700011
++1 2
+
+fn=(516)
+94 6120
++3 4080
+cfi=(19)
+cfn=(154)
+calls=1020 +78 
+* 7140
+* 4080
+cfi=(17)
+cfn=(512)
+calls=1020 -27 
+* 6120
+* 6120
+
+fn=(866)
+109 2790
++3 310
+cfi=(12)
+cfn=(126)
+calls=310 541 
+* 1550
+* 620
++7 1240
+cfi=(19)
+cfn=(154)
+calls=310 +56 
+* 2170
+* 1550
+cfi=(17)
+cfn=(868) SummarizedCat::scalar const& std::forward<SummarizedCat::scalar const&>(std::remove_reference<SummarizedCat::scalar const&>::type&)
+calls=310 -49 
+* 1860
+* 930
+cfi=(6)
+cfn=(578)
+calls=310 -92 
+* 7440
++1 2480
+
+fn=(264)
+182 55
++10 11
+cfi=(12)
+cfn=(126)
+calls=11 541 
+* 55
+* 22
++4 55
+cfn=(266) void std::_Destroy_aux<false>::__destroy<SummarizedCat::StructureSummary*>(SummarizedCat::StructureSummary*, SummarizedCat::StructureSummary*)
+calls=11 -36 
+* 15598372
++1 22
+
+fn=(434)
+182 1484800
++10 296960
+cfi=(12)
+cfn=(126)
+calls=296960 541 
+* 1484800
+* 593920
++4 1484800
+cfn=(436) void std::_Destroy_aux<true>::__destroy<SummarizedCat::scalar*>(SummarizedCat::scalar*, SummarizedCat::scalar*)
+calls=296960 -24 
+* 2078720
++1 593920
+
+fn=(720)
+182 20400
++10 4080
+cfi=(12)
+cfn=(126)
+calls=4080 541 
+* 20400
+* 8160
++4 20400
+cfn=(722) void std::_Destroy_aux<true>::__destroy<__gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > > >(__gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >)
+calls=4080 -24 
+* 28560
++1 8160
+
+fn=(826)
+94 5814
++3 2584
+cfi=(19)
+cfn=(154)
+calls=646 +78 
+* 4522
+* 3230
+cfi=(17)
+cfn=(812)
+calls=646 -27 
+* 3876
+* 1938
+cfi=(6)
+cfn=(578)
+calls=646 -70 
+* 15504
+* 5814
+
+fn=(240)
+109 299584
++3 37448
+cfi=(12)
+cfn=(126)
+calls=37448 541 
+* 187240
+* 74896
++7 149792
+cfi=(19)
+cfn=(154)
+calls=37448 +56 
+* 262136
+* 149792
+cfi=(5)
+cfn=(242) SummarizedCat::StructureSummary::StructureSummary()
+calls=37448 17 
+* 8425800
++1 299584
+
+fn=(488)
+94 2040
++3 1360
+cfi=(19)
+cfn=(154)
+calls=340 +78 
+* 2380
+* 1360
+cfi=(17)
+cfn=(484)
+calls=340 -27 
+* 2040
+* 2040
+
+fn=(652)
+172 276416
+
+fn=(790)
+182 1700
++10 340
+cfi=(12)
+cfn=(126)
+calls=340 541 
+* 1700
+* 680
++4 1700
+cfn=(792)
+calls=340 -24 
+* 2380
++1 680
+
+fn=(558)
+160 3400
++2 680
++1 4080
+cfi=(17)
+cfn=(770) SummarizedCat::IStructure* std::__addressof<SummarizedCat::IStructure>(SummarizedCat::IStructure&)
+calls=1360 51 
+* 8160
+* 2720
+cfn=(772) void std::_Destroy<SummarizedCat::IStructure>(SummarizedCat::IStructure*)
+calls=1360 -17 
+* 364480
+-1 7480
++2 2720
+
+fn=(266)
+160 55
++2 11
++1 112344
+cfi=(17)
+cfn=(238)
+calls=37448 51 
+* 224688
+* 74896
+cfn=(888) void std::_Destroy<SummarizedCat::StructureSummary>(SummarizedCat::StructureSummary*)
+calls=37448 -17 
+* 15036509
+-1 149825
++2 44
+
+fn=(436)
+172 2078720
+
+fn=(878) void std::destroy_at<std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> > >(std::vector<SummarizedCat::StructureSummary, std::allocator<SummarizedCat::StructureSummary> >*)
+80 24
++8 18
+cfi=(7)
+cfn=(880)
+calls=6 730 
+* 15600040
++1 18
+
+fn=(888)
+146 149792
++3 112344
+cfn=(890)
+calls=37448 -69 
+* 14662029
++4 112344
+
+fn=(964)
+80 400000
++8 600000
+cfi=(23)
+cfn=(966)
+calls=100000 -66 
+* 56899998
++1 300000
+
+fn=(634)
+94 12240
++3 5440
+cfi=(19)
+cfn=(154)
+calls=1360 +78 
+* 9520
+* 6800
+cfi=(17)
+cfn=(630)
+calls=1360 -27 
+* 8160
+* 4080
+cfi=(23)
+cfn=(576)
+calls=1360 -89 
+* 1122000
+* 12240
+
+fn=(722)
+172 28560
+
+fn=(872)
+182 10
++10 2
+cfi=(12)
+cfn=(126)
+calls=2 541 
+* 10
+* 4
++4 10
+cfn=(874)
+calls=2 -36 
+* 15600276
++1 4
+
+fn=(876)
+146 24
++3 18
+cfn=(878)
+calls=6 -69 
+* 15600100
++4 18
+
+fn=(332)
+94 600000
++3 400000
+cfi=(19)
+cfn=(154)
+calls=100000 +78 
+* 700000
+* 400000
+cfi=(17)
+cfn=(300)
+calls=100000 -27 
+* 600000
+* 600000
+
+fn=(772)
+146 5440
++3 4080
+cfn=(774)
+calls=1360 -69 
+* 350880
++4 4080
+
+fl=(5)
+fn=(664) SummarizedCat::StructureSummary::StructureSummary(std::vector<SummarizedCat::IStructure, std::allocator<SummarizedCat::IStructure> > const&)
+18 4420
+cfn=(52) SummarizedCat::IStructure::IStructure()
+calls=340 -7 
+* 52020
+* 4420
+cfi=(7)
+cfn=(244)
+calls=340 528 
+* 16320
++2 1020
+cfi=(6)
+cfn=(54)
+calls=340 +76 
+* 19720
++2 1020
+cfi=(7)
+cfn=(666)
+calls=340 900 
+* 10200
+* 1360
+cfi=(7)
+cfn=(670)
+calls=340 880 
+* 9860
+* 2380
+cfi=(25)
+cfn=(672)
+calls=340 161 
+* 3951480
+-2 1020
+cfi=(22)
+cfn=(450)
+calls=340 +1 
+* 38420
++4 1020
+cfi=(6)
+cfn=(54)
+calls=340 +72 
+* 19720
++2 1020
+cfi=(7)
+cfn=(666)
+calls=340 900 
+* 10200
+* 1360
+cfi=(7)
+cfn=(670)
+calls=340 880 
+* 9860
+* 2380
+cfi=(25)
+cfn=(728)
+calls=340 161 
+* 3951480
+-2 1020
+cfi=(22)
+cfn=(450)
+calls=340 -3 
+* 38420
++4 1020
+cfi=(7)
+cfn=(666)
+calls=340 900 
+* 10200
+* 1360
+cfi=(7)
+cfn=(670)
+calls=340 880 
+* 9860
+* 1360
+cfi=(25)
+cfn=(732)
+calls=340 161 
+* 241060
++2 2380
+cfi=(6)
+cfn=(64)
+calls=340 -4 
+* 3400
++2 2720
+cfi=(6)
+cfn=(738)
+calls=340 +54 
+* 268600
+* 2380
+cfi=(22)
+cfn=(688)
+calls=340 -11 
+* 181900
+* 1020
+cfi=(22)
+cfn=(450)
+calls=340 -11 
+* 38420
++1 2720
+cfi=(6)
+cfn=(738)
+calls=340 +53 
+* 268600
+* 2380
+cfi=(22)
+cfn=(688)
+calls=340 -12 
+* 181900
+* 1020
+cfi=(22)
+cfn=(450)
+calls=340 -12 
+* 38420
++1 1700
++1 1020
+cfi=(22)
+cfn=(450)
+calls=340 -14 
+* 38420
+* 1020
+cfi=(22)
+cfn=(450)
+calls=340 -14 
+* 38420
+* 2380
+
+fn=(682)
+20 14960
++1 10880
+cfi=(6)
+cfn=(380)
+calls=1360 +57 
+* 1074400
+* 8160
+cfi=(6)
+cfn=(684)
+calls=1360 +12 
+* 1521840
+* 5440
+cfi=(22)
+cfn=(450)
+calls=1360 * 
+* 153680
+* 1360
++1 9520
+
+fn=(736)
+28 13600
++1 9520
+cfi=(6)
+cfn=(104)
+calls=1360 -23 
+* 39440
++1 8160
+
+fn=(52)
+11 491257
+cfi=(6)
+cfn=(54)
+calls=37789 +85 
+* 2191762
+* 151156
+cfi=(6)
+cfn=(54)
+calls=37789 +85 
+* 2191762
+* 226734
+cfi=(6)
+cfn=(64)
+calls=37789 +15 
+* 377890
+* 151156
+
+fn=(660)
+13 1686108
+cfi=(22)
+cfn=(450)
+calls=140509 +8 
+* 31077515
+* 562036
+cfi=(22)
+cfn=(450)
+calls=140509 +8 
+* 31077517
+* 421527
+
+fn=(50) SummarizedCat::StructureCollection::StructureCollection()
+37 9
+cfn=(52)
+calls=1 -26 
+* 153
+* 13
+cfi=(7)
+cfn=(66)
+calls=1 528 
+* 48
+* 8
+cfi=(6)
+cfn=(64)
+calls=1 -11 
+* 10
+* 6
+cfi=(6)
+cfn=(64)
+calls=1 -11 
+* 10
+* 6
+
+fn=(48)
+39 15
+cfn=(50)
+calls=1 -2 
+* 263
++1 2
++2 4
+cfi=(7)
+cfn=(74)
+calls=1 900 
+* 30
+* 4
+cfi=(7)
+cfn=(78)
+calls=1 880 
+* 29
+* 4
+cfi=(9)
+cfn=(80)
+calls=1 3827 
+* 44100148
++11 8
+cfi=(6)
+cfn=(100)
+calls=1 -39 
+* 82
++2 3
++1 8
+cfi=(7)
+cfn=(106)
+calls=1 1010 
+* 1361
++2 4
++1 35
+cob=(6)
+cfi=(20)
+cfn=(176) pow@@GLIBC_2.29
+calls=5 -59 
+* 640
+* 5
+* 10
++1 100
+cob=(6)
+cfi=(20)
+cfn=(176)
+calls=5 -60 
+* 640
+* 5
+* 35
++1 30
+cfi=(7)
+cfn=(182)
+calls=5 1123 
+* 70
+* 25
+cfi=(7)
+cfn=(184)
+calls=5 1010 
+* 10454384
++2 25
++1 13
+cfi=(7)
+cfn=(74)
+calls=1 900 
+* 30
+* 4
+cfi=(7)
+cfn=(78)
+calls=1 880 
+* 29
+* 17
+cfi=(9)
+cfn=(272)
+calls=1 3827 
+* 127131489
+* 1
++8 1
++4 8
++1 2040
+cfn=(378) SummarizedCat::StructureCollection::unflattenVecInSpace(unsigned int, unsigned int)
+calls=340 +37 
+* 828630
++1 1700
+cfi=(6)
+cfn=(64)
+calls=340 -52 
+* 3400
+* 2040
+cfi=(6)
+cfn=(380)
+calls=340 * 
+* 528460
++1 2380
+cfi=(6)
+cfn=(446)
+calls=340 +15 
+* 130220
+* 1360
+cfn=(448) SummarizedCat::StructureCollection::flattenVecInSpace(SummarizedCat::SpatialVector, unsigned int)
+calls=340 +26 
+* 13260
+* 1360
+cfi=(22)
+cfn=(450)
+calls=340 -58 
+* 38420
++1 1020
++1 4080
+cob=(6)
+cfi=(20)
+cfn=(176)
+calls=340 -81 
+* 43520
+* 340
+* 2720
+cfi=(10)
+cfn=(452)
+calls=340 -14 
+* 128520
++2 1700
+cfi=(7)
+cfn=(482)
+calls=340 1278 
+* 25500
++1 680
++1 6120
+cfi=(7)
+cfn=(490)
+calls=680 890 
+* 20400
+* 2720
+cfi=(7)
+cfn=(494)
+calls=680 870 
+* 19720
+* 8840
+cfi=(9)
+cfn=(496)
+calls=680 3827 
+* 480420
+* 680
+-1 7140
++6 1020
++1 4080
+cob=(6)
+cfi=(20)
+cfn=(176)
+calls=340 -91 
+* 43520
+* 340
+* 2720
+cfi=(10)
+cfn=(524)
+calls=340 -24 
+* 155720
++1 2380
+cfi=(8)
+cfn=(564)
+calls=340 785 
+* 12580
+* 1360
+cfi=(7)
+cfn=(490)
+calls=340 890 
+* 10200
+* 1360
+cfi=(7)
+cfn=(494)
+calls=340 870 
+* 9860
+* 4080
+cfi=(9)
+cfn=(570)
+calls=340 4298 
+* 4488308
++4 1700
+cfn=(664)
+calls=340 -78 
+* 9493820
+* 2040
+cfi=(7)
+cfn=(182)
+calls=340 1123 
+* 4760
+* 1700
+cfi=(7)
+cfn=(292)
+calls=340 1123 
+* 4760
+* 1700
+cfi=(23)
+cfn=(742)
+calls=340 -68 
+* 539920
+* 1020
+cfi=(23)
+cfn=(646)
+calls=340 -68 
+* 126480
++1 1020
+cfi=(7)
+cfn=(768)
+calls=340 730 
+* 466480
+* 1020
+cfi=(7)
+cfn=(788)
+calls=340 730 
+* 79220
+* 1020
+cfi=(22)
+cfn=(450)
+calls=340 -76 
+* 38420
+* 1020
+cfi=(22)
+cfn=(450)
+calls=340 -76 
+* 82100
+-21 9284
+cob=(6)
+cfi=(20)
+cfn=(176)
+calls=344 -76 
+* 44032
+* 344
+* 2064
+-18 33
++41 3
+cfi=(7)
+cfn=(870)
+calls=1 730 
+* 15600494
+* 11
+
+fn=(378)
+114 3400
++1 680
++1 1020
+cfi=(6)
+cfn=(54)
+calls=340 -20 
+* 19720
++2 340
++1 340
++1 2584
++1 7752
+cfi=(6)
+cfn=(64)
+calls=646 -95 
+* 6460
+* 2584
+cfi=(7)
+cfn=(806)
+calls=646 1295 
+* 773890
++1 1938
++1 2584
++1 646
+-5 1972
++8 340
++1 2380
+
+fn=(730)
+24 14960
++1 10880
+cfi=(6)
+cfn=(380)
+calls=1360 +53 
+* 1074400
+* 8160
+cfi=(6)
+cfn=(684)
+calls=1360 +8 
+* 1521840
+* 5440
+cfi=(22)
+cfn=(450)
+calls=1360 -4 
+* 153680
+* 1360
++1 9520
+
+fn=(242)
+17 299584
+cfn=(52)
+calls=37448 -6 
+* 5729544
+* 486824
+cfi=(7)
+cfn=(244)
+calls=37448 528 
+* 1797504
+* 112344
+
+fn=(274)
+64 1000000
++1 100000
++1 200000
++1 3400000
+cfi=(7)
+cfn=(94)
+calls=200000 1142 
+* 2200000
+* 1200000
+cfi=(6)
+cfn=(100)
+calls=200000 -53 
+* 16400000
+* 1200000
+cfi=(6)
+cfn=(276)
+calls=200000 -45 
+* 5800000
+* 2800000
+cfi=(6)
+cfn=(64)
+calls=200000 -41 
+* 2000000
+* 1200000
+cfi=(6)
+cfn=(278)
+calls=200000 -49 
+* 5800000
+* 600000
+cfi=(6)
+cfn=(96)
+calls=200000 -38 
+* 1800000
+* 600000
+cob=(6)
+cfi=(20)
+cfn=(282) __floor_sse41
+calls=200000 -67 
+* 600000
+* 200000
+* 400000
++1 5200000
+cob=(6)
+cfi=(20)
+cfn=(176)
+calls=200000 -68 
+* 18300000
+* 200000
+* 2200000
+-2 1700000
++4 900000
+cfi=(7)
+cfn=(284)
+calls=100000 1175 
+* 5900000
+* 500000
+cfi=(7)
+cfn=(288)
+calls=100000 1175 
+* 5900000
+* 1300000
+cfi=(7)
+cfn=(294)
+calls=100000 1295 
+* 30031427
++1 900000
+
+fn=(572)
+92 8160
++1 13600
+cfi=(7)
+cfn=(284)
+calls=1360 1175 
+* 80240
+* 9520
+cfi=(7)
+cfn=(288)
+calls=1360 1175 
+* 80240
+* 6800
+cfi=(23)
+cfn=(574)
+calls=1360 -65 
+* 2045228
++1 4080
+
+fn=(88)
+42 600000
++1 200000
++1 2400000
+cfi=(7)
+cfn=(94)
+calls=200000 1142 
+* 2200000
+* 200000
++1 600000
+cfi=(6)
+cfn=(96)
+calls=200000 -16 
+* 1800000
+* 1200000
+cfi=(6)
+cfn=(96)
+calls=200000 -16 
+* 1800000
+* 1200000
++1 600000
+cfi=(6)
+cfn=(96)
+calls=200000 -17 
+* 1800000
+* 1200000
+cfi=(6)
+cfn=(96)
+calls=200000 -17 
+* 1800000
+* 1000065
+-3 143
+cfi=(6)
+cfn=(90)
+calls=13 +55 
+* 273
+* 2199857
+cfi=(6)
+cfn=(90)
+calls=199987 +55 
+* 4199727
+* 1000000
+cfi=(6)
+cfn=(90)
+calls=100000 +55 
+* 2100000
+* 1200000
++6 1000000
+cfi=(6)
+cfn=(90)
+calls=100000 +49 
+* 2100000
+* 700012
+cfi=(6)
+cfn=(90)
+calls=1 +49 
+* 21
+* 1
++1 10
+cfi=(6)
+cfn=(90)
+calls=1 +48 
+* 21
+* 999990
+cfi=(6)
+cfn=(90)
+calls=99999 +48 
+* 2099979
+* 700000
++1 400000
+
+fn=(448)
+105 1700
++1 340
++1 1700
+cfi=(6)
+cfn=(90)
+calls=340 -9 
+* 7140
+* 1360
++4 340
++1 680
+
+fn=(504)
+85 9180
++1 33660
+cob=(6)
+cfi=(20)
+cfn=(176)
+calls=1020 -86 
+* 105740
+* 1020
+* 7140
+cfi=(7)
+cfn=(506)
+calls=1020 1295 
+* 211140
++1 7140
+
+fl=(17)
+fn=(508)
+97 3060
++1 3060
+
+fn=(624)
+97 8160
++1 8160
+
+fn=(960)
+51 300000
++1 300000
+
+fn=(296)
+97 300000
++1 300000
+
+fn=(300)
+70 924576
++1 924576
+
+fn=(812)
+70 7752
++1 7752
+
+fn=(864)
+51 930
++1 930
+
+fn=(568)
+51 1020
++1 1020
+
+fn=(150)
+51 36
++1 36
+
+fn=(770)
+51 4080
++1 4080
+
+fn=(808)
+97 1938
++1 1938
+
+fn=(484)
+70 2040
++1 2040
+
+fn=(734)
+97 4080
++1 4080
+
+fn=(748)
+97 1020
++1 1020
+
+fn=(764)
+97 1020
++1 1020
+
+fn=(692)
+51 12240
++1 12240
+
+fn=(512)
+70 9180
++1 9180
+
+fn=(630)
+70 12240
++1 12240
+
+fn=(680)
+97 8160
++1 8160
+
+fn=(868)
+70 930
++1 930
+
+fn=(238)
+51 224688
++1 224688
+
+fl=(11)
+fn=(340)
+316 151536
++2 151536
+
+fn=(118)
+233 88480
++5 132720
++2 22120
++1 44240
+
+fn=(612) SummarizedCat::IStructure const** std::__copy_move_a1<false, SummarizedCat::IStructure const* const*, SummarizedCat::IStructure const**>(SummarizedCat::IStructure const* const*, SummarizedCat::IStructure const* const*, SummarizedCat::IStructure const**)
+532 8160
++1 8160
+cfn=(614) SummarizedCat::IStructure const** std::__copy_move_a2<false, SummarizedCat::IStructure const* const*, SummarizedCat::IStructure const**>(SummarizedCat::IStructure const* const*, SummarizedCat::IStructure const* const*, SummarizedCat::IStructure const**)
+calls=1360 -36 
+* 179296
+* 2720
+
+fn=(122)
+257 35376
++5 53064
++1 2732
++1 7478
++1 17688
+
+fn=(618) SummarizedCat::IStructure const** std::__niter_wrap<SummarizedCat::IStructure const**>(SummarizedCat::IStructure const** const&, SummarizedCat::IStructure const**)
+338 5440
++1 4080
+
+fn=(476)
+316 3060
++2 3060
+
+fn=(698)
+624 28560
++9 12240
+cfi=(24)
+cfn=(700)
+calls=4080 -26 
+* 24480
+* 16320
+cfi=(24)
+cfn=(700)
+calls=4080 -26 
+* 24480
+* 24480
+cfn=(702) __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > > std::__copy_move_a<false, __gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > > >(__gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar const*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >)
+calls=4080 -95 
+* 832320
++1 12240
+
+fn=(606) SummarizedCat::IStructure const** std::__copy_move_a<false, __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >, SummarizedCat::IStructure const**>(__gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >, __gnu_cxx::__normal_iterator<SummarizedCat::IStructure const* const*, std::vector<SummarizedCat::IStructure const*, std::allocator<SummarizedCat::IStructure const*> > >, SummarizedCat::IStructure const**)
+538 10880
++2 4080
+cfn=(340)
+calls=1360 316 
+* 8160
+* 5440
+cfi=(8)
+cfn=(608)
+calls=1360 1357 
+* 21760
+* 5440
+cfi=(8)
+cfn=(608)
+calls=1360 1357 
+* 21760
+* 5440
+cfn=(612)
+calls=1360 -8 
+* 198336
+* 6800
+cfn=(618)
+calls=1360 338 
+* 9520
++4 6800
+
+fn=(616) SummarizedCat::IStructure const** std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<SummarizedCat::IStructure const* const, SummarizedCat::IStructure const*>(SummarizedCat::IStructure const* const*, SummarizedCat::IStructure const* const*, SummarizedCat::IStructure const**)
+433 8160
++2 5440
++1 6800
++1 7168
+cob=(1)
+cfi=(1)
+cfn=(26)
+calls=1024 0 
+* 109568
+* 1024
+* 1024
++1 672
++3 5440
++1 2720
+
+fn=(702)
+538 32640
++2 12240
+cfi=(8)
+cfn=(704)
+calls=4080 1357 
+* 65280
+* 16320
+cfi=(8)
+cfn=(708)
+calls=4080 1357 
+* 65280
+* 16320
+cfi=(8)
+cfn=(708)
+calls=4080 1357 
+* 65280
+* 16320
+cfn=(710) SummarizedCat::scalar* std::__copy_move_a1<false, SummarizedCat::scalar const*, SummarizedCat::scalar*>(SummarizedCat::scalar const*, SummarizedCat::scalar const*, SummarizedCat::scalar*)
+calls=4080 -8 
+* 212160
+* 20400
+cfn=(716) __gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > > std::__niter_wrap<__gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, SummarizedCat::scalar*>(__gnu_cxx::__normal_iterator<SummarizedCat::scalar*, std::vector<SummarizedCat::scalar, std::allocator<SummarizedCat::scalar> > >, SummarizedCat::scalar*)
+calls=4080 331 
+* 289680
++4 20400
+
+fn=(710)
+532 24480
++1 24480
+cfn=(712) SummarizedCat::scalar* std::__copy_move_a2<false, SummarizedCat::scalar const*, SummarizedCat::scalar*>(SummarizedCat::scalar const*, SummarizedCat::scalar const*, SummarizedCat::scalar*)
+calls=4080 -36 
+* 155040
+* 8160
+
+fn=(712)
+497 24480
++4 4080
+cfi=(16)
+cfn=(146)
+calls=4080 3645 
+* 20400
+* 8160
++5 24480
+cfn=(714) SummarizedCat::scalar* std::__copy_move<false, false, std::random_access_iterator_tag>::__copy_m<SummarizedCat::scalar const*, SummarizedCat::scalar*>(SummarizedCat::scalar const*, SummarizedCat::scalar const*, SummarizedCat::scalar*)
+calls=4080 383 
+* 61200
+* 4080
++1 8160
+
+fn=(168)
+316 9
++2 9
+
+fn=(602)
+624 9520
++9 4080
+cfi=(24)
+cfn=(604)
+calls=1360 -26 
+* 8160
+* 5440
+cfi=(24)
+cfn=(604)
+calls=1360 -26 
+* 8160
+* 8160
+cfn=(606)
+calls=1360 -95 
+* 304416
++1 4080
+
+fn=(716)
+331 20400
++1 12240
+cfi=(8)
+cfn=(704)
+calls=4080 1357 
+* 65280
+* 36720
+cfi=(8)
+cfn=(718)
+calls=4080 1147 
+* 146880
+* 8160
+
+fn=(714)
+383 20400
++3 28560
++6 4080
++1 8160
+
+fn=(614)
+497 8160
++4 1360
+cfi=(16)
+cfn=(146)
+calls=1360 3645 
+* 6800
+* 2720
++5 8160
+cfn=(616)
+calls=1360 -73 
+* 148016
+* 1360
++1 2720
+
+ob=(7)
+fl=(31)
+fn=(1160) 0x00000000000056b0
+0 5
+
+fn=(1148)
+0 12
+
+fn=(1150)
+0 9
+cob=(2)
+cfi=(4)
+cfn=(1156) 0x0000000004b87370
+calls=1 0 
+0 141
+0 1
+cfn=(1160)
+calls=1 0 
+0 5
+0 3
+
+ob=(3)
+fl=(2)
+fn=(1058)
+0 5
+
+fn=(8)
+0 5
+cfn=(6) __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::uflow()
+calls=1 0 
+0 30
+0 2
+
+fn=(1062)
+0 2
+
+fn=(1068)
+0 2
+
+fn=(1090) __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::sync()
+0 15
+cob=(2)
+cfi=(4)
+cfn=(1092) 0x00000000048ea390
+calls=5 0 
+0 434
+
+fn=(1118) __gnu_cxx::stdio_sync_filebuf<wchar_t, std::char_traits<wchar_t> >::sync()
+0 15
+cob=(2)
+cfi=(4)
+cfn=(1092)
+calls=5 0 
+0 320
+
+fn=(6)
+cob=(1)
+cfi=(1)
+cfn=(4)
+calls=1 0 
+0 27
+0 3
+
+fn=(1072)
+0 4
+cob=(2)
+cfi=(4)
+cfn=(1074) 0x00000000048e8240
+calls=1 0 
+0 4
+
+fn=(1100) std::uncaught_exception()
+0 6
+cob=(2)
+cfi=(4)
+cfn=(1102) 0x00000000048e8d70
+calls=2 0 
+0 46
+0 10
+
+fn=(1080)
+0 13
+cob=(2)
+cfi=(4)
+cfn=(1082) 0x00000000048e87b0
+calls=1 0 
+0 241
+0 2
+cob=(2)
+cfi=(4)
+cfn=(1082)
+calls=1 0 
+0 371
+0 2
+cob=(2)
+cfi=(4)
+cfn=(1082)
+calls=1 0 
+0 127
+0 2
+cob=(2)
+cfi=(4)
+cfn=(1110) 0x00000000048e9880
+calls=1 0 
+0 127
+0 2
+cob=(2)
+cfi=(4)
+cfn=(1110)
+calls=1 0 
+0 371
+0 2
+cob=(2)
+cfi=(4)
+cfn=(1110)
+calls=1 0 
+0 127
+0 2
+
+fn=(134)
+0 87072
+cob=(2)
+cfi=(4)
+cfn=(136) 0x00000000048e7140
+calls=10884 0 
+0 2037246
+0 43536
+
+fn=(366) operator delete(void*)
+0 421770
+cob=(2)
+cfi=(4)
+cfn=(368) 0x00000000048e7b80
+calls=210885 0 
+0 22091962
+
+fn=(1056)
+0 12
+
+fn=(1060)
+0 2
+
+fn=(1066)
+0 2
+
+fn=(1076) std::error_category::~error_category()
+0 4
+
+fn=(1104) __cxa_get_globals
+0 8
+cob=(2)
+cfi=(4)
+cfn=(1106) 0x00000000048e8050
+calls=2 0 
+0 28
+0 6
+
+fn=(1122) 0x00000000000b91b0
+0 5
+
+fn=(1088) std::ostream::sentry::sentry(std::ostream&)
+0 49
+cob=(2)
+cfi=(4)
+cfn=(1083) 0x00000000048e87b0'2
+calls=1 0 
+0 127
+0 27
+
+fn=(1089) std::ostream::sentry::sentry(std::ostream&)'2
+0 23
+
+fn=(1078)
+0 4
+cob=(2)
+cfi=(4)
+cfn=(1074)
+calls=1 0 
+0 4
+
+fn=(42)
+0 10
+cob=(2)
+cfi=(4)
+cfn=(44) 0x00000000048e6b90
+calls=2 0 
+0 26
+0 8
+
+fn=(1048)
+0 9
+cob=(2)
+cfi=(4)
+cfn=(1054) 0x00000000048e6220
+calls=1 0 
+0 1888
+0 1
+cfn=(1122)
+calls=1 0 
+0 5
+0 3
+
+fn=(1064)
+0 2
+
+fn=(1070)
+0 4
+
+fn=(1084) std::ostream::flush()
+0 39
+cob=(2)
+cfi=(4)
+cfn=(1086) 0x00000000048ea240
+calls=3 0 
+0 209
+0 21
+cfn=(1090)
+calls=3 0 
+0 315
+0 25
+cob=(2)
+cfi=(4)
+cfn=(1098) 0x00000000048e7880
+calls=1 0 
+0 33
+0 7
+cfn=(1090)
+calls=1 0 
+0 67
+0 17
+
+fn=(1085) std::ostream::flush()'2
+0 13
+cob=(2)
+cfi=(4)
+cfn=(1087) 0x00000000048ea240'2
+calls=1 0 
+0 25
+0 7
+cfn=(1090)
+calls=1 0 
+0 67
+0 13
+
+fn=(1112) std::basic_ostream<wchar_t, std::char_traits<wchar_t> >::flush()
+0 39
+cob=(2)
+cfi=(4)
+cfn=(1114) 0x00000000048e8260
+calls=3 0 
+0 209
+0 21
+cfn=(1118)
+calls=3 0 
+0 201
+0 25
+cob=(2)
+cfi=(4)
+cfn=(1098)
+calls=1 0 
+0 33
+0 7
+cfn=(1118)
+calls=1 0 
+0 67
+0 17
+
+fn=(1113) std::basic_ostream<wchar_t, std::char_traits<wchar_t> >::flush()'2
+0 13
+cob=(2)
+cfi=(4)
+cfn=(1115) 0x00000000048e8260'2
+calls=1 0 
+0 25
+0 7
+cfn=(1118)
+calls=1 0 
+0 67
+0 13
+
+fn=(1116) std::basic_ostream<wchar_t, std::char_traits<wchar_t> >::sentry::sentry(std::basic_ostream<wchar_t, std::char_traits<wchar_t> >&)
+0 49
+cob=(2)
+cfi=(4)
+cfn=(1111) 0x00000000048e9880'2
+calls=1 0 
+0 127
+0 27
+
+fn=(1117) std::basic_ostream<wchar_t, std::char_traits<wchar_t> >::sentry::sentry(std::basic_ostream<wchar_t, std::char_traits<wchar_t> >&)'2
+0 23
+
+fn=(362)
+0 421770
+cob=(2)
+cfi=(4)
+cfn=(364) 0x00000000048e7340
+calls=210885 0 
+0 22935502
+
+ob=(2)
+fl=(4)
+fn=(1166)
+0 4
+
+fn=(1054)
+0 2
+cob=(1)
+cfi=(1)
+cfn=(1034)
+calls=1 0 
+0 1886
+
+fn=(1074)
+0 4
+cob=(3)
+cfi=(2)
+cfn=(1076)
+calls=2 0 
+0 4
+
+fn=(1146)
+0 4
+
+fn=(1086)
+0 6
+cob=(3)
+cfi=(2)
+cfn=(1088)
+calls=3 0 
+0 203
+
+fn=(1087)
+0 2
+cob=(3)
+cfi=(2)
+cfn=(1089)
+calls=1 0 
+0 23
+
+fn=(44)
+0 4
+cob=(1)
+cfi=(1)
+cfn=(46)
+calls=2 0 
+0 22
+
+fn=(1032)
+0 1
+cob=(1)
+cfi=(1)
+cfn=(1034)
+calls=1 0 
+0 139
+
+fn=(1156)
+0 2
+cob=(1)
+cfi=(1)
+cfn=(1034)
+calls=1 0 
+0 139
+
+fn=(940)
+0 6
+cob=(1)
+cfi=(1)
+cfn=(26)
+calls=3 0 
+0 43
+
+fn=(1098)
+0 4
+cob=(3)
+cfi=(2)
+cfn=(1100)
+calls=2 0 
+0 62
+
+fn=(1136) 0x0000000004ab0220
+0 2
+cob=(1)
+cfi=(1)
+cfn=(1034)
+calls=1 0 
+0 139
+
+fn=(16)
+0 2
+cob=(1)
+cfi=(1)
+cfn=(18)
+calls=1 0 
+0 14
+
+fn=(136)
+0 21768
+cob=(1)
+cfi=(1)
+cfn=(138)
+calls=10884 0 
+0 2015478
+
+fn=(364)
+0 421770
+cob=(3)
+cfi=(2)
+cfn=(366)
+calls=210885 0 
+0 22513732
+
+fn=(934)
+0 4
+cob=(1)
+cfi=(1)
+cfn=(936)
+calls=2 0 
+0 38
+
+fn=(1022)
+0 4
+
+fn=(1046)
+0 4
+
+fn=(178) 0x0000000004ab0370
+0 404108
+cob=(6)
+cfi=(20)
+cfn=(180) __ieee754_pow_fma
+calls=202054 0 
+0 14092904
+
+fn=(1082)
+0 6
+cob=(3)
+cfi=(2)
+cfn=(1084)
+calls=3 0 
+0 733
+
+fn=(1083)
+0 2
+cob=(3)
+cfi=(2)
+cfn=(1085)
+calls=1 0 
+0 125
+
+fn=(1110)
+0 6
+cob=(3)
+cfi=(2)
+cfn=(1112)
+calls=3 0 
+0 619
+
+fn=(1111)
+0 2
+cob=(3)
+cfi=(2)
+cfn=(1113)
+calls=1 0 
+0 125
+
+fn=(1114)
+0 6
+cob=(3)
+cfi=(2)
+cfn=(1116)
+calls=3 0 
+0 203
+
+fn=(1115)
+0 2
+cob=(3)
+cfi=(2)
+cfn=(1117)
+calls=1 0 
+0 23
+
+fn=(1102)
+0 4
+cob=(3)
+cfi=(2)
+cfn=(1104)
+calls=2 0 
+0 42
+
+fn=(1128)
+0 4
+
+fn=(22)
+0 4
+cob=(1)
+cfi=(1)
+cfn=(24)
+calls=2 0 
+0 28
+
+fn=(368)
+0 421770
+cob=(1)
+cfi=(1)
+cfn=(370)
+calls=210885 0 
+0 21670192
+
+fn=(1092)
+0 20
+cob=(1)
+cfi=(1)
+cfn=(1094)
+calls=10 0 
+0 734
+
+fn=(1106)
+0 4
+cob=(5)
+cfi=(28)
+cfn=(1108)
+calls=2 0 
+0 24
+
+ob=(6)
+fl=(20)
+fn=(180)
+0 14092904
+
+fn=(282)
+0 600000
+
+fn=(176)
+0 1212324
+cob=(2)
+cfi=(4)
+cfn=(178)
+calls=202054 0 
+0 14497012
+0 2828756
+
+fn=(1140) 0x0000000000010430
+0 5
+
+fn=(1130)
+0 9
+cob=(2)
+cfi=(4)
+cfn=(1136)
+calls=1 0 
+0 141
+0 1
+cfn=(1140)
+calls=1 0 
+0 5
+0 3
+
+totals: 275945573

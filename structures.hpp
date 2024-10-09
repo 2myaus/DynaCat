@@ -28,7 +28,7 @@ namespace SummarizedCat{
 	class StructureSummary : virtual public IStructure{ // absolutePosition represents center of mass, absoluteVelocity represents average velocity, mass represents total mass
 		private:
 		public:
-			std::vector<IStructure*> childStructures;
+			std::vector<const IStructure*> childStructures;
 
 			StructureSummary();
 			StructureSummary(const std::vector<IStructure> &argChildStructures);

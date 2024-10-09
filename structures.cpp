@@ -17,15 +17,15 @@ namespace SummarizedCat{
 	StructureSummary::StructureSummary() = default;
 	StructureSummary::StructureSummary(const std::vector<IStructure> &argChildStructures){
 
-		SpatialVector positionSum = std::accumulate(argChildStructures.begin(), argChildStructures.end(), SpatialVector(), [](const SpatialVector a, const IStructure b){
+		SpatialVector positionSum = std::accumulate(argChildStructures.begin(), argChildStructures.end(), SpatialVector(), [&](const SpatialVector &a, const IStructure &b){
 			return a + b.absolutePosition*b.mass;
 		});
 
-		SpatialVector velocitySum = std::accumulate(argChildStructures.begin(), argChildStructures.end(), SpatialVector(), [](const SpatialVector a, const IStructure b){
+		SpatialVector velocitySum = std::accumulate(argChildStructures.begin(), argChildStructures.end(), SpatialVector(), [&](const SpatialVector &a, const IStructure &b){
 			return a + b.absoluteVelocity*b.mass;
 		});
 
-		scalar totalMass = std::accumulate(argChildStructures.begin(), argChildStructures.end(), 0, [](const scalar a, const IStructure b){
+		scalar totalMass = std::accumulate(argChildStructures.begin(), argChildStructures.end(), 0, [&](const scalar &a, const IStructure &b){
 			return a + b.mass;
 		});
 
@@ -39,7 +39,7 @@ namespace SummarizedCat{
 	StructureCollection::StructureCollection(const std::vector<DiscreteStructure> &argChildStructures):StructureCollection(){
 		maxDetailDepth = 5; //TODO: Calculate this based on arguments
 
-		std::for_each(argChildStructures.begin(), argChildStructures.end(), [&](DiscreteStructure childStructure){
+		std::for_each(argChildStructures.begin(), argChildStructures.end(), [&](const DiscreteStructure &childStructure){
 			for(unsigned int d=0; d<childStructure.absolutePosition.dimension();d++){
 				const scalar &component = childStructure.absolutePosition.components[d];
 				if(component < lowestPosition){ lowestPosition = component; }
@@ -61,7 +61,7 @@ namespace SummarizedCat{
 			detailMap[detailDepth].resize(reserve); //Doing this without casts gives wrong values!
 			
 			if(detailDepth == maxDetailDepth){
-				std::for_each(argChildStructures.begin(), argChildStructures.end(), [&](DiscreteStructure childStructure){
+				std::for_each(argChildStructures.begin(), argChildStructures.end(), [&](const DiscreteStructure &childStructure){
 					unsigned int gridIdx = 0;
 					for(unsigned int d=0;d<dimension;d++){
 						unsigned int dimensionalGridPos = floor((scalar)gridWidth * ((childStructure.absolutePosition.components[d]-lowestPosition)/(sideLength))); //TODO: Increase performance here!
@@ -82,14 +82,14 @@ namespace SummarizedCat{
 
 				childIdxs.push_back(dGridIdx);
 				for(unsigned int d=0; d<dimension;d++){
-					std::for_each(childIdxs.begin(), childIdxs.end(), [&](unsigned int childIdx){
+					std::for_each(childIdxs.begin(), childIdxs.end(), [&](const unsigned int &childIdx){
 						childIdxs.push_back(childIdx+pow(gridWidth,d));
 					});
 				}
 
 				std::vector<IStructure> childSummaries;
 				childSummaries.reserve((double)pow(2,dimension));
-				std::transform(childIdxs.begin(), childIdxs.end(), std::back_inserter(childSummaries), [&](unsigned int childIdx){
+				std::transform(childIdxs.begin(), childIdxs.end(), std::back_inserter(childSummaries), [&](const unsigned int &childIdx){
 					return detailMap.at(detailDepth+1).at(childIdx);
 				});
 
