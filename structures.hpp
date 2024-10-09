@@ -30,14 +30,15 @@ namespace SummarizedCat{
 		public:
 			std::vector<IStructure*> childStructures;
 
+			StructureSummary();
 			StructureSummary(const std::vector<IStructure> &argChildStructures);
 	};
 
 	class StructureCollection : virtual public IStructure{
 		private:
 			std::vector<std::vector<StructureSummary>> detailMap; // Mipmap-like representation of existing structures on different detail levels (detaillevel-spatialposition)
-			StructureCollection(const std::vector<DiscreteStructure> &argChildStructures); //Generate a collection describing the given discrete structures
 		public:
+			StructureCollection(const std::vector<DiscreteStructure> &argChildStructures); //Generate a collection describing the given discrete structures
 			unsigned int maxDetailDepth;
 			scalar lowestPosition; // Lowest position component in any dimension
 			scalar highestPosition;

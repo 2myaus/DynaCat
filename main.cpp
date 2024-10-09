@@ -2,11 +2,26 @@
 #include "structures.hpp"
 
 #include <stdio.h>
+#include <vector>
+#include <chrono>
+#include <random>
 
 using namespace SummarizedCat;
 
 int main(){
 	printf("hw\n");
+
+	std::vector<DiscreteStructure> particles;
+
+	for(int i = 0; i < 100; i++){
+		particles.push_back(DiscreteStructure(SpatialVector({((double) rand() / (RAND_MAX)), ((double) rand() / (RAND_MAX))}), SpatialVector({((double) rand() / (RAND_MAX)), ((double) rand() / (RAND_MAX))}), 1));
+	}
+
+	auto begin = std::chrono::steady_clock::now();
+	StructureCollection collection(particles);
+	auto end = std::chrono::steady_clock::now();
+
+	printf("Took %ld ns!", std::chrono::duration_cast<std::chrono::nanoseconds> (end - begin).count());
 
 	return 0;
 }

@@ -2,6 +2,7 @@
 #include "primitives.hpp"
 #include <algorithm>
 #include <cmath>
+#include <iterator>
 #include <numeric>
 
 namespace SummarizedCat{
@@ -13,6 +14,7 @@ namespace SummarizedCat{
 
 	DiscreteStructure::DiscreteStructure(const SpatialVector argAbsolutePosition, const SpatialVector argAbsoluteVelocity, const scalar argMass):IStructure(argAbsolutePosition, argAbsoluteVelocity, argMass){}
 
+	StructureSummary::StructureSummary() = default;
 	StructureSummary::StructureSummary(const std::vector<IStructure> &argChildStructures){
 
 		SpatialVector positionSum = std::accumulate(argChildStructures.begin(), argChildStructures.end(), SpatialVector(), [](const SpatialVector a, const IStructure b){
@@ -35,7 +37,7 @@ namespace SummarizedCat{
 	StructureCollection::StructureCollection():maxDetailDepth(0),dimension(0),lowestPosition(0),highestPosition(0){}
 
 	StructureCollection::StructureCollection(const std::vector<DiscreteStructure> &argChildStructures):StructureCollection(){
-		maxDetailDepth = 15; //TODO: Calculate this based on arguments
+		maxDetailDepth = 5; //TODO: Calculate this based on arguments
 
 		std::for_each(argChildStructures.begin(), argChildStructures.end(), [&](DiscreteStructure childStructure){
 			for(unsigned int d=0; d<childStructure.absolutePosition.dimension();d++){
@@ -50,11 +52,13 @@ namespace SummarizedCat{
 		
 		scalar sideLength = highestPosition-lowestPosition;
 
-		std::vector<std::vector<StructureSummary>> detailMap(maxDetailDepth+1);
+		std::vector<std::vector<StructureSummary>> detailMap;
+		detailMap.resize(maxDetailDepth+1);
 
 		for(int detailDepth = maxDetailDepth; detailDepth > 0; detailDepth--){
 			unsigned int gridWidth = pow(2, detailDepth);
-			detailMap[detailDepth].reserve(pow(gridWidth, dimension));
+			size_t reserve = (double)pow(gridWidth, dimension);
+			detailMap[detailDepth].resize(reserve); //Doing this without casts gives wrong values!
 			
 			if(detailDepth == maxDetailDepth){
 				std::for_each(argChildStructures.begin(), argChildStructures.end(), [&](DiscreteStructure childStructure){
@@ -69,11 +73,12 @@ namespace SummarizedCat{
 			}
 			
 			//TODO: This can be multithreaded
-			for(unsigned int gridIdx = 0; gridIdx < pow(gridWidth,dimension); gridIdx++){
+			for(unsigned int gridIdx = 0; gridIdx < (double)pow(gridWidth,dimension); gridIdx++){
 				const SpatialVector gridPos = StructureCollection::unflattenVecInSpace(gridIdx, gridWidth);
 				const SpatialVector dGridPos = gridPos * 2;
 				const unsigned int dGridIdx = StructureCollection::flattenVecInSpace(dGridPos, gridWidth*2);
-				std::vector<unsigned int> childIdxs(pow(2, dimension));
+				std::vector<unsigned int> childIdxs;
+				childIdxs.reserve((double)pow(2,dimension));
 
 				childIdxs.push_back(dGridIdx);
 				for(unsigned int d=0; d<dimension;d++){
@@ -82,9 +87,10 @@ namespace SummarizedCat{
 					});
 				}
 
-				std::vector<IStructure> childSummaries(pow(2,dimension));
-				std::transform(childIdxs.begin(), childIdxs.end(), childSummaries.begin(), [&](unsigned int childIdx){
-					return detailMap[detailDepth+1][childIdx];
+				std::vector<IStructure> childSummaries;
+				childSummaries.reserve((double)pow(2,dimension));
+				std::transform(childIdxs.begin(), childIdxs.end(), std::back_inserter(childSummaries), [&](unsigned int childIdx){
+					return detailMap.at(detailDepth+1).at(childIdx);
 				});
 
 				detailMap[detailDepth][gridIdx] = StructureSummary(childSummaries);
@@ -106,13 +112,13 @@ namespace SummarizedCat{
 	}
 
 	const SpatialVector StructureCollection::unflattenVecInSpace(const unsigned int flattenedPosition, const unsigned int gridWidth){
-		unsigned int currentFlatPos = flattenedPosition;
+		/*unsigned*/ int currentFlatPos = flattenedPosition; //This shouldn't be an issue but keep it signed just in case
 		SpatialVector vec;
 
 		unsigned int d = 0;
-		while(flattenedPosition > 0){
+		while(currentFlatPos > 0){
 			unsigned int component = currentFlatPos % gridWidth;
-			vec.components.at(d) = component;
+			vec.components.push_back(component);
 			currentFlatPos -= component;
 			currentFlatPos /= gridWidth;
 			d++;
