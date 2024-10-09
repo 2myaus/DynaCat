@@ -15,11 +15,11 @@ namespace SummarizedCat{
 
 		std::transform(argChildStructures.begin(), argChildStructures.end(), childStructures.begin(), [](IStructure &struc){ return &struc; } );
 
-		SpatialVector positionSum = std::accumulate(argChildStructures.begin(), argChildStructures.end(), SpatialVector(0,0,0), [](const IStructure a, const IStructure b){
+		SpatialVector positionSum = std::accumulate(argChildStructures.begin(), argChildStructures.end(), SpatialVector(), [](const IStructure a, const IStructure b){
 			return a.absolutePosition*a.mass + b.absolutePosition*b.mass;
 		});
 
-		SpatialVector velocitySum = std::accumulate(argChildStructures.begin(), argChildStructures.end(), SpatialVector(0,0,0), [](const IStructure a, const IStructure b){
+		SpatialVector velocitySum = std::accumulate(argChildStructures.begin(), argChildStructures.end(), SpatialVector(), [](const IStructure a, const IStructure b){
 			return a.absoluteVelocity*a.mass + b.absoluteVelocity*b.mass;
 		});
 
@@ -102,7 +102,7 @@ namespace SummarizedCat{
 
 	const SpatialVector unflattenVecInSpace(const unsigned int flattenedPosition, const unsigned int gridWidth){
 		unsigned int currentFlatPos = flattenedPosition;
-		SpatialVector vec(0,0,0);
+		SpatialVector vec;
 
 		unsigned int d = 0;
 		while(flattenedPosition > 0){

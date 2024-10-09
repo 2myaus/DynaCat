@@ -25,12 +25,12 @@ namespace SummarizedCat{
 			SpatialVector operator+(const SpatialVector &o) const;
 			SpatialVector operator-() const;
 			SpatialVector operator-(const SpatialVector &o) const;
-			SpatialVector operator*(const scalar &rhs) const;
-			SpatialVector operator/(const scalar &o) const;
+			SpatialVector operator*(const scalar &o) const;
+			SpatialVector operator/(const scalar &rhs) const;
 
-			SpatialVector(const scalar argX, const scalar argY, const scalar argZ);
 			SpatialVector(const SpatialVector &rhs);
-			SpatialVector(std::vector<scalar>);
+			SpatialVector(const std::vector<scalar> &v);
+			SpatialVector();
 
 			scalar squaredMagnitude() const;
 			scalar dot(const SpatialVector &o) const;
