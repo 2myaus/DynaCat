@@ -1,6 +1,6 @@
 # Compiler
 CXX := g++
-CXXFLAGS := -std=c++17
+CXXFLAGS := -std=c++20
 
 # Files
 SRC := structures.cpp primitives.cpp

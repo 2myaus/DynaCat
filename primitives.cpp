@@ -39,7 +39,7 @@ namespace SummarizedCat{
 		}
 
 
-		std::vector<scalar> components(greaterD->components.begin(), greaterD->components.end());
+		std::vector<scalar> components(greaterD->components);
 		std::transform(lesserD->components.begin(), lesserD->components.end(), greaterD->components.begin(), components.begin(), [&](const scalar &lesserComp, const scalar &greaterComp){
 			return lesserComp +  greaterComp;
 		});
@@ -48,7 +48,8 @@ namespace SummarizedCat{
 	};
 
 	SpatialVector SpatialVector::operator-() const{
-		std::vector<scalar> components(this->dimension());
+		std::vector<scalar> components;
+		components.reserve(this->dimension());
 		std::transform(this->components.begin(), this->components.end(), components.begin(), [](const scalar component){
 			return -component;
 		});
@@ -66,7 +67,7 @@ namespace SummarizedCat{
 		}
 
 
-		std::vector<scalar> components(greaterD->components.begin(), greaterD->components.end());
+		std::vector<scalar> components(greaterD->components);
 		std::transform(lesserD->components.begin(), lesserD->components.end(), greaterD->components.begin(), components.begin(), [](const scalar &lesserComp, const scalar &greaterComp){
 			return lesserComp - greaterComp;
 		});
@@ -75,14 +76,16 @@ namespace SummarizedCat{
 	};
 
 	SpatialVector SpatialVector::operator*(const scalar &o) const{
-		std::vector<scalar> components(this->dimension());
+		std::vector<scalar> components;
+		components.reserve(this->dimension());
 		std::transform(this->components.begin(), this->components.end(), components.begin(), [&](const scalar &s){ return o*s; });
 
 		return SpatialVector(components);
 	}
 
 	SpatialVector SpatialVector::operator/(const scalar &o) const{
-		std::vector<scalar> components(this->dimension());
+		std::vector<scalar> components;
+		components.reserve(this->dimension());
 		std::transform(this->components.begin(), this->components.end(), components.begin(), [&](const scalar &s){ return s/o; });
 
 		return SpatialVector(components);
@@ -91,4 +94,8 @@ namespace SummarizedCat{
 	SpatialVector::SpatialVector(const SpatialVector &rhs):SpatialVector(rhs.components){}
 	SpatialVector::SpatialVector(const std::vector<scalar> &v):components(v){}
 	SpatialVector::SpatialVector(){}
+
+	unsigned int SpatialVector::dimension() const{
+		return this->components.size();
+	}
 }

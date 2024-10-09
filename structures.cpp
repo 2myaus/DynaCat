@@ -11,20 +11,17 @@ namespace SummarizedCat{
 	DiscreteStructure::DiscreteStructure(const SpatialVector argAbsolutePosition, const SpatialVector argAbsoluteVelocity, const scalar argMass):IStructure(argAbsolutePosition, argAbsoluteVelocity, argMass){}
 
 	StructureSummary::StructureSummary(const std::vector<IStructure> &argChildStructures){
-		childStructures.reserve(argChildStructures.size());
 
-		std::transform(argChildStructures.begin(), argChildStructures.end(), childStructures.begin(), [](IStructure &struc){ return &struc; } );
-
-		SpatialVector positionSum = std::accumulate(argChildStructures.begin(), argChildStructures.end(), SpatialVector(), [](const IStructure a, const IStructure b){
-			return a.absolutePosition*a.mass + b.absolutePosition*b.mass;
+		SpatialVector positionSum = std::accumulate(argChildStructures.begin(), argChildStructures.end(), SpatialVector(), [](const SpatialVector a, const IStructure b){
+			return a + b.absolutePosition*b.mass;
 		});
 
-		SpatialVector velocitySum = std::accumulate(argChildStructures.begin(), argChildStructures.end(), SpatialVector(), [](const IStructure a, const IStructure b){
-			return a.absoluteVelocity*a.mass + b.absoluteVelocity*b.mass;
+		SpatialVector velocitySum = std::accumulate(argChildStructures.begin(), argChildStructures.end(), SpatialVector(), [](const SpatialVector a, const IStructure b){
+			return a + b.absoluteVelocity*b.mass;
 		});
 
-		scalar totalMass = std::accumulate(argChildStructures.begin(), argChildStructures.end(), 0, [](const IStructure a, const IStructure b){
-			return a.mass + b.mass;
+		scalar totalMass = std::accumulate(argChildStructures.begin(), argChildStructures.end(), 0, [](const scalar a, const IStructure b){
+			return a + b.mass;
 		});
 
 		absolutePosition = positionSum / mass;
