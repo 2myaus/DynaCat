@@ -12,7 +12,7 @@ OUT := dynacat
 # Profiles
 CXXFLAGS_DEBUG := -g -O0 -DDEBUG
 CXXFLAGS_DEFAULT := -O2
-CXXFLAGS_FAST := -O3 -Ofast -funroll-loops -march=native
+CXXFLAGS_FAST := -O3 -Ofast -funroll-loops -fopenmp -march=native
 
 # Default target
 all: default
