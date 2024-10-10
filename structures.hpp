@@ -34,6 +34,7 @@ namespace SummarizedCat{
 			StructureSummary();
 			StructureSummary(const StructureSummary &o);
 			StructureSummary(const std::vector<const IStructure*> &argChildStructures);
+			StructureSummary(const StructureSummary &old, const IStructure *append);
 	};
 
 	class StructureCollection : virtual public IStructure{

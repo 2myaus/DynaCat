@@ -37,11 +37,19 @@ namespace SummarizedCat{
 		absoluteVelocity = velocitySum / mass;
 		mass = totalMass;
 	}
+	StructureSummary::StructureSummary(const StructureSummary &old, const IStructure *append) : childStructures(old.childStructures.size() + 1){
+		mass = old.mass + append->mass;
+		absolutePosition = old.absolutePosition + append->absolutePosition*(append->mass/old.mass);
+		absoluteVelocity = old.absoluteVelocity + append->absoluteVelocity*(append->mass/old.mass);
+
+		childStructures.insert(childStructures.end(), old.childStructures.begin(), old.childStructures.end());
+		childStructures.push_back(append);
+	}
 
 	StructureCollection::StructureCollection():maxDetailDepth(0),dimension(0),lowestPosition(0),highestPosition(0){}
 
 	StructureCollection::StructureCollection(std::vector<DiscreteStructure> &argChildStructures):StructureCollection(){
-		maxDetailDepth = 7; //TODO: Calculate this based on arguments
+		maxDetailDepth = 5; //TODO: Calculate this based on arguments
 
 		std::for_each(argChildStructures.begin(), argChildStructures.end(), [&](DiscreteStructure &childStructure){
 			for(unsigned int d=0; d<childStructure.absolutePosition.dimension();d++){
@@ -60,15 +68,17 @@ namespace SummarizedCat{
 
 		detailMap.resize(maxDetailDepth+1);
 		const unsigned int highestReserve = (double)pow(2,maxDetailDepth*dimension);
-		std::mutex mutexMap[highestReserve];
+		std::vector<std::mutex> mutexMap(highestReserve);
 
 		for(int detailDepth = maxDetailDepth; detailDepth > 0; detailDepth--){
 			unsigned int gridWidth = pow(2, detailDepth);
 			unsigned int reserve = (double)pow(gridWidth, dimension);
 			detailMap[detailDepth].resize(reserve); //TODO: Fix this giving an error with high detail depths?
+			std::vector<std::pair<std::vector<const IStructure*>, unsigned int>> writtenChildLists;
+			writtenChildLists.resize(reserve);
 			
 			if(detailDepth == maxDetailDepth){
-				std::for_each(std::execution::seq,argChildStructures.begin(), argChildStructures.end(), [&](DiscreteStructure &childStructure){ //TODO: Manually divide execution here because SIMD is slow
+				std::for_each(std::execution::par,argChildStructures.begin(), argChildStructures.end(), [&](DiscreteStructure &childStructure){ //TODO: Manually divide execution here because SIMD is slow
 					unsigned int gridIdx = 0;
 					for(unsigned int d=0;d<dimension;d++){
 						unsigned int dimensionalGridPos;
@@ -77,17 +87,19 @@ namespace SummarizedCat{
 						gridIdx += dimensionalGridPos*pow(gridWidth, d);
 					}
 					
+					std::optional<StructureSummary> &current = detailMap.at(detailDepth).at(gridIdx);
 					std::lock_guard<std::mutex> posLock(mutexMap[gridIdx]);
-					if(!detailMap.at(detailDepth).at(gridIdx).has_value()){
-						detailMap.at(detailDepth).at(gridIdx).emplace();
-					}
-					detailMap.at(detailDepth).at(gridIdx)->childStructures.push_back(&(childStructure)); //TODO TODO: Do this properly (initialize with every structure instead of adding THIS IS IMPORTANT!!!!
-					
+					writtenChildLists[gridIdx].first.push_back(&childStructure);
+				});
+
+				std::for_each(std::execution::par, writtenChildLists.begin(), writtenChildLists.end(), [&](const std::pair< std::vector<const IStructure*>, unsigned int > &cachedChildren){
+					detailMap[detailDepth][cachedChildren.second].emplace(cachedChildren.first);
 				});
 				continue;
 			}
 			
-			//TODO: This can be multithreaded
+			//TODO: use SIMD here
+#pragma openmp parallel for
 			for(unsigned int gridIdx = 0; gridIdx < (double)pow(gridWidth,dimension); gridIdx++){
 				const SpatialVector gridPos = StructureCollection::unflattenVecInSpace(gridIdx, gridWidth);
 				const SpatialVector dGridPos = gridPos * 2;
@@ -104,7 +116,7 @@ namespace SummarizedCat{
 
 				std::vector<const IStructure*> childSummaries;
 				childSummaries.reserve((double)pow(2,dimension));
-				std::for_each(childIdxs.begin(), childIdxs.end(), [&](const unsigned int childIdx){
+				std::for_each(std::execution::seq, childIdxs.begin(), childIdxs.end(), [&](const unsigned int childIdx){
 					if(!detailMap.at(detailDepth+1).at(childIdx).has_value()){return;}
 					childSummaries.push_back(&detailMap[detailDepth+1][childIdx].value());
 				});
